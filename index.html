@@ -1,0 +1,2211 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="Wirda Nissa · Organization Development & HRIS Developer">
+<meta property="og:description" content="Portofolio: HRIS Enterprise, Attendance & Payroll, Recruitment Suite, Asisten Dapur CRM, dan Waterynation.">
+<meta property="og:type" content="website">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Wirda Nissa Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portofolio Wirda Nissa, Organization Development & HRIS Developer: HRIS, Attendance, Career Site, dan Asisten Dapur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: corporate product portfolio. Home = profile + 4 product cards; each product has its own page (#hris, #attendance, #career, #dapur) with a sticky module index like a product docs site. */
+:root{
+  --paper:#F5F7FA; --surface:#FFFFFF; --surface-2:#EDF1F6; --ink:#0B1B33; --ink-2:#47546A; --ink-3:#7A869A; --line:#DCE2EA;
+  --brand:#0B2A5B; --stamp:#B4235A; --hris:#1D4ED8; --att:#0F7A6C; --car:#B4235A; --kit:#B45F06; --wat:#0E7490; --warn:#C2561A;
+  --display:"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --body:"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --radius:12px; --shadow:0 1px 2px rgba(11,27,51,.05), 0 10px 28px -16px rgba(11,27,51,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A111D; --surface:#111A2A; --surface-2:#1A2537; --ink:#E7ECF4; --ink-2:#A3AEC2; --ink-3:#77839A; --line:#25324A;
+    --brand:#9DB8F0; --stamp:#F0709A; --hris:#7FA2FF; --att:#3CC7B0; --car:#F0709A; --kit:#F0A64A; --wat:#38BDF8; --warn:#F28C55;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 14px 32px -16px rgba(0,0,0,.7); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A111D; --surface:#111A2A; --surface-2:#1A2537; --ink:#E7ECF4; --ink-2:#A3AEC2; --ink-3:#77839A; --line:#25324A;
+  --brand:#9DB8F0; --stamp:#F0709A; --hris:#7FA2FF; --att:#3CC7B0; --car:#F0709A; --kit:#F0A64A; --wat:#38BDF8; --warn:#F28C55;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 14px 32px -16px rgba(0,0,0,.7); color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:84px}
+body{background:var(--paper); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:60; background:var(--paper)}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--display); line-height:1.08; margin:0; text-wrap:balance; letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:1180px; margin:0 auto; padding-left:max(20px, env(safe-area-inset-left,0px)); padding-right:max(20px, env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono)}
+.eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+:focus-visible{outline:2px solid var(--hris); outline-offset:3px; border-radius:6px}
+.tag{font-family:var(--mono); font-size:12px; padding:3px 9px; border-radius:999px; border:1px solid var(--line); color:var(--ink-2); background:var(--surface); white-space:nowrap}
+
+/* NAV */
+.nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:50; background:color-mix(in srgb, var(--paper) 86%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex; align-items:center; gap:20px; padding-block:12px}
+.brand{font-family:var(--display); font-weight:800; font-size:19px; text-decoration:none; display:flex; align-items:center; gap:10px}
+.brand i{width:28px; height:28px; border-radius:7px; background:var(--brand); color:var(--paper); display:grid; place-items:center; font-style:normal; font-size:12px; font-family:var(--mono)}
+.nav ul{display:flex; gap:4px; list-style:none; margin:0 0 0 auto; padding:0; overflow-x:auto; scrollbar-width:none}
+.nav ul a{display:block; text-decoration:none; font-size:14px; font-weight:500; color:var(--ink-2); padding:6px 11px; border-radius:8px; white-space:nowrap}
+.nav ul a:hover{background:var(--surface-2); color:var(--ink)}
+@media (max-width:820px){ .nav ul li.opt{display:none} }
+
+/* HERO */
+.hero{position:relative; padding-block:56px 40px; overflow:hidden}
+.hero::before{content:""; position:absolute; inset:0; background-image:radial-gradient(var(--line) 1px, transparent 1.2px); background-size:22px 22px; mask-image:linear-gradient(180deg, #000 30%, transparent 95%); -webkit-mask-image:linear-gradient(180deg, #000 30%, transparent 95%); pointer-events:none}
+.hero .wrap{position:relative; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr); gap:48px; align-items:center}
+.status{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:12.5px; padding:6px 12px 6px 10px; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--ink-2)}
+.status b{width:8px; height:8px; border-radius:50%; background:var(--att); box-shadow:0 0 0 0 color-mix(in srgb, var(--att) 60%, transparent); animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-size:clamp(38px, 6vw, 74px); font-weight:800; margin-top:22px; letter-spacing:-.035em}
+.hero h1 .hl{color:var(--hris)}
+.hero .lead{font-size:clamp(17px,1.6vw,19px); color:var(--ink-2); max-width:58ch; margin-top:20px}
+.hero .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:22px}
+.cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+.btn{display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:15px; padding:12px 18px; border-radius:10px; text-decoration:none; border:1px solid var(--ink); cursor:pointer; font-family:var(--body)}
+.btn.primary{background:var(--ink); color:var(--paper)}
+.btn.ghost{background:transparent; color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.stats{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; margin-top:44px; border-top:1px solid var(--line)}
+.stats div{padding:16px 16px 0 0}
+.stats strong{display:block; font-family:var(--display); font-size:clamp(28px,3.2vw,40px); font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-.03em}
+.stats span{font-size:13.5px; color:var(--ink-2)}
+
+/* ID BADGE */
+.badge-area{display:flex; flex-direction:column; align-items:center}
+.lanyard{width:46px; height:90px; background:repeating-linear-gradient(90deg, var(--hris) 0 8px, color-mix(in srgb, var(--hris) 70%, var(--paper)) 8px 16px); clip-path:polygon(18% 0, 82% 0, 64% 100%, 36% 100%)}
+.clip{width:58px; height:18px; border-radius:6px; background:var(--ink-3); margin-top:-4px; position:relative; z-index:2}
+.idcard{width:min(340px,100%); background:var(--surface); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden}
+.lanyard, .clip{display:none}
+.idcard .top{background:var(--ink); color:var(--paper); padding:16px 20px 40px; display:flex; justify-content:space-between; align-items:flex-start}
+.idcard .top small{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; opacity:.75}
+.idcard .slot{width:44px; height:8px; border-radius:6px; background:var(--paper); opacity:.25}
+.idcard .body{padding:0 20px 18px; position:relative}
+.avatar{width:86px; height:86px; border-radius:20px; margin-top:-28px; background:linear-gradient(135deg, var(--hris), var(--car)); display:grid; place-items:center; color:#fff; font-family:var(--display); font-weight:800; font-size:32px; border:4px solid var(--surface)}
+.idcard h3{font-size:24px; margin-top:12px}
+.idcard .role{color:var(--ink-2); font-size:14px; margin-top:2px}
+.idcard dl{display:grid; grid-template-columns:auto 1fr; gap:6px 12px; margin:16px 0 0; font-size:13px}
+.idcard dt{font-family:var(--mono); color:var(--ink-3); font-size:11px; letter-spacing:.08em; text-transform:uppercase; padding-top:2px}
+.idcard dd{margin:0; font-weight:500}
+.barcode{height:34px; margin-top:16px; background:repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px, var(--ink) 4px 5px, transparent 5px 8px, var(--ink) 8px 11px, transparent 11px 12px, var(--ink) 12px 13px, transparent 13px 16px); opacity:.85}
+.barcode + small{display:block; font-family:var(--mono); font-size:10.5px; color:var(--ink-3); margin-top:4px; letter-spacing:.2em}
+
+/* SECTIONS */
+section.block{padding-block:72px}
+.sec-head{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px 48px; align-items:end; margin-bottom:36px}
+.sec-head h2{font-size:clamp(30px,4vw,48px); font-weight:800; margin-top:10px}
+.sec-head p{color:var(--ink-2); max-width:56ch}
+.rule{border:0; border-top:1px solid var(--line); margin:0}
+
+/* ABOUT */
+.about{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:32px}
+.about .story p{font-size:18px; color:var(--ink-2); max-width:60ch}
+.about .story p + p{margin-top:14px}
+.about .story strong{color:var(--ink); font-weight:600}
+.facts{display:grid; gap:12px}
+.fact{display:grid; grid-template-columns:110px minmax(0,1fr); gap:14px; padding:14px 0; border-bottom:1px dashed var(--line)}
+.fact:first-child{padding-top:0}
+.fact .k{font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); padding-top:3px}
+.fact .v{font-weight:500}
+.fact .v small{display:block; color:var(--ink-2); font-weight:400; font-size:14px}
+
+/* ECOSYSTEM */
+.eco{background:var(--surface); border:1px solid var(--line); border-radius:22px; padding:24px; overflow-x:auto}
+.eco svg{display:block; width:100%; min-width:680px; height:auto}
+.eco .node{fill:var(--surface); stroke:var(--line); stroke-width:1.5}
+.eco .core{fill:var(--ink)}
+.eco .t{font-family:var(--display); font-weight:700; font-size:19px; fill:var(--ink)}
+.eco .core-t{fill:var(--paper); font-family:var(--display); font-weight:800; font-size:24px}
+.eco .s{font-family:var(--mono); font-size:11.5px; fill:var(--ink-2)}
+.eco .core-s{font-family:var(--mono); font-size:11.5px; fill:var(--paper); opacity:.75}
+.eco .link{fill:none; stroke-width:2; stroke-dasharray:6 6; animation:flow 1.2s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-12}}
+.eco .pill{fill:var(--paper); stroke:var(--line)}
+.eco .pt{font-family:var(--mono); font-size:11px; fill:var(--ink)}
+.eco-legend{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-top:20px}
+.eco-legend div{font-size:14px; color:var(--ink-2)}
+.eco-legend b{display:block; color:var(--ink); font-size:15px; margin-bottom:2px}
+
+/* PROJECT SWITCHER */
+.switch{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px}
+.switch a{display:flex; align-items:center; gap:8px; text-decoration:none; font-weight:600; font-size:14px; padding:9px 14px; border-radius:10px; border:1px solid var(--line); background:var(--surface)}
+.switch a i{width:10px; height:10px; border-radius:3px; background:var(--c)}
+.switch a:hover{border-color:var(--c)}
+
+/* PROJECT CASE */
+.case{--c:var(--hris); padding-block:64px; border-top:1px solid var(--line)}
+.case[data-p="att"]{--c:var(--att)} .case[data-p="car"]{--c:var(--car)} .case[data-p="kit"]{--c:var(--kit)}
+.case-top{display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:44px; align-items:start}
+.case .kicker{display:flex; align-items:center; gap:10px; font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--c); font-weight:600}
+.case .kicker::before{content:""; width:22px; height:3px; background:var(--c); border-radius:2px}
+.case h2{font-size:clamp(32px,4.4vw,54px); font-weight:800; margin-top:14px}
+.case .lead{font-size:18px; color:var(--ink-2); margin-top:16px; max-width:56ch}
+.problem{margin-top:22px; padding:16px 18px; border-radius:12px; background:color-mix(in srgb, var(--c) 8%, var(--surface)); border:1px solid color-mix(in srgb, var(--c) 22%, var(--line))}
+.problem b{font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--c); display:block; margin-bottom:4px}
+.problem p{font-size:15px; color:var(--ink-2)}
+.meta{display:grid; gap:14px; margin-top:22px}
+.meta .row{display:grid; grid-template-columns:96px minmax(0,1fr); gap:12px; align-items:start}
+.meta .row > span{font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); padding-top:4px}
+.meta .row div{display:flex; flex-wrap:wrap; gap:6px}
+.role-steps .tag{border-color:color-mix(in srgb, var(--c) 35%, var(--line)); color:var(--ink)}
+.count{display:flex; gap:28px; margin-top:24px}
+.count strong{font-family:var(--display); font-size:40px; font-weight:800; color:var(--c); display:block; line-height:1; font-variant-numeric:tabular-nums}
+.count span{font-size:13px; color:var(--ink-2)}
+
+/* MOCK FRAMES */
+.mock{background:var(--surface); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden; font-size:13px; position:relative}
+.mock-bar{display:flex; align-items:center; gap:6px; padding:10px 12px; border-bottom:1px solid var(--line); background:var(--surface-2)}
+.mock-bar i{width:10px; height:10px; border-radius:50%; background:var(--line)}
+.mock-bar .url{margin-left:10px; flex:1; min-width:0; font-family:var(--mono); font-size:11.5px; color:var(--ink-3); background:var(--surface); border-radius:6px; padding:4px 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.sample{position:absolute; right:10px; bottom:10px; font-family:var(--mono); font-size:10px; letter-spacing:.08em; color:var(--ink-3); background:var(--surface); padding:2px 7px; border-radius:5px; border:1px solid var(--line)}
+.pill{display:inline-flex; align-items:center; gap:5px; font-size:11.5px; font-weight:600; padding:2px 8px; border-radius:999px; white-space:nowrap}
+.pill.ok{background:color-mix(in srgb, var(--att) 15%, transparent); color:var(--att)}
+.pill.wait{background:color-mix(in srgb, var(--kit) 18%, transparent); color:var(--kit)}
+.pill.bad{background:color-mix(in srgb, var(--stamp) 14%, transparent); color:var(--stamp)}
+.pill.info{background:color-mix(in srgb, var(--hris) 14%, transparent); color:var(--hris)}
+
+/* HRIS mock */
+.hris-ui{display:grid; grid-template-columns:150px minmax(0,1fr); min-height:380px}
+.hris-ui aside{border-right:1px solid var(--line); padding:14px 10px; display:flex; flex-direction:column; gap:2px; background:var(--surface)}
+.hris-ui aside b{font-family:var(--display); font-size:15px; padding:2px 8px 12px}
+.hris-ui aside span{padding:7px 8px; border-radius:7px; color:var(--ink-2)}
+.hris-ui aside span.on{background:color-mix(in srgb, var(--hris) 12%, transparent); color:var(--hris); font-weight:600}
+.hris-main{padding:14px; display:flex; flex-direction:column; gap:12px; min-width:0}
+.kpis{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px}
+.kpis div{border:1px solid var(--line); border-radius:10px; padding:10px}
+.kpis small{color:var(--ink-3); font-size:11px; display:block}
+.kpis strong{font-family:var(--display); font-size:22px; font-variant-numeric:tabular-nums}
+.bars{display:flex; align-items:flex-end; gap:6px; height:64px; padding:8px 10px; border:1px solid var(--line); border-radius:10px}
+.bars span{flex:1; background:color-mix(in srgb, var(--hris) 30%, transparent); border-radius:4px 4px 0 0; position:relative}
+.bars span:last-child{background:var(--hris)}
+.approvals{border:1px solid var(--line); border-radius:10px; overflow:hidden}
+.approvals .hd{display:flex; justify-content:space-between; padding:9px 12px; background:var(--surface-2); font-weight:600; font-size:12.5px}
+.ap{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:center; padding:10px 12px; border-top:1px solid var(--line); position:relative}
+.ap b{font-weight:600; display:block}
+.ap small{color:var(--ink-3)}
+.ap button{font:600 12px var(--body); padding:6px 10px; border-radius:7px; border:1px solid var(--hris); color:var(--hris); background:transparent; cursor:pointer}
+.ap button:hover{background:var(--hris); color:var(--surface)}
+.stampmark{position:absolute; right:14px; top:50%; font-family:var(--mono); font-weight:600; font-size:13px; letter-spacing:.14em; color:var(--stamp); border:2px solid var(--stamp); border-radius:6px; padding:2px 8px; transform:translateY(-50%) rotate(-10deg); animation:stamp .35s cubic-bezier(.3,1.6,.5,1) both; background:var(--surface)}
+@keyframes stamp{from{transform:translateY(-50%) rotate(-10deg) scale(2.2); opacity:0}}
+
+/* Attendance mock */
+.att-wrap{display:grid; grid-template-columns:minmax(0,250px) minmax(0,1fr); gap:18px; align-items:start}
+.phone{background:var(--ink); border-radius:34px; padding:10px; box-shadow:var(--shadow); max-width:250px; width:100%}
+.screen{background:var(--surface); border-radius:26px; overflow:hidden; display:flex; flex-direction:column}
+.screen .notch{height:22px; display:flex; justify-content:center; align-items:center}
+.screen .notch i{width:70px; height:6px; border-radius:6px; background:var(--surface-2)}
+.map{height:150px; position:relative; background:
+  linear-gradient(var(--line) 1px, transparent 1px) 0 0/24px 24px,
+  linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0/24px 24px, var(--surface-2); overflow:hidden}
+.map::before{content:""; position:absolute; left:-10%; top:58%; width:120%; height:14px; background:var(--surface); transform:rotate(-8deg); opacity:.9}
+.geo{position:absolute; left:50%; top:50%; width:110px; height:110px; border-radius:50%; transform:translate(-50%,-50%); background:color-mix(in srgb, var(--att) 18%, transparent); border:2px dashed var(--att)}
+.pin{position:absolute; left:56%; top:44%; width:16px; height:16px; border-radius:50%; background:var(--att); border:3px solid var(--surface); box-shadow:0 0 0 6px color-mix(in srgb, var(--att) 25%, transparent)}
+.screen .inner{padding:14px; display:flex; flex-direction:column; gap:10px}
+.clock{font-family:var(--mono); font-size:30px; font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.02em; text-align:center}
+.clock + small{display:block; text-align:center; color:var(--ink-3); font-size:11.5px; margin-top:-6px}
+.inarea{display:flex; justify-content:space-between; align-items:center; font-size:11.5px; padding:8px 10px; border-radius:10px; background:var(--surface-2)}
+.clockbtn{font:700 15px var(--body); border:0; border-radius:14px; padding:13px; background:var(--att); color:#fff; cursor:pointer}
+.clockbtn.done{background:var(--surface-2); color:var(--att)}
+.selfie{display:flex; gap:10px; align-items:center; font-size:11.5px; color:var(--ink-2)}
+.selfie i{width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg, var(--att), var(--hris)); flex:none}
+.cal{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow); min-width:0}
+.cal h4{font-size:16px}
+.cal .sub{font-size:12px; color:var(--ink-3)}
+.calgrid{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:5px; margin-top:12px}
+.calgrid span{aspect-ratio:1; border-radius:6px; font-family:var(--mono); font-size:10.5px; display:grid; place-items:center; color:var(--ink-2); background:var(--surface-2)}
+.calgrid span.h{background:color-mix(in srgb, var(--att) 75%, transparent); color:#fff}
+.calgrid span.l{background:color-mix(in srgb, var(--kit) 70%, transparent); color:#fff}
+.calgrid span.c{background:color-mix(in srgb, var(--hris) 65%, transparent); color:#fff}
+.calgrid span.s{background:color-mix(in srgb, var(--stamp) 55%, transparent); color:#fff}
+.calgrid span.o{background:transparent; color:var(--ink-3)}
+.calgrid em{font-style:normal; font-family:var(--mono); font-size:10px; color:var(--ink-3); text-align:center}
+.legend{display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:12px; font-size:11.5px; color:var(--ink-2)}
+.legend span{display:flex; align-items:center; gap:5px}
+.legend i{width:10px; height:10px; border-radius:3px}
+.recap{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:12px}
+.recap div{border:1px solid var(--line); border-radius:10px; padding:8px 10px}
+.recap small{display:block; color:var(--ink-3); font-size:11px}
+.recap b{font-family:var(--display); font-size:18px; font-variant-numeric:tabular-nums}
+
+/* Career mock */
+.car-ui{padding:14px; display:flex; flex-direction:column; gap:12px}
+.car-hero{border-radius:12px; padding:16px; background:linear-gradient(120deg, color-mix(in srgb, var(--car) 16%, var(--surface)), color-mix(in srgb, var(--hris) 10%, var(--surface)))}
+.car-hero b{font-family:var(--display); font-size:19px; display:block}
+.car-hero span{font-size:12px; color:var(--ink-2)}
+.jobs{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px}
+.job{border:1px solid var(--line); border-radius:10px; padding:10px}
+.job b{display:block; font-size:12.5px}
+.job small{color:var(--ink-3); font-size:11px}
+.kanban-h{display:flex; justify-content:space-between; align-items:baseline; font-weight:600; font-size:12.5px}
+.kanban-h small{font-weight:400; color:var(--ink-3)}
+.kanban{display:grid; grid-template-columns:repeat(5,minmax(110px,1fr)); gap:8px; overflow-x:auto; padding-bottom:4px}
+.col{background:var(--surface-2); border-radius:10px; padding:8px; min-height:150px; display:flex; flex-direction:column; gap:6px}
+.col > b{font-size:11px; font-family:var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); display:flex; justify-content:space-between}
+.cand{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:7px; display:flex; gap:7px; align-items:center; cursor:pointer; font:inherit; color:inherit; text-align:left; width:100%; transition:transform .15s}
+.cand:hover{transform:translateY(-1px); border-color:var(--car)}
+.cand i{width:24px; height:24px; border-radius:50%; flex:none; display:grid; place-items:center; font-style:normal; font-size:10px; font-weight:700; color:#fff; background:var(--car)}
+.cand span{font-size:11.5px; line-height:1.25; min-width:0}
+.cand small{display:block; color:var(--ink-3); font-size:10px}
+.cand.new{animation:pop .4s ease}
+@keyframes pop{from{transform:scale(.85); opacity:.3}}
+
+/* Kitchen mock */
+.kit-ui{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:0; min-height:360px}
+.kit-ui > div{padding:14px; min-width:0}
+.kit-ui > div + div{border-left:1px solid var(--line)}
+.kit-ui h5{font-family:var(--display); font-size:15px; margin:0 0 2px}
+.kit-ui .sub{font-size:11.5px; color:var(--ink-3)}
+.scaler{margin-top:12px; padding:10px; border-radius:10px; background:color-mix(in srgb, var(--kit) 10%, var(--surface))}
+.scaler label{display:flex; justify-content:space-between; font-weight:600; font-size:12.5px}
+.scaler output{font-family:var(--mono); color:var(--kit)}
+.scaler input{width:100%; accent-color:var(--kit); margin-top:6px}
+.ing{margin-top:10px; display:flex; flex-direction:column}
+.ing div{display:flex; justify-content:space-between; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:12.5px}
+.ing div b{font-family:var(--mono); font-weight:500; font-variant-numeric:tabular-nums}
+.ing .tot{border-bottom:0; font-weight:700; padding-top:8px}
+.prep{display:flex; flex-direction:column; gap:6px; margin-top:10px}
+.prep label{display:flex; gap:8px; align-items:center; font-size:12.5px; padding:7px 8px; border-radius:8px; border:1px solid var(--line); cursor:pointer}
+.prep input{accent-color:var(--att)}
+.prep label:has(input:checked) span{text-decoration:line-through; color:var(--ink-3)}
+.stock{margin-top:12px; display:flex; flex-direction:column; gap:7px}
+.stock div{font-size:12px}
+.stock .meter{height:6px; border-radius:6px; background:var(--surface-2); margin-top:3px; overflow:hidden}
+.stock .meter i{display:block; height:100%; border-radius:6px; background:var(--att)}
+.stock .low .meter i{background:var(--stamp)}
+
+/* FEATURE MODULES */
+.modules{margin-top:48px; display:flex; flex-direction:column; border-top:2px solid var(--ink)}
+.module{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); grid-template-areas:"h s" "f f"; gap:22px 32px; padding-block:34px; border-bottom:1px solid var(--line)}
+.module-h{grid-area:h; align-self:center}
+.module .scr{grid-area:s}
+.module .feats{grid-area:f}
+.module-h .flist{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px}
+.module-h .flist span{font-size:12px; padding:3px 9px; border-radius:999px; background:color-mix(in srgb, var(--c) 10%, var(--surface)); color:var(--ink); border:1px solid color-mix(in srgb, var(--c) 25%, var(--line))}
+.st-prog{font-family:var(--mono); font-size:10px; letter-spacing:.06em; padding:2px 7px; border-radius:999px; background:color-mix(in srgb, var(--kit) 18%, transparent); color:var(--kit); margin-left:6px; vertical-align:middle; white-space:nowrap}
+
+/* MINI SCREEN (desain layar per modul) */
+.scr{background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; font-size:12.5px; min-width:0; position:relative}
+.scr-bar{display:flex; align-items:center; gap:8px; padding:9px 12px; background:color-mix(in srgb, var(--c) 9%, var(--surface-2)); border-bottom:1px solid var(--line)}
+.scr-bar i{width:8px; height:8px; border-radius:50%; background:var(--c); opacity:.7}
+.scr-bar b{font-weight:600; font-size:12.5px}
+.scr-bar small{margin-left:auto; font-family:var(--mono); font-size:10px; color:var(--ink-3)}
+.scr-body{padding:12px; display:flex; flex-direction:column; gap:10px; min-width:0}
+.s-stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(90px,1fr)); gap:8px}
+.s-stats div{border:1px solid var(--line); border-radius:9px; padding:8px 10px}
+.s-stats small{display:block; font-size:10.5px; color:var(--ink-3)}
+.s-stats b{font-family:var(--display); font-size:19px; font-variant-numeric:tabular-nums}
+.s-table{overflow-x:auto; border:1px solid var(--line); border-radius:9px}
+.s-table table{width:100%; border-collapse:collapse; min-width:420px}
+.s-table th{font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); text-align:left; padding:7px 10px; background:var(--surface-2); font-weight:500}
+.s-table td{padding:7px 10px; border-top:1px solid var(--line); white-space:nowrap; font-variant-numeric:tabular-nums}
+.s-form{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px}
+.s-form label{display:flex; flex-direction:column; gap:3px; font-size:10.5px; color:var(--ink-3); min-width:0}
+.s-form label.full{grid-column:1/-1}
+.s-form span{font-size:12.5px; color:var(--ink); border:1px solid var(--line); border-radius:7px; padding:6px 9px; background:var(--paper); overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.s-btns{display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap}
+.s-btns span{font-weight:600; font-size:12px; padding:6px 12px; border-radius:7px; border:1px solid var(--c); color:var(--c)}
+.s-btns span:last-child{background:var(--c); color:var(--surface)}
+.s-list{display:flex; flex-direction:column; border:1px solid var(--line); border-radius:9px; overflow:hidden}
+.s-list div{display:grid; grid-template-columns:28px minmax(0,1fr) auto; gap:10px; align-items:center; padding:8px 10px}
+.s-list div + div{border-top:1px solid var(--line)}
+.s-list i{width:28px; height:28px; border-radius:8px; display:grid; place-items:center; font-style:normal; font-size:10.5px; font-weight:700; color:var(--c); background:color-mix(in srgb, var(--c) 14%, transparent)}
+.s-list b{display:block; font-weight:600; font-size:12.5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.s-list small{color:var(--ink-3); font-size:11px; display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.s-chart{border:1px solid var(--line); border-radius:9px; padding:10px 10px 6px}
+.s-chart .cbars{display:flex; align-items:flex-end; gap:6px; height:80px; border-bottom:1px solid var(--line)}
+.s-chart .cbars span{flex:1; background:color-mix(in srgb, var(--c) 35%, transparent); border-radius:4px 4px 0 0}
+.s-chart .cbars span.hi{background:var(--c)}
+.s-chart .clab{display:flex; gap:6px; margin-top:4px}
+.s-chart .clab em{flex:1; text-align:center; font-style:normal; font-family:var(--mono); font-size:9.5px; color:var(--ink-3)}
+.s-chart > small{display:block; font-size:11px; color:var(--ink-2); margin-bottom:6px}
+.s-flow{display:flex; align-items:center; gap:6px; flex-wrap:wrap}
+.s-flow span{font-size:11.5px; font-weight:600; padding:6px 10px; border-radius:8px; border:1px solid var(--line); background:var(--paper)}
+.s-flow span.on{border-color:var(--c); background:color-mix(in srgb, var(--c) 12%, var(--surface)); color:var(--c)}
+.s-flow em{font-style:normal; color:var(--ink-3)}
+.s-check{display:flex; flex-direction:column; gap:6px}
+.s-check div{display:flex; gap:8px; align-items:center; padding:7px 9px; border:1px solid var(--line); border-radius:8px}
+.s-check i{width:16px; height:16px; border-radius:5px; border:2px solid var(--line); flex:none; display:grid; place-items:center; font-style:normal; font-size:10px; color:#fff}
+.s-check .y i{background:var(--att); border-color:var(--att)}
+.s-check .y span{color:var(--ink-3); text-decoration:line-through}
+.s-kan{display:grid; grid-template-columns:repeat(var(--n,4),minmax(96px,1fr)); gap:6px; overflow-x:auto}
+.s-kan > div{background:var(--surface-2); border-radius:8px; padding:6px; display:flex; flex-direction:column; gap:5px; min-height:90px}
+.s-kan > div > b{font-family:var(--mono); font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2)}
+.s-kan > div > span{background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:5px 6px; font-size:11px}
+.s-note{font-size:11px; color:var(--ink-3)}
+.module-h small{font-family:var(--mono); font-size:11.5px; color:var(--c); letter-spacing:.1em; font-weight:600}
+.module-h h3{font-size:22px; margin-top:6px}
+.module-h p{font-size:14px; color:var(--ink-2); margin-top:6px}
+.feats{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px}
+.feat{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:8px; transition:border-color .2s, transform .2s}
+.feat:hover{border-color:color-mix(in srgb, var(--c) 55%, var(--line)); transform:translateY(-2px)}
+.feat h4{font-family:var(--body); font-size:16px; font-weight:700; letter-spacing:-.01em; display:flex; gap:8px; align-items:baseline}
+.feat h4::before{content:""; width:7px; height:7px; border-radius:2px; background:var(--c); flex:none; transform:translateY(-2px)}
+.feat p{font-size:14.5px; color:var(--ink-2)}
+.feat .eff{margin-top:auto; padding-top:10px; border-top:1px dashed var(--line); font-size:13.5px; color:var(--ink)}
+.feat .eff b{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--c); margin-right:6px}
+
+/* IMPACT */
+.impact{margin-top:40px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap:0; border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--surface)}
+.impact > div{padding:22px; min-width:0}
+.impact > div + div{border-left:1px solid var(--line)}
+.impact h5{font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--c); margin:0 0 4px}
+.impact h4{font-size:20px; margin-bottom:12px}
+.impact ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px}
+.impact li{font-size:14.5px; color:var(--ink-2); padding-left:18px; position:relative}
+.impact li::before{content:""; position:absolute; left:0; top:.6em; width:8px; height:2px; background:var(--c)}
+.sell{margin-top:16px; border-radius:18px; padding:24px; background:var(--ink); color:var(--paper); display:grid; grid-template-columns:minmax(0,220px) minmax(0,1fr); gap:24px; align-items:start}
+.sell h4{font-size:24px; color:var(--paper)}
+.sell h4 small{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:color-mix(in srgb, var(--c) 70%, var(--paper)); margin-bottom:8px; font-weight:600}
+.sell ol{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 24px}
+.sell li b{display:block; font-size:16px}
+.sell li span{font-size:14px; opacity:.75}
+
+/* PROCESS */
+.process{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:0; counter-reset:step; border:1px solid var(--line); border-radius:18px; background:var(--surface); overflow:hidden}
+.process div{padding:20px; position:relative; counter-increment:step; min-width:0}
+.process div + div{border-left:1px solid var(--line)}
+.process div::before{content:counter(step, decimal-leading-zero); font-family:var(--mono); font-size:12px; color:var(--hris); font-weight:600}
+.process b{display:block; font-family:var(--display); font-size:18px; margin-top:8px}
+.process p{font-size:14px; color:var(--ink-2); margin-top:6px}
+.process small{display:block; font-family:var(--mono); font-size:11px; color:var(--ink-3); margin-top:10px}
+
+/* OTHER PROJECTS */
+.others{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+.other{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:20px; display:flex; flex-direction:column; gap:10px}
+.other h4{font-size:19px}
+.other p{font-size:14.5px; color:var(--ink-2)}
+.other .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto}
+
+/* EXPERIENCE */
+.xp{display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:48px}
+.timeline{list-style:none; margin:0; padding:0; position:relative}
+.timeline::before{content:""; position:absolute; left:7px; top:8px; bottom:8px; width:2px; background:var(--line)}
+.timeline li{position:relative; padding:0 0 28px 34px}
+.timeline li::before{content:""; position:absolute; left:0; top:6px; width:16px; height:16px; border-radius:50%; background:var(--paper); border:3px solid var(--ink-3)}
+.timeline li.now::before{border-color:var(--att); background:var(--att); box-shadow:0 0 0 5px color-mix(in srgb, var(--att) 20%, transparent)}
+.timeline .when{font-family:var(--mono); font-size:12px; color:var(--ink-3)}
+.timeline h4{font-size:19px; margin-top:4px}
+.timeline .org{color:var(--ink-2); font-size:14.5px}
+.timeline ul{margin:8px 0 0; padding-left:18px; color:var(--ink-2); font-size:14.5px}
+.timeline ul li{padding:0; margin-bottom:3px}
+.timeline ul li::before{display:none}
+.side h3{font-size:22px; margin-bottom:14px}
+.awards{list-style:none; margin:0 0 32px; padding:0; display:flex; flex-direction:column; gap:10px}
+.awards li{display:grid; grid-template-columns:48px minmax(0,1fr); gap:12px; align-items:center; padding:12px; border:1px solid var(--line); border-radius:12px; background:var(--surface)}
+.awards .medal{width:48px; height:48px; border-radius:12px; display:grid; place-items:center; font-family:var(--display); font-weight:800; font-size:17px; background:color-mix(in srgb, var(--kit) 18%, transparent); color:var(--kit)}
+.awards b{display:block; font-size:14.5px}
+.awards small{color:var(--ink-3); font-family:var(--mono); font-size:11.5px}
+.lead-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; font-size:14.5px}
+.lead-list li{border-bottom:1px dashed var(--line); padding-bottom:10px}
+.lead-list b{display:block}
+.lead-list span{color:var(--ink-2)}
+
+/* SKILLS */
+.skills{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
+.skill{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:20px}
+.skill h4{font-size:17px; margin-bottom:12px}
+.skill div{display:flex; flex-wrap:wrap; gap:6px}
+
+/* CONTACT */
+.contact{background:var(--ink); color:var(--paper); border-radius:26px; padding:48px; display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:32px; align-items:center}
+.contact h2{font-size:clamp(30px,4.5vw,52px); font-weight:800; color:var(--paper)}
+.contact p{opacity:.75; margin-top:14px; max-width:46ch}
+.links{display:flex; flex-direction:column; gap:10px}
+.links > *{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 16px; border-radius:12px; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); text-decoration:none; color:var(--paper); min-width:0}
+.links small{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; opacity:.6; display:block}
+.links b{font-weight:600; overflow-wrap:anywhere}
+.links button{font:600 12.5px var(--body); background:var(--paper); color:var(--ink); border:0; border-radius:8px; padding:7px 12px; cursor:pointer; flex:none}
+.links a:hover{border-color:var(--paper)}
+footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
+
+/* PRODUCTIVITY: before / after */
+.prod{background:linear-gradient(180deg, var(--paper), var(--surface-2) 40%, var(--paper))}
+.ba{display:grid; grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr); gap:0; align-items:stretch}
+.ba-side{border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:18px; min-width:0}
+.ba-side.before{background:var(--surface); border:1px dashed color-mix(in srgb, var(--warn) 45%, var(--line))}
+.ba-side.after{background:var(--brand); color:#fff; box-shadow:var(--shadow)}
+:root[data-theme="dark"] .ba-side.after{background:#13254A}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ba-side.after{background:#13254A}}
+.ba-tag{align-self:flex-start; font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; border-radius:999px; background:color-mix(in srgb, var(--warn) 14%, transparent); color:var(--warn); font-weight:600}
+.after .ba-tag{background:rgba(255,255,255,.14); color:#fff}
+.stack{position:relative; height:190px; margin:4px auto 0; width:min(260px,90%)}
+.sheet{position:absolute; inset:0; background:#FBFAF6; border:1px solid #D9D4C7; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,.08); color:#2b2b2b}
+.sheet.s5{transform:rotate(-7deg) translate(-12px,10px)} .sheet.s4{transform:rotate(5deg) translate(10px,6px)}
+.sheet.s3{transform:rotate(-3deg) translate(-4px,4px)} .sheet.s2{transform:rotate(2.5deg) translate(4px,2px)}
+.sheet.s1{padding:16px; display:flex; flex-direction:column; gap:8px; animation:shuffle 5s ease-in-out infinite}
+@keyframes shuffle{50%{transform:rotate(-1.5deg) translateY(-3px)}}
+.sheet.s1 b{font-family:var(--mono); font-size:11px; letter-spacing:.08em}
+.sheet.s1 i{height:6px; border-radius:3px; background:#E3DED2}
+.sheet.s1 i.short{width:60%}
+.sheet .sign{margin-top:auto; display:grid; grid-template-columns:repeat(3,1fr); gap:6px}
+.sheet .sign span{font-size:9.5px; text-align:center; border-top:1px solid #9A9384; padding-top:3px; color:#6b6457}
+.sheet .sign span:first-child::before{content:"✓"; display:block; color:#B4235A; font-size:16px; transform:rotate(-12deg)}
+.device{background:var(--surface); color:var(--ink); border-radius:16px; padding:16px; display:flex; flex-direction:column; gap:10px; width:min(300px,100%); margin:4px auto 0; box-shadow:0 18px 40px -18px rgba(0,0,0,.6); animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-5px)}}
+.dv-top{display:flex; justify-content:space-between; align-items:center}
+.dv-top b{font-size:15px}
+.dv-row{display:flex; justify-content:space-between; font-size:13px; padding:6px 0; border-bottom:1px dashed var(--line)}
+.dv-row span{color:var(--ink-3)}
+.dv-flow{display:flex; gap:6px}
+.dv-flow .d{flex:1; text-align:center; font-size:11.5px; font-weight:600; padding:6px 0; border-radius:8px; background:color-mix(in srgb, var(--att) 14%, transparent); color:var(--att)}
+.dv-foot{font-family:var(--mono); font-size:10.5px; color:var(--ink-3)}
+.ba-steps{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px}
+.ba-steps li{display:grid; grid-template-columns:22px minmax(0,1fr); column-gap:10px; font-size:14px}
+.ba-steps li::before{content:"✕"; grid-row:span 2; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font-size:11px; font-weight:700; background:color-mix(in srgb, var(--warn) 14%, transparent); color:var(--warn)}
+.after .ba-steps li::before{content:"✓"; background:rgba(255,255,255,.16); color:#7FF0C9}
+.ba-steps b{font-weight:700}
+.ba-steps span{color:var(--ink-3); font-size:13px}
+.after .ba-steps span{color:rgba(255,255,255,.7)}
+.ba-time{margin-top:auto; display:flex; justify-content:space-between; align-items:baseline; padding-top:14px; border-top:1px solid var(--line)}
+.after .ba-time{border-top-color:rgba(255,255,255,.2)}
+.ba-time span{font-size:13px; color:var(--ink-3)}
+.after .ba-time span{color:rgba(255,255,255,.7)}
+.ba-time b{font-size:30px; font-weight:800; letter-spacing:-.02em}
+.before .ba-time b{color:var(--warn)}
+.after .ba-time b{color:#7FF0C9}
+.ba-arrow{display:grid; place-items:center; position:relative}
+.ba-arrow::before{content:""; position:absolute; top:50%; left:6px; right:6px; height:2px; background:repeating-linear-gradient(90deg, var(--ink-3) 0 6px, transparent 6px 12px); animation:flow 1s linear infinite}
+.ba-arrow span{position:relative; writing-mode:vertical-rl; transform:rotate(180deg); font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; background:var(--paper); padding:10px 4px; color:var(--ink-2); border:1px solid var(--line); border-radius:999px}
+.prod-filter{display:flex; flex-wrap:wrap; gap:6px; margin:36px 0 14px}
+.prod-filter button{font:600 13.5px var(--body); padding:8px 14px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--ink-2); cursor:pointer}
+.prod-filter button.on{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+.prod-list{display:flex; flex-direction:column; gap:10px}
+.prow{--c:var(--hris); display:grid; grid-template-columns:minmax(0,260px) minmax(0,1fr) 92px; gap:20px; align-items:center; padding:16px 18px; background:var(--surface); border:1px solid var(--line); border-radius:14px}
+.prow[data-p="att"]{--c:var(--att)} .prow[data-p="car"]{--c:var(--car)} .prow[data-p="kit"]{--c:var(--kit)}
+.prow[hidden]{display:none}
+.pr-h small{display:inline-block; font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; color:var(--c); font-weight:600; text-transform:uppercase}
+.pr-h b{display:block; font-size:15.5px; line-height:1.35}
+.pr-bars{display:flex; flex-direction:column; gap:7px; min-width:0}
+.pbar{display:grid; grid-template-columns:minmax(0,1fr) 150px; gap:12px; align-items:center}
+.pbar .tr{height:12px; border-radius:6px; background:var(--surface-2); overflow:hidden}
+.pbar .tr i{display:block; height:100%; border-radius:6px; transform-origin:left; animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.pbar.man .tr i{background:repeating-linear-gradient(135deg, color-mix(in srgb, var(--warn) 55%, transparent) 0 6px, color-mix(in srgb, var(--warn) 35%, transparent) 6px 12px)}
+.pbar.dig .tr i{background:var(--c); min-width:8px}
+.pbar span{font-size:12.5px; color:var(--ink-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.pbar span b{color:var(--ink)}
+.pr-x{text-align:right}
+.pr-x b{display:block; font-size:24px; font-weight:800; color:var(--c); letter-spacing:-.02em; font-variant-numeric:tabular-nums}
+.pr-x small{font-size:11.5px; color:var(--ink-3)}
+.prod-sum{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin-top:22px}
+.prod-sum div{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px}
+.prod-sum b{display:block; font-size:clamp(26px,3vw,36px); font-weight:800; letter-spacing:-.03em; color:var(--brand); font-variant-numeric:tabular-nums}
+.prod-sum span{font-size:13.5px; color:var(--ink-2)}
+.prod-note{font-size:12.5px; color:var(--ink-3); margin-top:14px}
+.pp-head{margin:48px 0 16px}
+.pp-head h3{font-size:clamp(24px,3vw,32px); font-weight:800; margin-top:6px}
+.pp-head + .prod-list + .impact{margin-top:22px}
+
+/* PRODUCT CARDS (home) */
+.pcards{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px}
+.pcard{--c:var(--hris); display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line); border-radius:16px; overflow:hidden; text-decoration:none; color:inherit; box-shadow:var(--shadow); transition:transform .2s, border-color .2s}
+.pcard:hover{transform:translateY(-3px); border-color:var(--c)}
+.pcard[data-p="att"]{--c:var(--att)} .pcard[data-p="car"]{--c:var(--car)} .pcard[data-p="kit"]{--c:var(--kit)}
+.pcard .ph{padding:22px 22px 0; display:flex; flex-direction:column; gap:10px}
+.pcard .sub{font-family:var(--mono); font-size:11.5px; color:var(--c); letter-spacing:.04em}
+.pcard h3{font-size:24px; font-weight:800}
+.pcard p{color:var(--ink-2); font-size:15px}
+.pcard .pm{display:flex; gap:22px; padding:16px 22px; margin-top:16px; border-top:1px solid var(--line); background:color-mix(in srgb, var(--c) 5%, var(--surface))}
+.pcard .pm div b{display:block; font-size:22px; font-weight:800; color:var(--c); font-variant-numeric:tabular-nums}
+.pcard .pm div span{font-size:12px; color:var(--ink-2)}
+.pcard .pm .go{margin-left:auto; align-self:center; font-weight:700; font-size:14px; color:var(--c); white-space:nowrap}
+.pcard .hl3{display:flex; flex-wrap:wrap; gap:6px}
+
+/* PROJECT PAGE */
+.crumb{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-3); padding-top:28px}
+.crumb a{color:var(--ink-2); text-decoration:none; font-weight:600}
+.crumb a:hover{color:var(--ink)}
+.case{border-top:0; padding-top:20px}
+.pbody{display:grid; grid-template-columns:220px minmax(0,1fr); gap:40px; margin-top:44px; align-items:start}
+.toc{position:sticky; top:84px; display:flex; flex-direction:column; gap:2px; border-left:2px solid var(--line); padding-left:2px}
+.toc > small{font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--ink-3); padding:0 12px 8px}
+.toc button{all:unset; cursor:pointer; padding:7px 12px; border-radius:0 8px 8px 0; font-size:13.5px; color:var(--ink-2); display:flex; justify-content:space-between; gap:8px; margin-left:-4px; border-left:2px solid transparent}
+.toc button span{font-family:var(--mono); font-size:11px; color:var(--ink-3)}
+.toc button:hover{color:var(--ink); background:var(--surface-2)}
+.toc button.on{color:var(--c); border-left-color:var(--c); font-weight:700; background:color-mix(in srgb, var(--c) 7%, transparent)}
+.toc button:focus-visible{outline:2px solid var(--c)}
+.pbody .modules{margin-top:0}
+.pnext{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:40px}
+.pnext a{display:flex; flex-direction:column; gap:4px; padding:18px 20px; border:1px solid var(--line); border-radius:12px; background:var(--surface); text-decoration:none}
+.pnext a:last-child{text-align:right}
+.pnext small{font-size:12px; color:var(--ink-3)}
+.pnext b{font-size:17px}
+.pnext a:hover{border-color:var(--ink-3)}
+.view[hidden]{display:none !important}
+.nav ul a.on{color:var(--ink); background:var(--surface-2)}
+
+/* RESPONSIVE */
+@media (max-width:1000px){
+  .hero .wrap, .case-top, .about, .xp, .contact{grid-template-columns:minmax(0,1fr)}
+  .badge-area{order:-1}
+  .idcard{transform:none; animation:none}
+  .module{grid-template-columns:minmax(0,1fr); grid-template-areas:"h" "s" "f"; gap:16px}
+  .pbody{grid-template-columns:minmax(0,1fr); gap:20px}
+  .toc{position:static; flex-direction:row; overflow-x:auto; border-left:0; border-bottom:1px solid var(--line); padding:0 0 6px; gap:4px}
+  .toc > small{display:none}
+  .toc button{white-space:nowrap; border-left:0; border-radius:8px; margin-left:0}
+  .toc button.on{border-left:0}
+  .pcards{grid-template-columns:minmax(0,1fr)}
+  .ba{grid-template-columns:minmax(0,1fr); gap:0}
+  .ba-arrow{height:56px}
+  .ba-arrow::before{top:6px; bottom:6px; left:50%; right:auto; width:2px; height:auto; background:repeating-linear-gradient(180deg, var(--ink-3) 0 6px, transparent 6px 12px)}
+  .ba-arrow span{writing-mode:horizontal-tb; transform:none; padding:4px 12px}
+  .prow{grid-template-columns:minmax(0,1fr) 80px; gap:12px}
+  .pr-bars{grid-column:1/-1; grid-row:2}
+  .prod-sum{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pbar{grid-template-columns:minmax(0,1fr) 128px}
+  .process{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .process div + div{border-left:0}
+  .process div{border-bottom:1px solid var(--line)}
+  .skills, .eco-legend{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .others{grid-template-columns:minmax(0,1fr)}
+  .sec-head{grid-template-columns:minmax(0,1fr)}
+  .sell{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  .feats, .impact, .sell ol, .skills, .eco-legend{grid-template-columns:minmax(0,1fr)}
+  .impact > div + div{border-left:0; border-top:1px solid var(--line)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .att-wrap{grid-template-columns:minmax(0,1fr)}
+  .phone{margin:0 auto}
+  .hris-ui{grid-template-columns:minmax(0,1fr)}
+  .hris-ui aside{display:none}
+  .kit-ui{grid-template-columns:minmax(0,1fr)}
+  .kit-ui > div + div{border-left:0; border-top:1px solid var(--line)}
+  .jobs{grid-template-columns:minmax(0,1fr)}
+  .process{grid-template-columns:minmax(0,1fr)}
+  .contact{padding:28px 22px}
+  section.block{padding-block:52px}
+  .fact{grid-template-columns:minmax(0,1fr); gap:2px}
+}
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{animation:none !important; transition:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<style>
+.case[data-p="wat"], .pcard[data-p="wat"], .prow[data-p="wat"]{--c:var(--wat)}
+.pcard:first-child{grid-column:1/-1}
+.pcard:first-child .ph h3{font-size:28px}
+.eco .ext{fill:var(--surface); stroke:var(--ink-3); stroke-dasharray:5 4; stroke-width:1.5}
+
+/* Asisten Dapur CRM mock */
+.crm-row{all:unset; box-sizing:border-box; cursor:pointer; display:grid !important; grid-template-columns:minmax(0,1fr) auto; gap:8px; align-items:center; width:100%; padding:8px !important; border-radius:8px; border-bottom:1px dashed var(--line)}
+.crm-row:hover{background:var(--surface-2)}
+.crm-row.sel{background:color-mix(in srgb, var(--kit) 12%, var(--surface)); outline:1px solid color-mix(in srgb, var(--kit) 50%, transparent)}
+.crm-row span{font-size:12.5px; min-width:0}
+.crm-row span small{display:block; color:var(--ink-3); font-size:11px}
+.crm-row:focus-visible{outline:2px solid var(--kit)}
+.crm-score{font-family:var(--mono); font-weight:600; font-size:12px; padding:2px 8px; border-radius:999px}
+.crm-sel{width:100%; margin-top:6px; font:500 12.5px var(--body); padding:6px 8px; border-radius:7px; border:1px solid var(--line); background:var(--surface); color:var(--ink)}
+.crm-cap{margin-top:10px !important; font-size:12.5px; line-height:1.5; padding:10px 12px; border-radius:10px 10px 10px 2px; background:color-mix(in srgb, var(--att) 12%, var(--surface)); border:1px solid color-mix(in srgb, var(--att) 25%, var(--line)); color:var(--ink)}
+.crm-btn{width:100%; margin-top:10px; font-size:13px; padding:10px}
+#crm-funnel{margin-top:14px}
+
+/* Waterynation mock */
+.wat-don{display:grid; grid-template-columns:84px minmax(0,1fr); gap:12px; align-items:center; border:1px solid var(--line); border-radius:12px; padding:12px}
+.wat-don b{display:block; font-size:13.5px}
+.wat-don small{display:block; color:var(--ink-2); font-size:11.5px; margin-top:2px}
+.qris{width:84px; height:84px; border-radius:8px; border:6px solid #fff; box-shadow:0 0 0 1px var(--line);
+  background:
+    conic-gradient(from 90deg at 30% 30%, #111 25%, transparent 0) 0 0/14px 14px,
+    repeating-linear-gradient(45deg, #111 0 3px, #fff 3px 7px)}
+.wat-amt{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px}
+.wat-amt span{font-size:11.5px; font-weight:600; padding:4px 9px; border-radius:7px; border:1px solid var(--line)}
+.wat-amt span.on{border-color:var(--wat); color:var(--wat); background:color-mix(in srgb, var(--wat) 10%, transparent)}
+@media (max-width:720px){ .pcard:first-child .ph h3{font-size:24px} }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Kulit mockup yang meniru UI asli tiap aplikasi */
+.sk{--c:var(--skc); --inter:"Inter", system-ui, sans-serif; font-family:var(--inter); padding:0}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .sk{--c:var(--skd)} }
+:root[data-theme="dark"] .sk{--c:var(--skd)}
+.sk .scr-body{padding:0; gap:0}
+.sk-top{display:flex; align-items:center; gap:10px; padding:8px 12px; background:var(--surface); border-bottom:1px solid var(--line); min-width:0}
+.sk-logo{width:22px; height:22px; border-radius:6px; background:var(--c); color:#fff; display:grid; place-items:center; font-size:10px; font-weight:700; flex:none}
+.sk-brand{font-weight:700; font-size:13px; white-space:nowrap}
+.sk-search{flex:1; min-width:0; max-width:220px; margin-left:auto; height:24px; border-radius:7px; border:1px solid var(--line); background:var(--paper); font-size:10.5px; color:var(--ink-3); padding:4px 8px; white-space:nowrap; overflow:hidden}
+.sk-ava{width:24px; height:24px; border-radius:50%; background:color-mix(in srgb, var(--c) 25%, var(--surface-2)); color:var(--c); font-size:9.5px; font-weight:700; display:grid; place-items:center; flex:none}
+.sk-wrap{display:grid; grid-template-columns:132px minmax(0,1fr); min-height:220px}
+.sk-side{border-right:1px solid var(--line); padding:10px 8px; display:flex; flex-direction:column; gap:1px; background:var(--surface); min-width:0}
+.sk-side small{font-size:9.5px; font-weight:600; letter-spacing:.04em; color:var(--ink-3); padding:4px 8px; text-transform:uppercase}
+.sk-side span{font-size:11.5px; padding:5px 8px; border-radius:7px; color:var(--ink-2); display:flex; gap:7px; align-items:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.sk-side span::before{content:""; width:10px; height:10px; border-radius:3px; border:1.5px solid currentColor; opacity:.55; flex:none}
+.sk-side span.on{background:color-mix(in srgb, var(--c) 12%, transparent); color:var(--c); font-weight:600}
+.sk-side span.on::before{opacity:1; background:currentColor}
+.sk-main{padding:12px; display:flex; flex-direction:column; gap:10px; background:color-mix(in srgb, var(--surface-2) 55%, var(--surface)); min-width:0}
+.sk-head small{display:block; font-size:10.5px; color:var(--ink-3)}
+.sk-head b{font-size:16px; font-weight:700; letter-spacing:-.01em}
+.sk .s-table, .sk .s-list, .sk .s-stats div, .sk .s-chart, .sk .s-check div{background:var(--surface); border-radius:10px; box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.sk .s-table th{font-family:var(--inter); text-transform:none; letter-spacing:0; font-size:11px; font-weight:600; color:var(--ink)}
+.sk .s-stats small{font-size:10.5px}
+.sk .pill{border-radius:6px; font-family:var(--inter)}
+.sk .s-btns span{border-radius:8px}
+.sk .s-btns span:last-child{background:var(--c); border-color:var(--c); color:#fff}
+.sk .s-flow span{border-radius:8px; font-family:var(--inter)}
+.sk .s-form span{background:var(--surface)}
+.sk .s-note{font-family:var(--inter)}
+
+/* Filament (HRIS, Recruitment staff, Absensi admin): tab aktif berwarna utama */
+.sk-filament .sk-tabs{display:flex; gap:4px; flex-wrap:wrap}
+.sk-filament .sk-tabs span{font-size:11px; font-weight:500; padding:4px 9px; border-radius:7px; color:var(--ink-2); background:var(--surface); border:1px solid var(--line)}
+.sk-filament .sk-tabs span.on{background:var(--c); border-color:var(--c); color:#fff; font-weight:600}
+
+/* Sidebar gelap (Asisten Dapur) */
+.sk-dark .sk-side{background:#0F221C; border-right-color:#0F221C}
+.sk-dark .sk-side small{color:#7E9690}
+.sk-dark .sk-side span{color:#DCE7E2}
+.sk-dark .sk-side span.on{background:#173A30; color:#fff}
+.sk-dark .sk-top{background:#0F221C; border-bottom-color:#173A30; color:#DCE7E2}
+.sk-dark .sk-search{background:#173A30; border-color:#173A30; color:#7E9690}
+
+/* Aplikasi karyawan mobile (Absensi /absen) */
+.sk-mobile{max-width:330px; width:100%; justify-self:center; margin:0 auto; border-radius:26px; border:6px solid var(--ink); overflow:hidden}
+.sk-mob-head{padding:14px 14px 18px; color:#fff; background:linear-gradient(140deg, #1e3a8a 0%, #1d4ed8 55%, #2563eb 100%)}
+.sk-mob-head small{display:block; font-size:10.5px; opacity:.8}
+.sk-mob-head b{font-size:15px}
+.sk-mobile .sk-main{background:var(--paper); margin-top:-8px; border-radius:14px 14px 0 0; position:relative}
+.sk-tabbar{display:flex; justify-content:space-around; padding:7px 4px 9px; border-top:1px solid var(--line); background:var(--surface)}
+.sk-tabbar span{font-size:9.5px; color:var(--ink-3); display:flex; flex-direction:column; align-items:center; gap:3px}
+.sk-tabbar span::before{content:""; width:14px; height:14px; border-radius:4px; border:1.5px solid currentColor}
+.sk-tabbar span.on{color:var(--c); font-weight:600}
+.sk-tabbar span.on::before{background:currentColor}
+
+/* Situs publik (Karir, Waterynation) */
+.sk-pub .sk-top{gap:12px}
+.sk-pub .sk-menu{display:flex; gap:10px; margin-left:auto; overflow:hidden}
+.sk-pub .sk-menu span{font-size:11px; color:var(--ink-2); white-space:nowrap}
+.sk-pub .sk-menu span.on{color:var(--c); font-weight:700}
+.sk-pub .sk-cta{font-size:11px; font-weight:700; padding:5px 10px; border-radius:8px; background:var(--ska, var(--c)); color:#fff; white-space:nowrap; flex:none}
+.sk-pub .sk-main{background:var(--paper)}
+.sk-pub .sk-head{padding:12px; margin:-12px -12px 0; background:color-mix(in srgb, var(--c) 92%, #000); color:#fff}
+.sk-pub .sk-head small{color:rgba(255,255,255,.75)}
+
+@media (max-width:560px){
+  .sk-wrap{grid-template-columns:minmax(0,1fr)}
+  .sk-side{display:none}
+  .sk-pub .sk-menu{display:none}
+  .sk-search{display:none}
+}
+</style>
+<style>
+.case[data-p="hris"] .mock{--hris:#D97706}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .case[data-p="hris"] .mock{--hris:#FBBF24} }
+:root[data-theme="dark"] .case[data-p="hris"] .mock{--hris:#FBBF24}
+</style>
+<style>
+.module{grid-template-columns:minmax(0,1fr) !important; grid-template-areas:"h" "s" "f" !important; gap:18px !important}
+.module .scr.sk:not(.sk-mobile){max-width:900px; width:100%}
+.module-h p{max-width:70ch}
+</style>
+
+<nav class="nav" aria-label="Navigasi utama">
+  <div class="wrap">
+    <a class="brand" href="#home"><i>WN</i>Wirda Nissa</a>
+    <ul>
+      <li class="opt"><a href="#tentang">Tentang</a></li>
+      <li><a href="#produktivitas">Dampak</a></li>
+      <li><a href="#proyek" data-nav="proyek">Proyek</a></li>
+      <li class="opt"><a href="#pengalaman">Pengalaman</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="view" data-view="home">
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="status"><b></b>Membangun HRIS di PT. Suri Nusantara Jaya</span>
+      <h1>Saya mengubah tumpukan dokumen menjadi <span class="hl">sistem yang bekerja sendiri.</span></h1>
+      <p class="lead">Saya Wirda Nissa, Organization Development &amp; HRIS Developer. Saya menganalisis proses bisnis, merancang alurnya, lalu membangun aplikasinya dengan Laravel dan Google Apps Script, sampai dipakai setiap hari oleh tim HR, rekrutmen, dan dapur.</p>
+      <div class="chips">
+        <span class="tag">Laravel</span><span class="tag">Google Apps Script</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">Agile Scrum</span><span class="tag">FSD · TSD · BRD</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#proyek">Lihat 5 proyek unggulan</a>
+        <a class="btn ghost" href="#produktivitas">Lihat dampaknya</a>
+      </div>
+      <div class="stats">
+        <div><strong id="stat-feat">0</strong><span>fitur dibangun end-to-end</span></div>
+        <div><strong>5</strong><span>proyek unggulan end-to-end</span></div>
+        <div><strong id="stat-hours">0</strong><span>jam kerja dihemat / bulan*</span></div>
+        <div><strong>3,68</strong><span>IPK D3 Manajemen Informatika</span></div>
+      </div>
+    </div>
+    <div class="badge-area" aria-label="Kartu profil">
+      <div class="idcard">
+        <div class="top"><small>EMPLOYEE PROFILE</small><span class="slot"></span></div>
+        <div class="body">
+          <div class="avatar">WN</div>
+          <h3>Wirda Nissa</h3>
+          <p class="role">Organization Development &amp; HRIS Developer</p>
+          <dl>
+            <dt>Perusahaan</dt><dd>PT. Suri Nusantara Jaya</dd>
+            <dt>Fokus</dt><dd>HRIS · Automation · Analytics</dd>
+            <dt>Lokasi</dt><dd>Jakarta Selatan</dd>
+            <dt>Sejak</dt><dd>September 2025</dd>
+          </dl>
+          <div class="barcode" aria-hidden="true"></div>
+          <small>OD · HRIS · 2025 · 09</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="block" id="tentang">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Sekilas tentang saya</span><h2>Developer yang paham proses bisnis, bukan hanya kode.</h2></div>
+      <p>Latar belakang saya menggabungkan pengembangan software, analisis sistem, dokumentasi teknis, dan koordinasi proyek. Kombinasi ini yang membuat sistem yang saya bangun benar-benar dipakai.</p>
+    </div>
+    <div class="about">
+      <div class="story">
+        <p>Saya membangun aplikasi web sepanjang <strong>Software Development Life Cycle</strong>, mulai dari menggali kebutuhan pengguna, menulis BRD dan FSD, merancang ERD dan flowchart, menulis kode backend, menguji, merilis, hingga melatih pengguna.</p>
+        <p>Di PT. Suri Nusantara Jaya saya memegang dua peran sekaligus: <strong>Organization Development</strong> yang memahami kebutuhan SDM dan <strong>HRIS Developer</strong> yang menerjemahkannya menjadi sistem. Hasilnya adalah HRIS, absensi, career site, dashboard workforce planning, dan aplikasi operasional seperti Asisten Dapur.</p>
+        <p>Sebelumnya saya bekerja sebagai IT Support di Monex Investindo Futures (dokumentasi ISO 27001), Tech Writer dan Backend Developer di Solusi Eksplorasi Rembulan Utama, serta Scrum Master di program MSIB Infinite Learning.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><span class="k">Pendidikan</span><span class="v">D3 Manajemen Informatika, Politeknik Negeri Padang<small>2022–2026 · IPK 3,68 / 4,00</small></span></div>
+        <div class="fact"><span class="k">Peran kini</span><span class="v">OD &amp; HRIS Developer<small>PT. Suri Nusantara Jaya · Sep 2025–sekarang</small></span></div>
+        <div class="fact"><span class="k">Metodologi</span><span class="v">Agile Scrum &amp; Waterfall<small>Sprint planning, review, retrospective, backlog</small></span></div>
+        <div class="fact"><span class="k">Program</span><span class="v">MSIB Batch 6 · PMM Batch 3 · PKM-PM Vokasi 2024<small>Research Assistant, Interactive Tsunami Education</small></span></div>
+        <div class="fact"><span class="k">Kekuatan</span><span class="v">Business process → sistem jadi<small>Analisis, desain alur, development, dokumentasi, stakeholder</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block prod" id="produktivitas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Dampak produktivitas</span><h2>Sebelum dan sesudah digitalisasi.</h2></div>
+      <p>Setiap sistem menggantikan pekerjaan yang dulu bergantung pada kertas, tanda tangan basah, chat, dan rekap Excel. Inilah perbandingan waktu kerja untuk proses yang paling sering dijalankan.</p>
+    </div>
+
+    <div class="ba">
+      <div class="ba-side before">
+        <span class="ba-tag">Cara lama · manual</span>
+        <div class="stack" aria-hidden="true">
+          <div class="sheet s5"></div><div class="sheet s4"></div><div class="sheet s3"></div><div class="sheet s2"></div>
+          <div class="sheet s1"><b>FORM PENGAJUAN CUTI</b><i></i><i></i><i class="short"></i><div class="sign"><span>Atasan</span><span>Manajer</span><span>HRD</span></div></div>
+        </div>
+        <ul class="ba-steps">
+          <li><b>Isi form kertas</b><span>diantar ke meja atasan</span></li>
+          <li><b>Tunggu 3 tanda tangan</b><span>sering tertahan karena atasan dinas</span></li>
+          <li><b>Input ulang ke Excel</b><span>saldo cuti dihitung manual</span></li>
+          <li><b>Arsip di lemari</b><span>sulit dicari saat audit</span></li>
+        </ul>
+        <div class="ba-time"><span>Waktu proses</span><b>2–3 hari</b></div>
+      </div>
+      <div class="ba-arrow" aria-hidden="true"><span>Digitalisasi</span></div>
+      <div class="ba-side after">
+        <span class="ba-tag">Dengan sistem saya</span>
+        <div class="device" aria-hidden="true">
+          <div class="dv-top"><b>Pengajuan Cuti</b><span class="pill ok">Disetujui</span></div>
+          <div class="dv-row"><span>Jenis</span><b>Cuti tahunan · 3 hari</b></div>
+          <div class="dv-row"><span>Sisa saldo</span><b>9 → 6 hari</b></div>
+          <div class="dv-flow"><span class="d">Atasan ✓</span><span class="d">Manajer ✓</span><span class="d">HR ✓</span></div>
+          <div class="dv-foot">Notifikasi email terkirim · 09:14</div>
+        </div>
+        <ul class="ba-steps">
+          <li><b>Ajukan dari ponsel</b><span>lampiran foto langsung terunggah</span></li>
+          <li><b>Approval otomatis berjenjang</b><span>notifikasi ke atasan detik itu juga</span></li>
+          <li><b>Saldo terpotong otomatis</b><span>tanpa input ulang</span></li>
+          <li><b>Tersimpan digital</b><span>dicari dalam hitungan detik</span></li>
+        </ul>
+        <div class="ba-time"><span>Waktu proses</span><b>± 10 menit</b></div>
+      </div>
+    </div>
+
+    <div class="prod-filter" role="tablist" aria-label="Filter sistem">
+      <button type="button" class="on" data-f="all">Semua sistem</button>
+      <button type="button" data-f="hris">HRIS</button>
+      <button type="button" data-f="att">Attendance</button>
+      <button type="button" data-f="car">Career Site</button>
+      <button type="button" data-f="kit">Asisten Dapur</button>
+      <button type="button" data-f="wat">Waterynation</button>
+    </div>
+    <div class="prod-list" id="prod-home"></div>
+    <div class="prod-sum" id="prod-sum"></div>
+    <p class="prod-note">* Estimasi berdasarkan alur kerja sebelum dan sesudah sistem diterapkan, dihitung dengan asumsi 1 hari kerja = 8 jam.</p>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Arsitektur ekosistem</span><h2>Ekosistem SDM yang saling terhubung.</h2></div>
+      <p>PTK di HRIS menjadi lowongan di Career Site, dan kandidat yang diterima langsung menjadi karyawan. Aplikasi Attendance menarik data karyawan dari HRIS setiap jam dan mengirim status kehadiran harian kembali. WLA menghitung kebutuhan tenaga kerja, sementara karyawan baru, rotasi, dan absensi diekspor ke Talenta untuk payroll.</p>
+    </div>
+    <div class="eco">
+      <svg viewBox="0 0 900 400" role="img" aria-label="Diagram alur data antara Career Site, HRIS Core, Attendance, Asisten Dapur, dan WLA Dashboard">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="mk"/></marker>
+        </defs>
+        <style>.mk{fill:var(--ink-3)}</style>
+        <path class="link" d="M202 180 L346 180" style="stroke:var(--car)" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <path class="link" d="M574 140 C640 140 640 70 696 70" style="stroke:var(--att)" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <path class="link" d="M574 220 C640 220 640 320 696 320" style="stroke:var(--ink-3)" marker-end="url(#ah)"/>
+        <path class="link" d="M460 254 L460 316" style="stroke:var(--hris)" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <rect class="node" x="20" y="140" width="180" height="80" rx="14"/>
+        <rect x="20" y="140" width="6" height="80" rx="3" style="fill:var(--car)"/>
+        <text class="t" x="110" y="175" text-anchor="middle">Career Site</text>
+        <text class="s" x="110" y="198" text-anchor="middle">lowongan · seleksi</text>
+        <rect class="core" x="350" y="105" width="220" height="148" rx="18"/>
+        <text class="core-t" x="460" y="165" text-anchor="middle">HRIS Core</text>
+        <text class="core-s" x="460" y="190" text-anchor="middle">karyawan · PTK · PKWT</text>
+        <text class="core-s" x="460" y="210" text-anchor="middle">rotasi · org chart</text>
+        <rect class="node" x="700" y="30" width="180" height="80" rx="14"/>
+        <rect x="700" y="30" width="6" height="80" rx="3" style="fill:var(--att)"/>
+        <text class="t" x="790" y="65" text-anchor="middle">Attendance</text>
+        <text class="s" x="790" y="88" text-anchor="middle">wajah · shift · payroll</text>
+        <rect class="ext" x="700" y="280" width="180" height="80" rx="14"/>
+        <text class="t" x="790" y="315" text-anchor="middle">Talenta</text>
+        <text class="s" x="790" y="338" text-anchor="middle">payroll eksternal</text>
+        <rect class="node" x="360" y="320" width="200" height="66" rx="14"/>
+        <text class="t" x="460" y="349" text-anchor="middle" style="font-size:17px">WLA Dashboard</text>
+        <text class="s" x="460" y="370" text-anchor="middle">FTE · workforce plan</text>
+        <rect class="pill" x="224" y="146" width="102" height="22" rx="11"/><text class="pt" x="275" y="161" text-anchor="middle">PTK ⇄ karyawan</text>
+        <rect class="pill" x="576" y="94" width="120" height="22" rx="11"/><text class="pt" x="636" y="109" text-anchor="middle">karyawan ⇄ status</text>
+        <rect class="pill" x="580" y="258" width="112" height="22" rx="11"/><text class="pt" x="636" y="273" text-anchor="middle">ekspor Excel</text>
+        <rect class="pill" x="334" y="274" width="118" height="22" rx="11"/><text class="pt" x="393" y="289" text-anchor="middle">FTE ⇄ headcount</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="proyek" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Proyek unggulan · keterlibatan penuh</span><h2>Lima proyek, masing-masing dengan halamannya sendiri.</h2></div>
+      <p>Saya terlibat penuh di kelima proyek ini, dari menggali kebutuhan sampai mendampingi pengguna. Buka setiap sistem untuk melihat seluruh modul, desain layar, fitur, dan dampaknya.</p>
+    </div>
+    <div class="pcards" id="pcards"></div>
+  </div>
+</section>
+
+<section class="block" id="cara-kerja">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Cara saya bekerja</span><h2>Dari obrolan dengan user sampai sistem yang terdokumentasi.</h2></div>
+      <p>Setiap sistem di atas melewati lima tahap yang sama. Inilah yang membuat sistemnya tepat sasaran dan mudah dirawat oleh tim berikutnya.</p>
+    </div>
+    <div class="process">
+      <div><b>Gali kebutuhan</b><p>Wawancara user, observasi proses berjalan, dan memetakan masalah yang paling mahal.</p><small>BRD · user story</small></div>
+      <div><b>Rancang alur</b><p>Proses bisnis baru, aturan approval, struktur data, dan rancangan layar.</p><small>Flowchart · ERD · UML · Figma</small></div>
+      <div><b>Bangun</b><p>Development backend dan frontend secara bertahap dalam sprint, dengan demo rutin ke user.</p><small>Laravel · Apps Script · MySQL</small></div>
+      <div><b>Uji &amp; rilis</b><p>UAT bersama user, perbaikan, migrasi data lama, lalu rilis bertahap per divisi.</p><small>UAT · Postman · Git</small></div>
+      <div><b>Dokumentasi &amp; adopsi</b><p>Spesifikasi teknis, panduan pengguna, dan pelatihan supaya sistem benar-benar dipakai.</p><small>FSD · TSD · panduan user</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Proyek pendukung</span><h2>Kompetisi, magang, dan cikal bakal sistem.</h2></div>
+      <p>Proyek dari kompetisi pendanaan, magang, dan prototipe awal yang membentuk cara saya membangun sistem.</p>
+    </div>
+    <div class="others">
+      <div class="other"><span class="eyebrow">Innovillage 2024 · Team Lead</span><h4>KenalAdat Virtual Tour</h4><p>Virtual tour Perkampungan Adat Sijunjung dengan 77 Rumah Gadang untuk promosi wisata budaya digital. Masuk Top 165 Innovillage 2024 dengan skema pendanaan.</p><div class="tags"><span class="tag">Virtual Tour</span><span class="tag">Web</span><span class="tag">Sociopreneur</span></div></div>
+      <div class="other"><span class="eyebrow">PKM-PM Vokasi 2024</span><h4>Website Rumah Singgah Pasien</h4><p>Website untuk meningkatkan aksesibilitas dan pengelolaan Rumah Singgah Pasien M. Ihpan, termasuk kampanye donasi. Didanai skema PKM-PM Vokasi 2024.</p><div class="tags"><span class="tag">Web</span><span class="tag">Pengabdian masyarakat</span></div></div>
+      <div class="other"><span class="eyebrow">Solusi Eksplorasi Rembulan Utama</span><h4>DATABUDI Market Insight</h4><p>Aplikasi web market insight dengan treemap merek dan tren. Saya menyusun FSD, TSD, ERD, dan spesifikasi API, serta mengembangkan backend Laravel.</p><div class="tags"><span class="tag">Laravel</span><span class="tag">REST API</span><span class="tag">FSD · TSD</span></div></div>
+      <div class="other"><span class="eyebrow">MSIB Infinite Learning</span><h4>Infinitee Community App</h4><p>Aplikasi komunitas Android. Saya menjadi Scrum Master yang mengelola backlog dan sprint di Trello sekaligus mobile developer.</p><div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Scrum</span></div></div>
+      <div class="other"><span class="eyebrow">Cikal bakal HRIS</span><h4>WLA Dashboard (Apps Script)</h4><p>Web app Google Apps Script dengan form WLA, tren FTE, heatmap produktivitas toko, kalkulator kasir, dan workforce planning tahunan, sebelum dipindahkan ke HRIS.</p><div class="tags"><span class="tag">Google Apps Script</span><span class="tag">Google Sheets</span></div></div>
+      <div class="other"><span class="eyebrow">Monex Investindo Futures</span><h4>Inventory Procurement Request</h4><p>Form pengajuan pembelian dan perbaikan barang di Lark dengan alur approval lintas departemen, plus dokumentasi ISO 27001.</p><div class="tags"><span class="tag">Lark</span><span class="tag">Workflow</span><span class="tag">ISO 27001</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pengalaman" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Pengalaman</span><h2>Perjalanan karier dan kepemimpinan.</h2></div>
+      <p>Pengalaman di pengembangan software, IT operations, dokumentasi teknis, dan koordinasi tim lintas fungsi.</p>
+    </div>
+    <div class="xp">
+      <ol class="timeline">
+        <li class="now"><span class="when">Sep 2025 – sekarang · Jakarta Selatan</span><h4>Organization Development &amp; HRIS Developer</h4><p class="org">PT. Suri Nusantara Jaya</p>
+          <ul><li>Membangun HRIS dan aplikasi bisnis internal dengan Laravel dan Google Apps Script.</li><li>Merancang proses bisnis, workflow, dan kebutuhan sistem untuk solusi HR.</li><li>Mengotomasi operasional HR, pelaporan, dan workflow approval.</li><li>Membangun dashboard KPI, workforce planning, dan analitik organisasi.</li></ul></li>
+        <li><span class="when">Jul – Sep 2025 · Jakarta Pusat</span><h4>IT Support Intern</h4><p class="org">PT. Monex Investindo Futures</p>
+          <ul><li>Mengelola siklus aset IT dan dokumentasi teknis.</li><li>Menyusun prosedur maintenance dan dokumen kepatuhan ISO 27001.</li><li>Menganalisis metrik IT support untuk laporan manajemen.</li></ul></li>
+        <li><span class="when">Feb – Mei 2025 · Jakarta Barat</span><h4>Tech Writer &amp; Backend Developer Intern</h4><p class="org">PT. Solusi Eksplorasi Rembulan Utama</p>
+          <ul><li>Menyusun FSD, TSD, UML, flowchart, ERD, API documentation, dan user story.</li><li>Mengembangkan backend Laravel dan mengintegrasikan REST API.</li><li>Mengoptimasi query MySQL dan performa aplikasi.</li></ul></li>
+        <li><span class="when">Feb – Jun 2024 · Batam</span><h4>Scrum Master &amp; Mobile Developer Intern</h4><p class="org">Infinite Learning · MSIB Batch 6</p>
+          <ul><li>Memfasilitasi Sprint Planning, Daily Scrum, Review, dan Retrospective.</li><li>Mengelola sprint backlog dan prioritas di Trello.</li><li>Mengembangkan aplikasi Android dengan Kotlin dan Jetpack Compose.</li></ul></li>
+      </ol>
+      <div class="side">
+        <h3>Penghargaan</h3>
+        <ul class="awards">
+          <li><span class="medal">#1</span><div><b>National UI/UX Challenge</b><small>Politeknik Negeri Padang · Mei 2024</small></div></li>
+          <li><span class="medal">165</span><div><b>Top 165 Innovillage 2024, skema pendanaan</b><small>September 2024</small></div></li>
+          <li><span class="medal">W</span><div><b>Winner Women Award 2023, kategori Kreatif Sumatera Barat</b><small>Desember 2023</small></div></li>
+          <li><span class="medal">#2</span><div><b>Juara 2 Ide Kreatif</b><small>Universitas Negeri Padang · November 2022</small></div></li>
+          <li><span class="medal">#1</span><div><b>Juara 1 Hackathon</b><small>Politeknik Negeri Padang · Oktober 2022</small></div></li>
+        </ul>
+        <h3>Kepemimpinan</h3>
+        <ul class="lead-list">
+          <li><b>UI/UX Competition Coordinator, Developer Festival 6.0</b><span>Kompetisi UI/UX nasional bersama kampus se-Indonesia · 2024</span></li>
+          <li><b>Sekretaris, Modul Nusantara Nagazena PMM 3</b><span>Universitas Airlangga · 2023–2024</span></li>
+          <li><b>Sekretaris, Forum Lingkar Pena Sumatera Barat</b><span>2024–2026</span></li>
+          <li><b>Head of Media, Dompet Dhuafa Volunteer Sumbar</b><span>2023</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="keahlian" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Keahlian</span><h2>Toolkit yang saya pakai setiap hari.</h2></div>
+    </div>
+    <div class="skills">
+      <div class="skill"><h4>Development</h4><div><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">Google Apps Script</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span></div></div>
+      <div class="skill"><h4>Project Management</h4><div><span class="tag">Agile Scrum</span><span class="tag">Waterfall</span><span class="tag">SDLC</span><span class="tag">Sprint Planning</span><span class="tag">Backlog</span><span class="tag">Stakeholder Mgmt</span></div></div>
+      <div class="skill"><h4>Dokumentasi</h4><div><span class="tag">BRD</span><span class="tag">FSD</span><span class="tag">TSD</span><span class="tag">User Story</span><span class="tag">API Docs</span><span class="tag">UML</span><span class="tag">ERD</span><span class="tag">Flowchart</span></div></div>
+      <div class="skill"><h4>Tools</h4><div><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Postman</span><span class="tag">Figma</span><span class="tag">Trello</span><span class="tag">Google Workspace</span><span class="tag">MS Office</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="kontak" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <span class="eyebrow" style="color:inherit;opacity:.6">Kontak</span>
+        <h2>Punya proses HR atau operasional yang masih manual?</h2>
+        <p>Saya senang diajak berdiskusi tentang HRIS, automasi proses bisnis, dan sistem internal yang membuat tim bekerja lebih cepat.</p>
+      </div>
+      <div class="links">
+        <div><span><small>Email</small><b id="email">wirdanissa0504@gmail.com</b></span><button type="button" id="copy">Salin</button></div>
+        <a href="https://linkedin.com/in/wirdanissa" target="_blank" rel="noopener"><span><small>LinkedIn</small><b>linkedin.com/in/wirdanissa</b></span><span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/wirdanissa" target="_blank" rel="noopener"><span><small>GitHub</small><b>github.com/wirdanissa</b></span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ HRIS ============ -->
+<main class="view" data-view="hris" hidden>
+<article class="case" data-p="hris">
+  <div class="wrap">
+    <div class="crumb"><a href="#home">Portofolio</a><span>/</span><a href="#proyek">Proyek</a><span>/</span><span>HRIS</span></div>
+    <div class="case-top">
+      <div>
+        <span class="kicker">Sistem inti SDM · grup perusahaan ritel &amp; F&amp;B</span>
+        <h2>HRIS Enterprise</h2>
+        <p class="lead">HRIS terpadu untuk seluruh entitas grup: data karyawan, struktur organisasi, Job Description berbantuan AI, permintaan tenaga kerja, evaluasi kontrak, rotasi, analisis beban kerja, dashboard eksekutif, sampai izin keluar kantor dan bis kantor.</p>
+        <div class="problem"><b>Masalah sebelumnya</b><p>Data karyawan tersebar di spreadsheet dan Talenta, PTK dan rotasi berjalan dengan form kertas berjenjang, evaluasi kontrak sering terlambat, JD ditulis manual satu per satu, dan kebutuhan tenaga kerja diputuskan tanpa perhitungan beban kerja.</p></div>
+        <div class="meta">
+          <div class="row"><span>Stack</span><div><span class="tag">Laravel 12</span><span class="tag">Filament 3</span><span class="tag">Livewire</span><span class="tag">React (xyflow)</span><span class="tag">MySQL</span><span class="tag">Gemini API</span><span class="tag">Google Drive &amp; Calendar API</span><span class="tag">PWA</span></div></div>
+          <div class="row role-steps"><span>Peran</span><div><span class="tag">Kontributor utama (695 commit)</span><span class="tag">Integrator</span><span class="tag">Analisis proses</span><span class="tag">Backend &amp; UI</span><span class="tag">Testing</span><span class="tag">Dokumentasi</span></div></div>
+        </div>
+        <div class="count" data-count="hris"></div>
+      </div>
+      <div class="mock">
+        <div class="mock-bar"><i></i><i></i><i></i><span class="url">hris / dashboard</span></div>
+        <div class="hris-ui">
+          <aside><b>HRIS</b><span class="on">Dashboard</span><span>Karyawan</span><span>Org Chart</span><span>PTK</span><span>PKWT</span><span>Rotasi</span><span>WLA</span><span>Izin Keluar</span></aside>
+          <div class="hris-main">
+            <div class="kpis">
+              <div><small>Headcount</small><strong>2.418</strong></div>
+              <div><small>Tugas saya</small><strong id="pending">3</strong></div>
+              <div><small>PKWT ≤ 30 hari</small><strong>46</strong></div>
+            </div>
+            <div class="bars" aria-label="Grafik kepatuhan SLA per bulan">
+              <span style="height:52%"></span><span style="height:60%"></span><span style="height:58%"></span><span style="height:66%"></span><span style="height:71%"></span><span style="height:69%"></span><span style="height:78%"></span><span style="height:88%"></span>
+            </div>
+            <div class="approvals">
+              <div class="hd"><span>Tugas Saya · menunggu approval</span><span class="mono" style="font-weight:400;color:var(--ink-3)">klik Setujui</span></div>
+              <div class="ap"><div><b>PTK-0412 · Cook Helper × 5</b><small>Known-2 · Retail · SLA 2 hari</small></div><button type="button">Setujui</button></div>
+              <div class="ap"><div><b>Evaluasi PKWT · Perpanjang</b><small>Dodi P. · KPI 88 · absensi 96%</small></div><button type="button">Setujui</button></div>
+              <div class="ap"><div><b>Rotasi · Promosi Store Leader</b><small>Sari M. · efektif 1 Des</small></div><button type="button">Setujui</button></div>
+            </div>
+          </div>
+        </div>
+        <span class="sample">CONTOH DATA</span>
+      </div>
+    </div>
+    <div class="pbody"><nav class="toc" id="toc-hris" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-hris"></div></div></div>
+    <div class="impact" id="imp-hris"></div>
+    <div class="sell" id="sell-hris"></div>
+    <div class="pnext" id="next-hris"></div>
+  </div>
+</article>
+</main>
+
+<!-- ============ ATTENDANCE ============ -->
+<main class="view" data-view="attendance" hidden>
+<article class="case" data-p="att">
+  <div class="wrap">
+    <div class="crumb"><a href="#home">Portofolio</a><span>/</span><a href="#proyek">Proyek</a><span>/</span><span>Attendance</span></div>
+    <div class="case-top">
+      <div>
+        <span class="kicker">Kehadiran, jadwal &amp; payroll</span>
+        <h2>Attendance &amp; Payroll System</h2>
+        <p class="lead">Absensi berbasis verifikasi wajah dengan liveness, geofence, dan deteksi fake GPS. Roster shift tersusun otomatis, pengajuan disetujui dari ponsel, rekap terkunci per cut-off, lalu langsung dihitung menjadi gaji, PPh 21, BPJS, THR, dan slip digital.</p>
+        <div class="problem"><b>Masalah sebelumnya</b><p>Absensi bergantung pada tarikan data manual dari Talenta, lembur diajukan lewat Google Form, titip absen sulit dibuktikan, roster disusun manual, dan perhitungan gaji, pajak, serta BPJS dikerjakan berhari-hari di Excel.</p></div>
+        <div class="meta">
+          <div class="row"><span>Stack</span><div><span class="tag">Laravel 12</span><span class="tag">Filament 3</span><span class="tag">PostgreSQL</span><span class="tag">Python FastAPI</span><span class="tag">OpenCV · ONNX</span><span class="tag">PWA · Web Push</span><span class="tag">Flutter</span></div></div>
+          <div class="row role-steps"><span>Peran</span><div><span class="tag">Pengembang tunggal</span><span class="tag">Analisis aturan kerja &amp; regulasi</span><span class="tag">Backend</span><span class="tag">Face service</span><span class="tag">PWA</span><span class="tag">190 test</span><span class="tag">Deploy guide</span></div></div>
+        </div>
+        <div class="count" data-count="att"></div>
+      </div>
+      <div class="att-wrap">
+        <div class="phone">
+          <div class="screen">
+            <div class="notch"><i></i></div>
+            <div class="map"><div class="geo"></div><div class="pin"></div></div>
+            <div class="inner">
+              <div class="clock" id="clock">08:00:00</div>
+              <small id="today">Hari ini</small>
+              <div class="inarea"><span>Kantor Pusat · 38 m</span><span class="pill ok">Dalam radius</span></div>
+              <div class="selfie"><i></i><span>Wajah cocok 0,82 · liveness 0,94<br><b style="color:var(--ink)">Shift Pagi · 08:00–17:00</b></span></div>
+              <button class="clockbtn" id="clockbtn" type="button">Clock In dengan Wajah</button>
+            </div>
+          </div>
+        </div>
+        <div class="cal">
+          <h4>Riwayat kehadiran saya</h4>
+          <p class="sub">Oktober · periode 21–20</p>
+          <div class="calgrid" id="calgrid"></div>
+          <div class="legend">
+            <span><i style="background:color-mix(in srgb,var(--att) 75%,transparent)"></i>Hadir</span>
+            <span><i style="background:color-mix(in srgb,var(--kit) 70%,transparent)"></i>Terlambat</span>
+            <span><i style="background:color-mix(in srgb,var(--hris) 65%,transparent)"></i>Cuti</span>
+            <span><i style="background:color-mix(in srgb,var(--stamp) 55%,transparent)"></i>Sakit</span>
+          </div>
+          <div class="recap">
+            <div><small>Jam kerja</small><b>168 j</b></div>
+            <div><small>Lembur</small><b>9 j 30 m</b></div>
+          </div>
+          <span class="sample" style="position:static;display:inline-block;margin-top:10px">CONTOH DATA</span>
+        </div>
+      </div>
+    </div>
+    <div class="pbody"><nav class="toc" id="toc-att" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-att"></div></div></div>
+    <div class="impact" id="imp-att"></div>
+    <div class="sell" id="sell-att"></div>
+    <div class="pnext" id="next-att"></div>
+  </div>
+</article>
+</main>
+
+<!-- ============ CAREER ============ -->
+<main class="view" data-view="career" hidden>
+<article class="case" data-p="car">
+  <div class="wrap">
+    <div class="crumb"><a href="#home">Portofolio</a><span>/</span><a href="#proyek">Proyek</a><span>/</span><span>Career Site</span></div>
+    <div class="case-top">
+      <div>
+        <span class="kicker">Rekrutmen end-to-end</span>
+        <h2>Career Site &amp; Recruitment Suite</h2>
+        <p class="lead">Situs karier publik, formulir lamaran lewat QR tanpa akun, portal kandidat, dan pipeline rekrutmen 10 tahap dengan SLA. Dilengkapi skor kecocokan, Virtual Hiring, psikotest, kalkulator remunerasi, live chat, hingga satu klik "Jadikan Karyawan" ke HRIS.</p>
+        <div class="problem"><b>Masalah sebelumnya</b><p>Lamaran masuk lewat Google Form dan email, CV ditumpuk di Drive, status kandidat dilacak di spreadsheet, jadwal interview diatur lewat chat, poster dibuat manual di Canva, dan data karyawan baru diketik ulang ke HRIS dan Talenta.</p></div>
+        <div class="meta">
+          <div class="row"><span>Stack</span><div><span class="tag">Laravel 12</span><span class="tag">Filament 3 (2 panel)</span><span class="tag">Livewire</span><span class="tag">MySQL</span><span class="tag">Google Calendar &amp; Meet</span><span class="tag">DomPDF · FPDI</span><span class="tag">Turnstile</span></div></div>
+          <div class="row role-steps"><span>Peran</span><div><span class="tag">Penulis utama modul (39 dari 40 commit)</span><span class="tag">Alur rekrutmen</span><span class="tag">UI/UX</span><span class="tag">Backend</span><span class="tag">Integrasi Google</span><span class="tag">Testing</span></div></div>
+        </div>
+        <div class="count" data-count="car"></div>
+      </div>
+      <div class="mock">
+        <div class="mock-bar"><i></i><i></i><i></i><span class="url">karir / info-lowongan</span></div>
+        <div class="car-ui">
+          <div class="car-hero"><b>Tumbuh bersama kami</b><span>Lowongan terbuka di kantor pusat, toko, dan outlet</span></div>
+          <div class="jobs">
+            <div class="job"><b>HR Generalist</b><small>Human Capital · Jakarta</small></div>
+            <div class="job"><b>Cook Helper</b><small>Kitchen · Bogor · 5 posisi</small></div>
+            <div class="job"><b>Store Leader</b><small>Retail · Depok</small></div>
+          </div>
+          <div class="kanban-h"><span>Proses Rekrutmen · Cook Helper</span><small>klik kartu untuk naik tahap</small></div>
+          <div class="kanban" id="kanban">
+            <div class="col" data-stage="0"><b>Screening <span>0</span></b></div>
+            <div class="col" data-stage="1"><b>Interview <span>0</span></b></div>
+            <div class="col" data-stage="2"><b>Psikotest <span>0</span></b></div>
+            <div class="col" data-stage="3"><b>Offering <span>0</span></b></div>
+            <div class="col" data-stage="4"><b>Onboarding <span>0</span></b></div>
+          </div>
+        </div>
+        <span class="sample">CONTOH DATA</span>
+      </div>
+    </div>
+    <div class="pbody"><nav class="toc" id="toc-car" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-car"></div></div></div>
+    <div class="impact" id="imp-car"></div>
+    <div class="sell" id="sell-car"></div>
+    <div class="pnext" id="next-car"></div>
+  </div>
+</article>
+</main>
+
+<!-- ============ ASISTEN DAPUR ============ -->
+<main class="view" data-view="dapur" hidden>
+<article class="case" data-p="kit">
+  <div class="wrap">
+    <div class="crumb"><a href="#home">Portofolio</a><span>/</span><a href="#proyek">Proyek</a><span>/</span><span>Asisten Dapur</span></div>
+    <div class="case-top">
+      <div>
+        <span class="kicker">CRM ritel &amp; program loyalty</span>
+        <h2>Asisten Dapur</h2>
+        <p class="lead">Aplikasi CRM untuk program Asisten Dapur di jaringan toko ritel F&amp;B. Karyawan toko mendaftarkan pelanggan, menindaklanjuti lewat WhatsApp, dengan pesan yang dipersonalisasi. Sistem memprioritaskan pelanggan berdasarkan RFM, dan manajemen memantau hasilnya sampai ke penjualan.</p>
+        <div class="problem"><b>Masalah sebelumnya</b><p>Data pelanggan dicatat terpisah per toko, follow-up tidak terlacak, tidak ada cara membuktikan apakah follow-up menghasilkan pembelian, dan kinerja karyawan toko dalam program loyalty direkap manual.</p></div>
+        <div class="meta">
+          <div class="row"><span>Stack</span><div><span class="tag">Python Flask</span><span class="tag">MySQL</span><span class="tag">Metabase API</span><span class="tag">APScheduler</span><span class="tag">Playwright</span><span class="tag">Google Business Profile API</span><span class="tag">gspread</span><span class="tag">Gunicorn · Nginx</span></div></div>
+          <div class="row role-steps"><span>Peran</span><div><span class="tag">Pengembang end-to-end</span><span class="tag">Desain program data</span><span class="tag">Backend Flask</span><span class="tag">Integrasi Metabase</span><span class="tag">Deploy VPS</span></div></div>
+        </div>
+        <div class="count" data-count="kit"></div>
+      </div>
+      <div class="mock">
+        <div class="mock-bar"><i></i><i></i><i></i><span class="url">asisten-dapur / rekomendasi-aksi</span></div>
+        <div class="kit-ui">
+          <div>
+            <h5>Prioritas tindak lanjut hari ini</h5>
+            <p class="sub">Skor RFM + tahap pipeline</p>
+            <div class="ing" id="crm-list"></div>
+          </div>
+          <div>
+            <h5>Kirim follow-up</h5>
+            <p class="sub" id="crm-who">Pilih pelanggan di kiri</p>
+            <div class="scaler">
+              <label for="crm-tpl">Template <output id="crm-cat">Reaktivasi</output></label>
+              <select id="crm-tpl" class="crm-sel"><option value="0">Reaktivasi pelanggan lama</option><option value="1">Ajak gabung member loyalty</option><option value="2">Promo produk terakhir</option></select>
+            </div>
+            <p class="crm-cap" id="crm-cap"></p>
+            <button type="button" class="clockbtn crm-btn" id="crm-send">Tandai sudah dikirim via WhatsApp</button>
+            <div class="stock" id="crm-funnel"></div>
+          </div>
+        </div>
+        <span class="sample">CONTOH DATA</span>
+      </div>
+    </div>
+    <div class="pbody"><nav class="toc" id="toc-kit" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-kit"></div></div></div>
+    <div class="impact" id="imp-kit"></div>
+    <div class="sell" id="sell-kit"></div>
+    <div class="pnext" id="next-kit"></div>
+  </div>
+</article>
+</main>
+
+<!-- ============ WATERYNATION (TA) ============ -->
+<main class="view" data-view="waterynation" hidden>
+<article class="case" data-p="wat">
+  <div class="wrap">
+    <div class="crumb"><a href="#home">Portofolio</a><span>/</span><a href="#proyek">Proyek</a><span>/</span><span>Waterynation</span></div>
+    <div class="case-top">
+      <div>
+        <span class="kicker">Proyek Tugas Akhir · D3 Manajemen Informatika</span>
+        <h2>Waterynation</h2>
+        <p class="lead">Website organisasi peduli air yang menyatukan profil organisasi, program kegiatan dengan pendaftaran online, donasi QRIS dengan verifikasi bukti transfer, rekrutmen volunteer, dan publikasi artikel dalam satu panel admin.</p>
+        <div class="problem"><b>Masalah sebelumnya</b><p>Informasi program tersebar di media sosial, pendaftaran peserta dan volunteer memakai banyak Google Form, dan donasi dicatat manual dari konfirmasi chat sehingga sulit dipertanggungjawabkan.</p></div>
+        <div class="meta">
+          <div class="row"><span>Stack</span><div><span class="tag">Laravel 12</span><span class="tag">Blade</span><span class="tag">MySQL</span><span class="tag">Spatie Permission</span><span class="tag">Laravel Excel</span></div></div>
+          <div class="row role-steps"><span>Peran</span><div><span class="tag">Pengembang tunggal</span><span class="tag">Analisis kebutuhan</span><span class="tag">Desain database</span><span class="tag">Full-stack</span></div></div>
+          <div class="row"><span>Repo</span><div><a class="tag" href="https://github.com/Wirdanissa/waterynation" target="_blank" rel="noopener">github.com/Wirdanissa/waterynation ↗</a></div></div>
+        </div>
+        <div class="count" data-count="wat"></div>
+      </div>
+      <div class="mock">
+        <div class="mock-bar"><i></i><i></i><i></i><span class="url">waterynation / donasi</span></div>
+        <div class="car-ui">
+          <div class="car-hero" style="background:linear-gradient(120deg, color-mix(in srgb, var(--wat) 22%, var(--surface)), color-mix(in srgb, var(--hris) 10%, var(--surface)))"><b>Setetes kepedulian untuk air bersih</b><span>Program · Donasi · Volunteer · Publikasi</span></div>
+          <div class="jobs">
+            <div class="job"><b>Offline Action</b><small>Aksi bersih sungai</small></div>
+            <div class="job"><b>Online Webinar</b><small>Edukasi air bersih</small></div>
+            <div class="job"><b>Modul for Kids</b><small>Hemat air sejak dini</small></div>
+          </div>
+          <div class="wat-don">
+            <div class="qris" aria-hidden="true"></div>
+            <div><b>Donasi via QRIS</b><small>Pindai, isi nominal, unggah bukti transfer. Admin memverifikasi sebelum tercatat.</small>
+              <div class="wat-amt"><span>Rp 50.000</span><span class="on">Rp 100.000</span><span>Rp 250.000</span></div>
+            </div>
+          </div>
+        </div>
+        <span class="sample">CONTOH DATA</span>
+      </div>
+    </div>
+    <div class="pbody"><nav class="toc" id="toc-wat" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-wat"></div></div></div>
+    <div class="impact" id="imp-wat"></div>
+    <div class="sell" id="sell-wat"></div>
+    <div class="pnext" id="next-wat"></div>
+  </div>
+</article>
+</main>
+
+<footer><div class="wrap">© 2026 Wirda Nissa · Organization Development &amp; HRIS Developer. Angka pada tampilan aplikasi adalah contoh data dan estimasi.</div></footer>
+
+<script>
+const P = {};
+P.hris = {
+ meta:{name:"HRIS Enterprise", short:"HRIS", stack:"Laravel 12 · Filament 3 · React · MySQL · Google Workspace API",
+  desc:"Sistem HR terpadu dengan 115 resource dan 1.500+ commit: data karyawan, org chart, Job Description berbantuan AI, PTK, evaluasi PKWT, rotasi, WLA, dashboard eksekutif, sampai izin keluar kantor dan bis kantor."},
+ mods:[
+  {n:"Data Karyawan & Atasan", d:"Satu sumber data karyawan untuk seluruh entitas grup.",
+   ui:{title:"Karyawan", who:"HC", parts:[
+    ["stats",[["Karyawan aktif","2.418"],["Masuk bulan ini","64"],["Resign bulan ini","41"],["Data bermasalah","12"]]],
+    ["table",{c:["ID","Nama","Jabatan","Organisasi","Approval Line","Status"],r:[["JKT-00412","Rina A.","HR Generalist","Human Capital","Manajer HC","ok|PKWTT"],["BGR-00188","Dodi P.","Store Leader","Retail","Area Manager","info|PKWT"],["DPK-00921","Sari M.","Kasir","Retail","—","bad|Line kosong"]]}]
+   ]},
+   f:[
+    ["Master Karyawan Lengkap","Data dasar, kepegawaian, reporting line (Approval Line, RL1–RL3), pribadi, bank dan BPJS, serta alamat dalam satu form.","Satu data dipakai semua modul HR."],
+    ["Karyawan Harian Non-Talenta","Tab khusus pekerja harian dengan template impor dan konversi ke NIK Talenta.","Pekerja harian tercatat rapi walau belum masuk sistem payroll."],
+    ["Editor Atasan Karyawan","Grid untuk mengubah Approval Line sampai RL3 secara inline dengan usulan otomatis berbasis aturan; perubahan mengalir ke PTK yang berjalan.","Jalur approval seluruh perusahaan dirapikan dalam satu layar."],
+    ["Kesehatan Data","Kartu masalah data per jenis, karyawan terdampak, dan ejaan jabatan yang tidak konsisten.","Kualitas data terjaga tanpa audit manual."],
+    ["Riwayat Karier & Mutasi","Timeline promosi, mutasi, dan perubahan atasan dengan digest perubahan harian via email; gaji hanya terlihat oleh Comben.","Jejak karier karyawan utuh dan rahasia gaji terjaga."],
+    ["Dashboard & Laporan Karyawan","Headcount, masuk vs resign, komposisi status, tren turnover, dan laporan PDF per karyawan.","Kondisi tenaga kerja terbaca dalam satu halaman."],
+    ["Pengungkapan Data Sensitif Tercatat","Field sensitif disembunyikan dan setiap kali dibuka tercatat di log.","Akses data pribadi bisa diaudit."]
+   ]},
+  {n:"Org Chart, Job Design & SOP", d:"Struktur organisasi hidup yang menjadi dasar semua proses.",
+   ui:{title:"Organization Chart", who:"Organization Development", parts:[
+    ["kan",[["Direksi",["Direktur Utama"]],["Divisi",["HC · 18/20","Retail · 412/440","Finance · 22/22"]],["Posisi",["Store Leader · 2 kosong","Kasir · terisi"]]]],
+    ["note","Kartu diberi warna per level jabatan · posisi kosong ditandai · ekspor PDF A3 vektor"]
+   ]},
+   f:[
+    ["Org Chart Interaktif","Grafik node React (xyflow + elkjs) dari organisasi sampai posisi dengan rencana vs terisi, deteksi posisi kosong, dan warna per level.","Struktur dan kekosongan posisi terlihat seketika."],
+    ["Ekspor PDF A3 Bertanda Tangan","Org chart diekspor ke PDF vektor A3 lengkap dengan rantai direksi dan tabel tanda tangan.","Dokumen struktur organisasi resmi siap disahkan."],
+    ["Headcount Plan & Manpower Planning","Jumlah kursi per organisasi, cabang, dan posisi, serta rencana tahunan vs karyawan aktif dan PTK berjalan.","Kebutuhan tenaga kerja direncanakan, bukan reaktif."],
+    ["Wizard Setup Jabatan","Input posisi, level, organisasi, cabang, dan atasan (bisa tempel dari Excel) yang otomatis membuat master posisi, slot, dan atasan.","Struktur baru siap dalam menit, bukan hari."],
+    ["Job Description Berbantuan Gemini AI","JD per posisi dengan struktur organisasi live dan aktivitas dari WLA; draf dibuat Gemini, edit manual tetap tersimpan, bisa massal.","Ratusan JD tersusun konsisten tanpa menulis dari nol."],
+    ["Perpustakaan SOP Aman","SOP tampil sebagai buku dengan watermark di canvas, tanpa unduh atau cetak, dan akses tercatat.","SOP mudah dibaca tanpa risiko bocor."]
+   ]},
+  {n:"PTK (Permintaan Tenaga Kerja)", d:"Dari kebutuhan atasan sampai lowongan terbit.",
+   ui:{title:"PTK-0412 · Cook Helper", who:"approval berjenjang", parts:[
+    ["flow",{s:["Diajukan","Known-1 (RL)","Known-2 (HC)","Approved (Direksi)","Lowongan"],on:3}],
+    ["table",{c:["No. PTK","Posisi","Jumlah/Terisi","Status","Progres"],r:[["PTK-0412","Cook Helper","5 / 3","ok|Approved","Interview"],["PTK-0420","Store Leader","1 / 0","wait|Known-2","—"]]}]
+   ]},
+   f:[
+    ["Form PTK dengan Autofill","Atasan memilih organisasi dan posisi; JD dan KPI terisi otomatis dari data yang ada.","Pengajuan kebutuhan tenaga kerja selesai dalam menit."],
+    ["Rantai Approval Otomatis","Known-1 dari RL pengaju, Known-2 dari HC Manager atau GM HC sesuai level, lalu Direksi; ditolak berarti final.","Tidak ada PTK salah alamat atau tertahan tanpa jejak."],
+    ["PDF Bernomor & Scan Bertanda Tangan","PTK menghasilkan PDF bernomor dengan slot unggah scan tanda tangan founder.","Dokumen resmi tersimpan digital."],
+    ["Progres Rekrutmen per Posisi","PIC ditugaskan dan progres pemenuhan per posisi terlihat dari PTK sampai onboarding.","Atasan tahu kapan posisinya terisi."],
+    ["Terhubung ke Recruitment Suite","PTK yang selesai menjadi dasar lowongan di Career Site dan dihitung pemenuhannya otomatis.","Satu alur dari kebutuhan sampai karyawan baru."]
+   ]},
+  {n:"Evaluasi & Monitoring PKWT", d:"Tidak ada kontrak yang berakhir tanpa keputusan.",
+   ui:{title:"Evaluasi PKWT", who:"atasan & HC", parts:[
+    ["table",{c:["Karyawan","Berakhir","Sisa hari","KPI","Absensi","SP","Hasil"],r:[["Dodi P.","30 Nov","15","88","96%","—","ok|Perpanjang"],["Bayu K.","5 Des","20","71","89%","SP1","wait|Evaluasi"],["Lina S.","12 Des","27","92","99%","—","info|PKWTT"]]}]
+   ]},
+   f:[
+    ["Evaluasi Otomatis Menjelang Akhir Kontrak","Record evaluasi dibuat otomatis untuk kontrak yang akan berakhir, dengan remark KPI, absensi, dan SP.","Keputusan kontrak berbasis data kinerja nyata."],
+    ["Hasil & Approval Berjenjang","Perpanjang, Evaluasi, PKWTT, atau Selesai; approval Approval Line, RL1–RL3, GM HC, lalu unggah scan final, bisa massal.","Keputusan tepat waktu dan sah."],
+    ["Diskusi, Log & PDF","Thread diskusi per evaluasi, riwayat perubahan, dan PDF.","Alasan setiap keputusan terdokumentasi."],
+    ["PKWT Monitoring Hub","Monitor alur evaluasi plus tab Talent Management, Legal, dan Comben dengan analitik dan pengingat WhatsApp/email.","Semua tim yang terlibat bergerak dari satu layar."],
+    ["Deteksi PKWT Dobel","Menemukan evaluasi ganda untuk NIK dan periode yang sama beserta rekomendasi.","Data evaluasi bersih tanpa duplikat."]
+   ]},
+  {n:"Rotasi, Promosi & Serah Terima", d:"Perpindahan karyawan dengan alur persetujuan dinamis.",
+   ui:{title:"Form Rotasi · Promosi", who:"talent management", parts:[
+    ["flow",{s:["RL asal","Comben (gaji)","TM","RL tujuan","GM HC","SK Direksi"],on:3}],
+    ["form",{f:[["Jenis","Promosi"],["Tanggal efektif","1 Desember"],["Posisi baru","Store Leader · Cabang Bogor",1]],b:["Unduh SK","Setujui"]}]
+   ]},
+   f:[
+    ["Form Bertingkat","Entitas, organisasi, posisi, level dan lokasi, sampai atasan baru dipilih berurutan.","Tidak ada salah input posisi tujuan."],
+    ["Rantai Approval Dinamis","RL asal, input gaji Comben, TM, RL tujuan, GM HC, lalu Direksi dengan unggah keputusan; mendukung delegasi.","Promosi dan mutasi disetujui semua pihak yang berwenang."],
+    ["Band Gaji & Skema","Band gaji per level dan daftar orang yang boleh mengajukan perubahan gaji.","Penyesuaian gaji adil dan terkendali."],
+    ["Efektif Otomatis & Ekspor Talenta","Perubahan diterapkan otomatis pada tanggal efektif dan diekspor ke template Employee Transfer Talenta.","Data HRIS dan payroll selalu sinkron."],
+    ["SK, Form & Final Salary PDF","Arsip SK rotasi dengan kirim ulang dan koreksi nomor.","Dokumen keputusan resmi tersedia kapan saja."],
+    ["Serah Terima Pekerjaan","Form serah terima atau impor Excel; pengganti menerima, atasan lama mengetahui.","Pekerjaan tidak terputus saat orang berpindah."]
+   ]},
+  {n:"WLA & Workforce Planning", d:"Beban kerja dihitung menjadi kebutuhan tenaga kerja.",
+   ui:{title:"Dasbor Workforce", who:"direksi", parts:[
+    ["table",{c:["Jabatan","FTE","Status","Kebutuhan"],r:[["Kasir","1,34","bad|Over Load","+2"],["Admin Gudang","0,96","ok|Fit","0"],["Staff Payroll","0,62","wait|Under Load","−1"]]}],
+    ["note","FTE = jam per minggu ÷ jam efektif (40) · Under < 0,8 · Fit 0,8–1,2 · Over > 1,2"]
+   ]},
+   f:[
+    ["Siklus WLA Tahunan","Siklus dengan karyawan target, periode, dan jam efektif.","Analisis beban kerja menjadi agenda rutin."],
+    ["Analisa Jabatan","Form aktivitas dengan frekuensi, menit, dan periode; relasi kerja; kompetensi; riwayat.","Beban kerja setiap jabatan terukur dari aktivitas nyata."],
+    ["Kalkulasi FTE Otomatis","FTE dihitung otomatis dan diberi status Under Load, Fit, atau Over Load.","Kebutuhan tambah atau kurang orang punya dasar angka."],
+    ["Dasbor Workforce Direksi","Kebutuhan SDM per divisi dan posisi, beban kerja, progres WLA, kompetensi, dan asumsi perhitungan.","Direksi memutuskan headcount berdasarkan data."],
+    ["Evolusi dari Apps Script","Dimulai sebagai web app Google Apps Script dengan heatmap produktivitas toko dan kalkulator kasir, lalu dipindahkan ke HRIS.","Alat yang terbukti dipakai naik kelas menjadi sistem resmi."]
+   ]},
+  {n:"Dashboard Utama & Eksekutif", d:"Semua yang perlu ditindaklanjuti ada di halaman pertama.",
+   ui:{title:"Dashboard Executive", who:"direksi", parts:[
+    ["stats",[["Headcount","2.418"],["Turnover YTD","14,2%"],["PTK terbuka","37"],["Approval macet","9"]]],
+    ["chart",{t:"Kepatuhan SLA approval per bulan (%)",v:[71,74,78,80,84,86,89,92],l:["Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov"]}]
+   ]},
+   f:[
+    ["Tugas Saya Lintas Modul","Satu daftar pekerjaan tertunda dari semua modul beserta agenda 7 hari.","Tidak ada approval yang terlupa."],
+    ["Widget Sesuai Peran","Ringkasan operasional, SLA, pipeline approval, PKWT akan berakhir, headcount vs kekosongan, dan pengumuman.","Setiap orang melihat informasi yang relevan baginya."],
+    ["Dashboard Eksekutif","Metrik tenaga kerja, KPI, training, rekrutmen, PKWT, SLA, offboarding, dan bottleneck approval dengan rekomendasi keputusan.","Direksi mendapat gambaran HR utuh dalam satu layar."],
+    ["Perbandingan & Peta","Bulan ke bulan, antar entitas, peta sebaran karyawan, dan PDF per tab.","Tren dan anomali cepat terlihat."]
+   ]},
+  {n:"Izin Keluar Kantor & Bis Kantor", d:"Operasional harian kantor yang sepenuhnya mobile.",
+   ui:{title:"Izin Keluar Saya", who:"aplikasi karyawan", parts:[
+    ["flow",{s:["Ajukan + peta","Atasan","HRD","Scan pos security","Kembali + foto GPS"],on:3}],
+    ["list",[["QR","Izin aktif · Bank BCA Sudirman","Kembali dalam 00:42:10","info|Di luar"],["BUS","Bis Kantor 17:15 · Rute Bekasi","Sisa 6 kursi","ok|Ambil kursi"]]]
+   ]},
+   f:[
+    ["Izin Keluar dengan Peta & QR","Tujuan dipilih di peta, QR izin, hitung mundur waktu kembali, dan foto GPS saat tiba.","Karyawan keluar kantor tercatat dan aman."],
+    ["Approval Bertanda Tangan","Atasan, HRD, dan HC menyetujui dengan tanda tangan digital.","Izin sah tanpa kertas."],
+    ["Scanner Pos Security Offline","Pos security memindai QR dengan antrean offline dan laporan keluar tanpa izin.","Disiplin keluar-masuk kantor terpantau."],
+    ["Perjalanan Driver","Odometer dan muatan tercatat per perjalanan.","Biaya operasional kendaraan terkendali."],
+    ["Bis Kantor: Rebutan Kursi","Ambil kursi dengan hitung mundur, waitlist, tiket QR, dan scan saat naik.","Kursi bis terbagi adil tanpa grup chat."],
+    ["Sanksi No-show & Rekap","Daftar penumpang untuk driver, sanksi tidak hadir, blokir, dan rekap bulanan.","Kapasitas bis terpakai maksimal."]
+   ]},
+  {n:"Platform, Bantuan & Keamanan", d:"Fondasi agar ratusan pengguna bisa mandiri.",
+   ui:{title:"Feature Settings", who:"admin", parts:[
+    ["kan",[["HR Operations",["PTK ✓","Rotasi ✓","PKWT ✓"]],["HC Operations",["Izin Keluar ✓","Bis Kantor ✓"]],["Nonaktif",["Modul uji coba"]]]],
+    ["note","Menu diurutkan, diganti nama, dan dinyalakan atau dimatikan per peran tanpa deploy"]
+   ]},
+   f:[
+    ["Asisten SURI","Asisten helpdesk berbasis aturan yang menjawab pertanyaan tugas, profil, menu, dan 'kenapa saya tidak bisa', serta mencatat pertanyaan yang belum terjawab.","Pertanyaan ke tim HRIS berkurang drastis."],
+    ["Feature & Notification Settings Kanban","Menu, fitur, dan setiap notifikasi diatur dari papan Kanban: urutan, nama, nyala/mati, kanal, dan penerima.","Admin mengubah sistem tanpa developer."],
+    ["Peran & Cakupan Data","27 peran statis plus peran dinamis dari data karyawan (atasan, PIC, inspektur), dengan data dibatasi per bawahan atau organisasi.","Setiap orang hanya melihat yang menjadi haknya."],
+    ["Log & Status Sistem","Log aktivitas, login, notifikasi, dan error; status scheduler, queue, backup, dan arsip Drive dengan tombol backup.","Masalah terdeteksi sebelum pengguna mengeluh."],
+    ["Backup & Arsip Google Drive","Backup database harian dan arsip PDF ke Shared Drive melalui Google API.","Data aman dan server tetap ringan."],
+    ["PWA & Push","Aplikasi bisa dipasang ke layar utama dengan notifikasi push.","HRIS terasa seperti aplikasi ponsel."],
+    ["SSO Keycloak","Login OIDC dengan sinkronisasi akun otomatis termasuk penonaktifan saat resign.","Satu akun untuk semua sistem perusahaan.",1],
+    ["Integrasi Absensi & Career Site","API bertoken untuk sinkron karyawan ke aplikasi absensi dan lowongan ke situs karier terpisah.","Sistem-sistem saling bicara tanpa ekspor manual.",1]
+   ]},
+  {n:"Modul Kolaborasi Tim", d:"Modul yang dikembangkan bersama tim HRIS; saya berperan sebagai integrator utama.",
+   ui:{title:"Modul tim HRIS", who:"kolaborasi", parts:[
+    ["list",[["KPI","KPI Management","Assignment bulanan, kalibrasi, performance dashboard",""],["OFF","Offboarding","Clearance 6 departemen, hold gaji, paklaring",""],["HSE","HSE","Insiden, APAR, Visit 5R, risk matrix",""],["L&D","L&D & LMS","Training, OJT, pre/post-test",""]]]
+   ]},
+   f:[
+    ["KPI Management","KPI per posisi, assignment bulanan dengan bukti, kalibrasi, dan performance dashboard.","Kinerja karyawan terukur setiap bulan."],
+    ["Offboarding","Tiket resign/PHK, exit interview, clearance 6 departemen, hold dan rilis gaji, paklaring, nonaktif BPJS.","Karyawan keluar dengan proses rapi dan aset kembali."],
+    ["Attendance Report & Kehadiran","Matriks status, deteksi mangkir bertingkat, surat panggilan, input kehadiran oleh leader, dan jadwal shift.","Mangkir terdeteksi dan ditindak sesuai aturan."],
+    ["Legal, HSE, L&D & Engagement","Perjanjian dan perizinan, insiden dan APAR, training dan LMS, kalender, booking ruang, survei, dan pengumuman.","Seluruh fungsi HC berjalan di satu platform."]
+   ]}
+ ],
+ imp:[
+  ["Manajemen & Direksi","Keputusan SDM berbasis data",["Kebutuhan tenaga kerja dihitung dari WLA dan headcount plan.","Dashboard eksekutif menunjukkan bottleneck approval dan tren turnover.","Setiap PTK, rotasi, dan kontrak disetujui berjenjang dan terdokumentasi."]],
+  ["Tim HC","Proses manual berubah menjadi alur kerja",["Evaluasi PKWT, rotasi, dan PTK berjalan otomatis dengan pengingat.","Data karyawan, struktur, dan JD terjaga dari satu sumber.","Admin mengatur fitur dan notifikasi tanpa developer."]],
+  ["Karyawan & Atasan","Semua dari ponsel",["Izin keluar, bis kantor, dan pengajuan lewat PWA.","Tugas dan approval terkumpul di satu daftar.","Asisten SURI menjawab pertanyaan kapan saja."]]
+ ],
+ sell:[["Skala enterprise","115 resource, 271 model, 569 migrasi, 686 file test, CI otomatis."],["AI yang tepat guna","Gemini untuk drafting JD, aturan transparan untuk keputusan."],["Approval berjenjang dinamis","Mengikuti struktur organisasi yang selalu terbaru."],["Terintegrasi","Talenta, Google Workspace, absensi, career site, SSO."]]
+};
+</script>
+
+<script>
+P.att = {
+ meta:{name:"Attendance & Payroll System", short:"Attendance", stack:"Laravel 12 · Filament · Python Face AI · PWA",
+  desc:"Absensi berbasis verifikasi wajah dengan liveness, geofence dan deteksi fake GPS, roster shift otomatis, approval, sampai payroll PPh 21 dan BPJS yang terhubung dua arah dengan HRIS."},
+ mods:[
+  {n:"Clock-in Wajah & Lokasi", d:"Absen dari ponsel yang sulit dicurangi: wajah, liveness, lokasi, dan jaringan diperiksa sekaligus.",
+   ui:{title:"Scan Clock In", who:"aplikasi karyawan", parts:[
+    ["flow",{s:["Kamera","Gerakan acak","Cocokkan wajah","Liveness","Geofence","Tercatat"],on:5}],
+    ["stats",[["Skor wajah","0,82"],["Liveness","0,94"],["Jarak","38 m"],["Akurasi GPS","12 m"]]],
+    ["list",[["IN","Clock in diterima","08:02 · Kantor Pusat · server time","ok|Diterima"],["IN","Clock in di luar radius","Alasan dikirim ke atasan","wait|Menunggu atasan"],["IN","Wajah tidak cocok","Foto & alasan tersimpan sebagai bukti","bad|Ditolak"]]]
+   ]},
+   f:[
+    ["Verifikasi Wajah 1:1","Selfie dicocokkan dengan profil wajah karyawan memakai model SFace di layanan Python (FastAPI, OpenCV, ONNX).","Titip absen praktis tertutup karena yang absen harus orangnya sendiri."],
+    ["Passive Liveness Detection","Model MiniFASNet mendeteksi foto cetak, layar ponsel, atau topeng sebelum wajah diterima.","Kecurangan dengan foto rekan kerja langsung tertolak."],
+    ["Tantangan Gerakan Acak","Mode opsional: dua gerakan acak (toleh kiri, toleh kanan, mendekat) yang berlaku sekali dan kedaluwarsa 120 detik.","Video rekaman tidak bisa dipakai ulang untuk absen."],
+    ["Keputusan Tiga Tingkat","Skor tinggi langsung diterima, skor tengah diterima sementara untuk direview, skor rendah ditolak.","Karyawan sah tidak terhambat, kasus meragukan tetap terkontrol."],
+    ["Geofence Multi-Lokasi","Jarak dihitung ke lokasi terdekat yang diizinkan: kantor utama, lokasi tambahan, atau rumah WFH yang disetujui. Akurasi GPS di atas 100 m ditolak.","Absen hanya sah dari tempat kerja yang benar."],
+    ["Scan di Luar Radius dengan Alasan","Scan di luar area tidak langsung ditolak; karyawan menulis alasan dan atasan memutuskan.","Fleksibel untuk tugas luar tanpa kehilangan kontrol."],
+    ["Cek Wi-Fi / IP Kantor","Setiap lokasi bisa mendaftarkan IP publik kantor dengan mode nonaktif, review, atau wajib.","Lapisan tambahan melawan aplikasi fake GPS."],
+    ["Deteksi Anomali","Perjalanan mustahil (lebih dari 150 km/jam), perangkat dipakai karyawan lain, jam ponsel beda lebih dari 10 menit, dan pola GPS palsu otomatis masuk review.","Kecurangan canggih tertangkap tanpa memeriksa manual satu per satu."],
+    ["Device Lock & Ganti Ponsel","Satu akun satu ponsel, dengan 4 skema ganti perangkat: reset oleh HC, approval atasan, approval HC, atau otomatis berkala.","Akun tidak bisa dipinjamkan ke ponsel orang lain."],
+    ["Antrean Saat Sistem Sibuk","Bila layanan wajah lambat atau mati, scan disimpan sebagai menunggu verifikasi lalu diverifikasi ulang otomatis; lebih dari 30 menit dieskalasi ke atasan.","Absensi tidak pernah gagal hanya karena server sibuk."],
+    ["Anti Double Tap","Row lock di database mencegah clock-in ganda dari dua tab atau ketukan beruntun.","Data kehadiran bersih tanpa duplikat."],
+    ["Bukti Tersimpan Aman","Foto scan disimpan di storage privat dan setiap akses foto tercatat.","Bukti siap untuk sengketa, privasi karyawan terlindungi."]
+   ]},
+  {n:"Profil Wajah & Privasi Data", d:"Pendaftaran wajah yang patuh UU Perlindungan Data Pribadi.",
+   ui:{title:"Profil Wajah Karyawan", who:"panel HC", parts:[
+    ["stats",[["Profil aktif","1.184"],["Menunggu review","7"],["Dikecualikan","3"]]],
+    ["table",{c:["Karyawan","Foto","Persetujuan","Status"],r:[["Rina A.","5 frame","v2 · 12 Okt","ok|Aktif"],["Dodi P.","3 frame","v2 · 14 Nov","wait|Review HC"],["Sari M.","4 frame","v2 · 14 Nov","bad|Mirip profil lain"]]}]
+   ]},
+   f:[
+    ["Persetujuan Berversi (UU PDP)","Karyawan wajib menyetujui pernyataan persetujuan berversi sebelum mendaftarkan wajah.","Perusahaan patuh regulasi data biometrik."],
+    ["Self-Enrollment dengan Cek Duplikat","3–5 frame diambil dengan arahan gerakan, lalu dicek 1:N ke semua profil untuk mencegah satu wajah dipakai dua akun.","Akun ganda dan joki absen terdeteksi sejak pendaftaran."],
+    ["Kelola Profil oleh HC","HC dapat mengunggah foto referensi, menyetujui, menolak dengan catatan, mencabut, mengganti foto, atau menandai pengecualian.","HC memegang kendali penuh atas kualitas data wajah."],
+    ["Template Wajah Adaptif","Scan dengan skor sangat tinggi ditambahkan sebagai referensi (maksimal 3) dan tetap harus cocok dengan foto asli.","Akurasi tetap tinggi walau penampilan karyawan berubah."],
+    ["Penghapusan Biometrik Otomatis","Data wajah dan selfie dihapus otomatis N hari setelah tanggal resign.","Risiko kebocoran data mantan karyawan dihilangkan."]
+   ]},
+  {n:"Mesin Kehadiran Harian", d:"Status kehadiran dihitung otomatis setiap 15 menit.",
+   ui:{title:"Monitor Kehadiran", who:"panel HC", parts:[
+    ["table",{c:["Karyawan","Shift","Masuk","Pulang","Kerja","Status"],r:[["Rina A.","Pagi","07:56","17:04","8j 08m","ok|Hadir"],["Dodi P.","Pagi","08:12","—","—","wait|Terlambat 12m"],["Sari M.","Siang","—","—","—","info|Cuti"],["Bayu K.","Malam","21:58","—","—","bad|Lupa clock out"]]}]
+   ]},
+   f:[
+    ["11 Status Harian Otomatis","Belum mulai, belum absen, sedang bekerja, hadir, lupa clock out, alpa, libur, cuti, izin, sakit, dan dinas.","Status setiap karyawan selalu jelas tanpa dicek manual."],
+    ["Hitung Terlambat, Pulang Cepat, Jam Kerja","Menit terlambat, pulang cepat, jam kerja setelah potong istirahat dihitung per hari.","Data disiplin akurat sampai hitungan menit."],
+    ["Lembur dari Irisan Waktu Nyata","Lembur hanya dihitung dari irisan antara SPL yang disetujui dan jam scan aktual.","Lembur yang dibayar adalah lembur yang benar-benar dikerjakan."],
+    ["Toleransi Terlambat per Shift","Toleransi diatur per shift dengan opsi override global; lewat toleransi dihitung penuh.","Aturan adil dan konsisten di semua lokasi."],
+    ["Pengajuan Disetujui Menimpa Scan","Cuti atau koreksi yang disetujui otomatis mengganti status alpa atau jam scan asli; periode terkunci dibekukan.","Rekap selalu sinkron dengan keputusan atasan."]
+   ]},
+  {n:"Penjadwalan & Roster", d:"Jadwal ribuan karyawan tersusun otomatis dari pola.",
+   ui:{title:"Roster 14 Hari", who:"panel HC", parts:[
+    ["table",{c:["Karyawan","Sen","Sel","Rab","Kam","Jum","Sab","Min"],r:[["Regu A","P","P","S","S","M","M","OFF"],["Regu B","S","S","M","M","OFF","P","P"],["Regu C","M","OFF","P","P","S","S","M"]]}],
+    ["note","P = Pagi · S = Siang · M = Malam · sel yang diubah manual diberi garis biru"]
+   ]},
+   f:[
+    ["Master Shift 4 Tipe","Shift tetap, lintas malam, fleksibel, dan off, masing-masing dengan istirahat, jendela scan, toleransi, dan warna roster.","Satu sistem untuk kantor, toko, dan operasional 24 jam."],
+    ["Pola Shift, Regu & Mutasi","Pola berulang diberikan ke regu dengan tanggal mulai siklus; riwayat pindah regu tercatat dan bisa dipindah massal.","Rotasi shift tidak lagi disusun manual setiap bulan."],
+    ["Generator Roster Otomatis","Setiap hari roster dibuat untuk 35 hari ke depan tanpa menimpa editan manual.","Jadwal selalu tersedia jauh hari."],
+    ["Grid Roster Interaktif","Grid 14 hari dengan dropdown kode shift per sel dan tombol reset ke pola.","Perubahan jadwal mendadak cukup satu klik."],
+    ["Periode Khusus (Ramadan)","Shift otomatis ditukar ke varian khusus selama periode tertentu.","Penyesuaian jam kerja musiman tanpa input ulang."],
+    ["Hari Libur per Lokasi","Libur nasional, cuti bersama, dan libur perusahaan, opsional per lokasi.","Hari kerja dihitung tepat untuk setiap cabang."],
+    ["Sinkron Kalender Libur","Kolom sumber libur sudah disiapkan untuk impor kalender otomatis.","Libur nasional akan masuk tanpa input manual.",1],
+    ["Import dari Talenta & HRIS","Master shift, karyawan, dan IP kantor bisa diimpor dari file Talenta atau HRIS.","Migrasi dari sistem lama cepat dan tanpa ketik ulang."]
+   ]},
+  {n:"Pengajuan & Approval", d:"Cuti, izin, koreksi, lembur, WFH, dan ganti ponsel dalam satu alur.",
+   ui:{title:"Persetujuan Atasan", who:"aplikasi atasan", parts:[
+    ["stats",[["Menunggu","6"],["Cuti","2"],["Lembur","3"],["Di luar lokasi","1"]]],
+    ["list",[["CT","Cuti tahunan · 3 hari","Rina A. · saldo 9 hari","wait|Menunggu"],["SPL","Lembur 18:00–20:30","Dodi P. · ≤ 4 jam (PP 35/2021)","wait|Menunggu"],["KR","Koreksi lupa clock out","Bayu K. · lampiran 1","ok|Disetujui"]]]
+   ]},
+   f:[
+    ["Cuti, Izin, Sakit & Dinas","Jenis cuti dapat dikonfigurasi (potong saldo, wajib lampiran, dibayar, maksimal hari, kode Talenta); hari dihitung dari jadwal kerja.","Aturan cuti perusahaan berjalan otomatis."],
+    ["Saldo Cuti dengan Reservasi","Saldo tahunan, carry-over, dan penyesuaian; pengajuan pending langsung mengunci saldo.","Tidak ada lagi saldo minus karena pengajuan ganda."],
+    ["Koreksi Absensi","Koreksi lupa scan atau salah jam hingga 7 hari ke belakang dengan lampiran.","Data diperbaiki lewat jalur resmi, bukan edit diam-diam."],
+    ["Surat Perintah Lembur (SPL)","Lembur maksimal 4 jam per hari sesuai PP 35/2021, dan memperpanjang batas clock out.","Lembur patuh regulasi dan terkontrol sejak pengajuan."],
+    ["Routing ke Approval Line HRIS","Pengajuan otomatis ke atasan sesuai approval line HRIS, atau ke HC bila belum ada; tidak bisa menyetujui diri sendiri.","Approval tidak salah alamat dan bebas konflik kepentingan."],
+    ["Lokasi WFH & Lokasi Tambahan","Karyawan mengajukan titik rumah WFH dengan GPS dan alamat untuk disetujui atasan.","Kerja hybrid tetap tervalidasi lokasinya."],
+    ["Import Lembur dari Google Form","Transisi dari Google Form: lembur dipecah sebelum dan sesudah shift, ditandai disetujui, dan duplikat dilewati.","Data lama tidak hilang saat pindah sistem.",1]
+   ]},
+  {n:"Periode, Rekap & Ekspor", d:"Cut-off payroll yang dulu berhari-hari kini otomatis setiap malam.",
+   ui:{title:"Rekap Periode 21 Okt – 20 Nov", who:"panel HC", parts:[
+    ["table",{c:["Karyawan","Hadir","Terlambat","Alpa","Cuti","Lembur"],r:[["Rina A.","21","0","0","1","4j"],["Dodi P.","20","3 × 41m","1","0","9j 30m"],["Sari M.","19","1 × 6m","0","3","0"]]}],
+    ["flow",{s:["Periode berakhir","Tidak ada pending","Kunci","Ekspor Talenta"],on:2}]
+   ]},
+   f:[
+    ["Periode Cut-off Otomatis","Periode default tanggal 21–20 dibuat otomatis dan rekap dibangun ulang setiap malam.","Rekap siap begitu periode ditutup."],
+    ["Rekap per Karyawan","Hari terjadwal, hadir, alpa, lupa clock out, cuti, izin, sakit, dinas, libur, menit terlambat, jam kerja, dan lembur.","Satu tabel menjawab semua pertanyaan payroll."],
+    ["Kunci & Buka Periode","Periode hanya bisa dikunci setelah berakhir dan tanpa pengajuan pending; buka kunci hanya admin dengan alasan.","Angka payroll tidak berubah setelah disahkan."],
+    ["Ekspor Format Talenta","Ekspor rekap Excel, kehadiran harian format Talenta, dan cuti format Talenta Time Off.","Langkah tarik data manual ke Talenta hilang."]
+   ]},
+  {n:"Payroll & Pajak", d:"Dari kehadiran langsung ke slip gaji, PPh 21, BPJS, dan THR.",
+   ui:{title:"Payroll Run · November", who:"panel payroll", parts:[
+    ["flow",{s:["Draft","Hitung ulang","Final","Slip terbit"],on:2}],
+    ["stats",[["Gross","Rp 1,42 M"],["Take home pay","Rp 1,27 M"],["Iuran perusahaan","Rp 96 jt"],["Perlu dicek","4"]]],
+    ["table",{c:["Komponen","Dasar","Nilai"],r:[["Gaji pokok","bulanan","Rp 5.200.000"],["Lembur","PP 35/2021 · 1/173","Rp 451.000"],["BPJS JHT/JP/Kes","dasar UMP","− Rp 208.000"],["PPh 21","TER PP 58/2023","− Rp 54.000"]]}]
+   ]},
+   f:[
+    ["Grup Payroll","Tipe upah harian atau bulanan, hari kerja per minggu, metode lembur, aturan potongan alpa, proporsional, toggle BPJS dan PPh 21.","Satu sistem untuk karyawan bulanan dan harian."],
+    ["Komponen Gaji","Pendapatan atau potongan tetap per periode atau per hari hadir, dengan flag kena pajak dan tunjangan tetap.","Struktur gaji perusahaan terpetakan rapi."],
+    ["Profil Payroll Terenkripsi","Upah, rekening, NIK, NPWP, PTKP, dan nomor BPJS; data sensitif dienkripsi dan bisa ditarik dari HRIS.","Data gaji aman dan tidak perlu diinput dua kali."],
+    ["Payroll Run Bertahap","Draft, hitung ulang, final, dan buka kembali, dengan penyesuaian manual (bonus, insentif, kasbon, denda) dan peringatan baris bermasalah.","Proses gaji terkontrol dan bisa diaudit."],
+    ["Perhitungan Lembur, BPJS & PPh 21","Lembur PP 35/2021, BPJS JHT/JKK/JKM/JP/Kesehatan, dan PPh 21 TER PP 58/2023 dengan perhitungan ulang Pasal 17 di akhir tahun.","Perhitungan patuh regulasi tanpa rumus Excel manual."],
+    ["THR Otomatis","THR sesuai Permenaker 6/2016: proporsional masa kerja dan rata-rata upah untuk pekerja harian.","Musim THR tidak lagi berarti lembur tim payroll."],
+    ["Ekspor Bank, BPJS & 1721-A1","File transfer per bank, lembar tunai bertanda tangan, laporan iuran BPJS, dan rekap bukti potong 1721-A1.","Gaji siap ditransfer dan pelaporan pajak siap pakai.",1],
+    ["Slip Gaji Digital ber-PIN","Slip terbit setelah final, dilindungi PIN 6 digit, terkunci 15 menit setelah 5 kali salah, bisa dicetak atau disimpan PDF.","Slip kertas hilang, kerahasiaan gaji terjaga.",1],
+    ["Akses Payroll Terbatas","Hanya admin dan HC terpilih yang bisa membuka payroll; atasan tidak pernah melihat gaji.","Kerahasiaan gaji terjamin oleh sistem."]
+   ]},
+  {n:"Kunjungan Lapangan", d:"Sales dan SPG tercatat kunjungannya dengan wajah dan GPS.",
+   ui:{title:"Kunjungan Hari Ini", who:"aplikasi sales", parts:[
+    ["list",[["▶","Toko Sumber Rejeki","Sales/order · mulai 10:12 · sedang berjalan","info|Berjalan"],["✓","Minimarket Jaya","Penagihan · 42 menit · 1,8 km","ok|Selesai"],["!","Gudang Distributor","Wajah meragukan","wait|Ditandai"]]]
+   ]},
+   f:[
+    ["Check-in Kunjungan","Tempat, tujuan (rutin, order, penagihan, pengiriman, survei display), kontak, catatan, dan foto tempat, diverifikasi wajah dan GPS.","Aktivitas tim lapangan terbukti, bukan sekadar laporan."],
+    ["Check-out & Jarak","Mencatat durasi dan jarak dari titik mulai; kunjungan baru otomatis menutup yang terbuka.","Produktivitas sales terukur per kunjungan."],
+    ["Penandaan & Review","Kunjungan ditandai bila wajah meragukan atau ada anomali, lalu ditandai sudah dicek oleh atasan.","Pengawasan fokus pada kunjungan yang mencurigakan saja."],
+    ["Laporan Kunjungan Tim","Halaman kunjungan tim dan ekspor Excel.","Evaluasi kinerja lapangan berbasis data."]
+   ]},
+  {n:"Tools Atasan", d:"Atasan memantau tim tanpa membuka laptop.",
+   ui:{title:"Tim Saya Hari Ini", who:"aplikasi atasan", parts:[
+    ["stats",[["Hadir","14"],["Terlambat","2"],["Belum absen","1"],["Cuti","1"]]],
+    ["list",[["!","Dodi P. terlambat 4× bulan ini","Peringatan dini · perlu tindak lanjut","bad|Perhatian"],["!","Bayu K. lupa clock out 3×","Peringatan dini","wait|Pantau"]]]
+   ]},
+   f:[
+    ["Tim Saya Hari Ini","Statistik tim dan daftar anggota lengkap dengan selfie clock-in, jam, lokasi, terlambat, dan status.","Atasan tahu kondisi tim dalam 5 detik."],
+    ["Peringatan Dini","Sering terlambat, alpa beruntun, atau sering lupa clock out terdeteksi dengan ambang yang bisa diatur, dikirim lewat push.","Masalah disiplin ditangani sebelum menjadi pelanggaran."],
+    ["Laporan Bulanan Tim","Rekap per anggota dengan unduhan Excel, dikirim otomatis setiap tanggal 1.","Bahan evaluasi bulanan siap tanpa diminta."],
+    ["Digest Approval","Satu notifikasi ringkas per atasan setiap 5 menit.","Approval cepat tanpa banjir notifikasi."]
+   ]},
+  {n:"Notifikasi & Pengumuman", d:"Komunikasi ke karyawan langsung dari aplikasi absensi.",
+   ui:{title:"Pengumuman", who:"aplikasi karyawan", parts:[
+    ["list",[["!","Jadwal shift Ramadan berlaku 1 Maret","Penting · semua lokasi · dibaca 812","bad|Penting"],["i","Pengingat: kumpulkan dokumen PKWT","Info · HO · dibaca 96","info|Info"]]],
+    ["check",[["Pengingat clock in 15 menit sebelum shift",1],["Pengingat clock out 10 menit setelah shift",1]]]
+   ]},
+   f:[
+    ["Web Push Reminder","Pengingat clock-in sebelum shift dan clock-out setelah shift, opt-in per perangkat.","Kasus lupa absen berkurang drastis."],
+    ["Pengumuman Bertarget","Level info, penting, mendesak; bisa disematkan, dijadwalkan, dan ditargetkan per organisasi, lokasi, jabatan, atau karyawan, dengan read receipt.","Informasi HR sampai ke orang yang tepat dan terbukti dibaca."],
+    ["PWA Siap Install","Aplikasi bisa dipasang ke layar utama, punya halaman offline, dan mode gelap.","Rasa aplikasi native tanpa biaya publikasi app store."]
+   ]},
+  {n:"Monitoring, Kalibrasi & Log", d:"Kendali penuh untuk admin dan HC.",
+   ui:{title:"Pantauan Hari Ini", who:"refresh 30 detik", parts:[
+    ["stats",[["Face service","sehat · 420 ms"],["Antrean","0"],["Terjadwal","1.204"],["Hadir","1.131"]]],
+    ["chart",{t:"Histogram skor wajah: karyawan asli vs impostor",v:[2,3,5,4,6,12,28,46,64,38],l:["0,1","","0,3","","0,45","","0,6","","0,8",""]}]
+   ]},
+   f:[
+    ["Pantauan Hari Ini","Kesehatan dan latensi layanan wajah, antrean verifikasi, jumlah hadir, terlambat, belum mulai, cuti, dan approval tertua per lokasi.","Masalah operasional terlihat sebelum karyawan mengeluh."],
+    ["Kalibrasi Ambang Wajah","Histogram skor asli vs impostor dan simulasi persentase diterima, direview, ditolak sebelum ambang disimpan.","Akurasi AI disetel berdasarkan data, bukan tebakan."],
+    ["Pengaturan Tanpa Kode","Satu halaman pengaturan untuk mode verifikasi, WFH, toleransi, reminder, kunjungan, akses payroll, device lock, dan wajah adaptif.","HC mengubah kebijakan tanpa menunggu developer."],
+    ["Log Audit, Error & Notifikasi","Audit perubahan data dan login, log error terdeduplikasi, dan log notifikasi dengan retensi otomatis.","Setiap perubahan bisa ditelusuri untuk audit.",1]
+   ]},
+  {n:"Integrasi HRIS & Talenta", d:"Data mengalir dua arah tanpa input ulang.",
+   ui:{title:"Sinkronisasi", who:"scheduler", parts:[
+    ["table",{c:["Job","Jadwal","Terakhir"],r:[["Sync karyawan dari HRIS","setiap jam","ok|09:00 sukses"],["Kirim status harian ke HRIS","30 menit","ok|09:30 sukses"],["Bangun ulang rekap payroll","02:00","ok|sukses"],["Hapus biometrik resign","03:00","ok|sukses"]]}]
+   ]},
+   f:[
+    ["Login Tunggal dengan Akun HRIS","Karyawan masuk memakai username dan password HRIS; peran HRIS dipetakan ke peran absensi.","Tidak ada akun dan password baru yang harus diingat."],
+    ["Sync Karyawan Tiap Jam","Data karyawan, approval line, dan kode lokasi ditarik dari API HRIS secara inkremental.","Karyawan baru langsung bisa absen di hari pertama."],
+    ["Push Status Harian ke HRIS","Status final harian dikirim ke HRIS setiap 30 menit dan menjadi dasar deteksi mangkir.","Langkah upload tarikan manual dari Talenta hilang."],
+    ["API Mobile & Aplikasi Flutter","REST API v1 dengan Sanctum untuk aplikasi Flutter: login, jadwal, clock, riwayat, pengajuan, approval.","Siap dikembangkan ke aplikasi native Android dan iOS."]
+   ]}
+ ],
+ imp:[
+  ["Manajemen","Biaya tenaga kerja akurat dan patuh",["Gaji, lembur, PPh 21, dan BPJS dihitung dari kehadiran nyata dan regulasi terbaru.","Kecurangan absen ditekan oleh wajah, liveness, geofence, dan deteksi anomali.","Kehadiran semua lokasi terpantau real-time."]],
+  ["HC & Payroll","Cut-off tanpa lembur",["Rekap dibangun otomatis setiap malam dan dikunci saat sah.","Ekspor Talenta, bank, BPJS, dan 1721-A1 siap pakai.","Kebijakan diubah sendiri lewat halaman pengaturan."]],
+  ["Karyawan & Atasan","Semua dari ponsel",["Absen dalam hitungan detik tanpa antre fingerprint.","Cuti, lembur, koreksi, dan slip gaji dalam satu aplikasi.","Atasan menyetujui dan memantau tim dari mana saja."]]
+ ],
+ sell:[["AI anti titip absen","Face match, liveness, dan tantangan gerakan acak."],["Absensi sampai slip gaji","Satu alur dari scan wajah ke PPh 21, BPJS, dan THR."],["Tanpa hardware fingerprint","Cukup ponsel karyawan sebagai PWA."],["Patuh regulasi","UU PDP, PP 35/2021, PP 58/2023, Permenaker 6/2016."]]
+};
+</script>
+
+<script>
+P.car = {
+ meta:{name:"Career Site & Recruitment Suite", short:"Career Site", stack:"Laravel 12 · Filament 3 · Livewire · MySQL · Google Meet",
+  desc:"Situs karier publik, formulir lamaran via QR, portal kandidat, pipeline rekrutmen 10 tahap dengan SLA, skor kecocokan, Virtual Hiring, psikotest, remunerasi, sampai kandidat menjadi karyawan di HRIS."},
+ mods:[
+  {n:"Situs Karier Publik", d:"Etalase employer branding yang dikelola HR tanpa developer.",
+   ui:{title:"karir · Beranda", who:"publik", parts:[
+    ["form",{f:[["Cari lowongan","Kasir, Cook Helper, HR…"],["Tipe","Semua tipe pekerjaan"],["Lokasi","Semua lokasi"]],b:["Lihat FAQ","Cari"]}],
+    ["list",[["HR","HR Generalist","Human Capital · Jakarta · 2 posisi · s.d. 30 Nov","info|PKWT"],["CK","Cook Helper","Kitchen · Bogor · 5 posisi · s.d. 25 Nov","info|PKWT"],["IT","Backend Developer","IT · Hybrid · 1 posisi · s.d. 5 Des","ok|Tetap"]]]
+   ]},
+   f:[
+    ["Beranda Karier","Hero, pencarian (kata kunci, tipe, lokasi), 6 lowongan terbaru, langkah melamar, tahapan seleksi, nilai perusahaan, dan ajakan chat.","Kandidat paham proses dan budaya sebelum melamar."],
+    ["Daftar & Detail Lowongan","Filter lowongan, deskripsi bernomor, kualifikasi, skill, tahapan seleksi, kartu lamar yang lengket, dan lowongan terkait.","Kandidat cepat menemukan posisi yang sesuai."],
+    ["Bagikan ke Media Sosial","WhatsApp, Telegram, Facebook, X, LinkedIn, email, salin link, dengan Open Graph dan native share di ponsel.","Lowongan menyebar organik tanpa biaya iklan."],
+    ["Life at & FAQ","Halaman nilai perusahaan bergambar dan FAQ akordeon yang dikelola dari admin.","Pertanyaan berulang ke HR berkurang."],
+    ["Halaman Super Cepat","Cache halaman tamu melayani halaman publik tanpa memuat Laravel selama 60 detik.","Situs tetap cepat saat lowongan viral."],
+    ["Analitik Pengunjung","Kunjungan anonim dicatat termasuk tag UTM untuk laporan trafik.","Kanal rekrutmen terbaik terbukti dengan data."]
+   ]},
+  {n:"Formulir Lamaran QR & Cek Status", d:"Melamar tanpa akun lewat satu link atau QR per lowongan.",
+   ui:{title:"Formulir Lamaran · Cook Helper", who:"kandidat", parts:[
+    ["flow",{s:["Persetujuan","Data Pribadi","Pendidikan","Pengalaman","Dokumen","Kirim"],on:3}],
+    ["form",{f:[["CV","Otomatis format ATS"],["PIN","••••"],["Pertanyaan tim","Bersedia shift malam?",1]],b:["Simpan draf","Kirim Lamaran"]}]
+   ]},
+   f:[
+    ["Wizard Lamaran Lengkap","Persetujuan, data pribadi, alamat dengan pemilih wilayah Indonesia, identitas, keluarga, pendidikan, pengalaman, dokumen, dan pertanyaan khusus lowongan.","Data kandidat lengkap sejak awal, tidak perlu ditanya ulang."],
+    ["Isi Otomatis untuk Pelamar Lama","Data sebelumnya terisi otomatis dengan NIK, email, dan kode 6 digit atau PIN.","Melamar posisi kedua hanya butuh beberapa klik."],
+    ["CV ATS Otomatis","CV PDF format ATS dibuat dari isian form, atau kandidat mengunggah CV sendiri (maks 3 halaman).","Kandidat tanpa CV rapi tetap bisa melamar dengan standar yang sama."],
+    ["Draf Lintas Perangkat","Draf tersimpan di perangkat dan terenkripsi di server untuk dilanjutkan di perangkat lain.","Lebih sedikit lamaran yang terbengkalai di tengah jalan."],
+    ["Anti Duplikat & Validasi NIK","Satu lamaran per NIK per lowongan; NIK dicek terhadap tanggal lahir dan jenis kelamin.","Data pelamar bersih dari duplikat dan data palsu."],
+    ["Anti Bot","Cloudflare Turnstile, honeypot, waktu isi minimum, dan rate limit.","Spam lamaran tertahan sebelum masuk database."],
+    ["Cek Status 8 Tahap","Kandidat melihat timeline Lamaran Dikirim sampai Onboarding beserta agenda interview dan psikotest.","Kandidat tidak perlu menanyakan status ke HR."],
+    ["Funnel per Langkah Form","Statistik sesi per langkah form dan sumber via parameter src.","Langkah form yang membuat kandidat berhenti bisa diperbaiki."]
+   ]},
+  {n:"Portal Kandidat", d:"Akun kandidat terpisah dari akun karyawan.",
+   ui:{title:"Profil Saya", who:"portal kandidat", parts:[
+    ["stats",[["Kelengkapan profil","86%"],["Lamaran aktif","2"],["Agenda","1 interview"]]],
+    ["check",[["Data pribadi & alamat",1],["Pendidikan & pengalaman",1],["Dokumen KTP & ijazah",1],["Pertanyaan tambahan",0]]]
+   ]},
+   f:[
+    ["Registrasi & Verifikasi Email","Daftar dengan nama, email, WhatsApp, password, verifikasi email, dan reset password.","Kontak kandidat terverifikasi sejak awal."],
+    ["Persetujuan Data Berversi","Halaman persetujuan wajib; kandidat diminta setuju ulang bila teks berubah.","Patuh UU Perlindungan Data Pribadi."],
+    ["Profil dengan Autosave","Tersimpan otomatis setiap 1,5 detik, salinan offline di browser, dan peringatan konflik antar perangkat.","Tidak ada data yang hilang karena sinyal putus."],
+    ["Watermark Dokumen Otomatis","Dokumen diberi watermark rekrutmen saat dipilih.","Dokumen identitas kandidat tidak bisa disalahgunakan."],
+    ["Lamaran Saya","Status, detail proses 8 tahap, data bank dan BPJS, serta konfirmasi psikotest selesai.","Kandidat memegang kendali atas proses lamarannya."],
+    ["Hapus Data Saya","Kandidat bisa meminta penghapusan data yang diproses tim TA.","Hak subjek data terpenuhi."]
+   ]},
+  {n:"Manajemen Lowongan", d:"Dari PTK yang disetujui sampai poster Instagram.",
+   ui:{title:"Lowongan", who:"Talent Acquisition", parts:[
+    ["table",{c:["Lowongan","Status","No. PTK","Pelamar","PIC","Batas"],r:[["Cook Helper","ok|Dipublikasikan","PTK-0412","148","2 PIC","25 Nov"],["HR Generalist","ok|Dipublikasikan","PTK-0398","61","1 PIC","30 Nov"],["Store Leader","wait|Draft","PTK-0420","0","—","—"]]}]
+   ]},
+   f:[
+    ["Buat dari PTK","Lowongan dibuat langsung dari permintaan tenaga kerja (PTK) yang sudah disetujui.","Setiap lowongan punya dasar kebutuhan yang sah."],
+    ["Rekomendasi Isi Otomatis","Tombol rekomendasi mengisi kualifikasi dari master kualifikasi, PTK terakhir, atau Job Description.","Membuat lowongan baru dalam hitungan menit."],
+    ["Kriteria Kecocokan Internal","Skema dan rentang gaji, pendidikan, jurusan, pengalaman, plus kriteria berbobot seperti usia, tinggi, IPK, domisili, dan SIM.","Penyaringan kandidat mengikuti kebutuhan nyata posisi."],
+    ["Multi-Lokasi & Kuota","Setiap lokasi tambahan menjadi lowongan anak dengan slug, QR, pelamar, dan interview sendiri; tutup otomatis saat kuota terpenuhi.","Rekrutmen massal untuk banyak toko tetap rapi."],
+    ["QR & Link Formulir","QR PNG dan poster QR per lowongan, dengan statistik QR.","Rekrutmen walk-in di toko langsung tercatat digital."],
+    ["Generator Poster Instagram","Carousel 4:5 (cover, satu slide per posisi dengan QR, slide pengumuman) yang bisa diedit dan diunduh PNG atau ZIP.","Tim tidak lagi bergantung pada Canva dan desainer."],
+    ["PIC per Tahap","PIC rekrutmen ditentukan per lowongan dan per tahap, dengan aksi massal tambah atau ganti PIC.","Tanggung jawab setiap tahap jelas."]
+   ]},
+  {n:"Pipeline Rekrutmen & SLA", d:"10 tahap dengan SLA, dari screening sampai onboarding.",
+   ui:{title:"Proses Rekrutmen · Tugas Saya", who:"PIC rekrutmen", parts:[
+    ["kan",[["Screening",["Ayu R. · 86","Bima S. · 72"]],["Interview",["Citra N. · H+2"]],["Psikotest",["Dewi F."]],["Offering",["Eko K."]],["MCU",["Fajar M."]]]],
+    ["note","Di tahap ini: Citra N. 2 dari SLA 5 hari · Dewi F. 4 dari SLA 3 hari (lewat SLA)"]
+   ]},
+   f:[
+    ["Recruitment Engine","Alur rekrutmen yang dapat dikonfigurasi dengan SLA per tahap, revert, reopen, dan timeline aktivitas lengkap.","Setiap kandidat bergerak dengan aturan yang sama dan tercatat."],
+    ["Tahap Paralel","Interview dan psikotest bisa berjalan bersamaan per kandidat atau massal.","Time-to-hire lebih pendek tanpa melanggar proses."],
+    ["Tab per Tahap","Screening, Interview, Psikotest, Remunerasi, OL, MCU, Persetujuan Masuk, Talenta, Kontrak PKWT, Onboarding, dengan kolom dan aksi khusus setiap tahap.","PIC fokus pada pekerjaan di tahapnya saja."],
+    ["Papan Alur & SLA","Per kandidat terlihat semua tahap, PIC, siapa yang ditunggu, dan hari berjalan dibanding SLA.","Hambatan proses terlihat dan bisa dikejar."],
+    ["Detail Pelamar 360°","Profil, dokumen viewer, hasil tahapan, catatan internal, ringkasan penilaian, dan unduh semua PDF dalam satu dosir.","Keputusan diambil dengan informasi lengkap."],
+    ["Cek Mantan Karyawan & Relasi","Peringatan riwayat resign atau PHK, utang, mangkir, NON OK sebelumnya, dan pencocokan kerabat dengan data karyawan.","Risiko rekrutmen ulang yang bermasalah tertangkap otomatis."],
+    ["WhatsApp per Tahap","Tombol WhatsApp dengan pesan otomatis sesuai tahap kandidat.","Komunikasi ke kandidat cepat dan konsisten."],
+    ["Import Data Lama","Impor pelamar lama dari CSV/XLSX, tautkan dokumen Google Drive lama, dan masukkan ke alur.","Transisi dari sistem lama tanpa kehilangan data."]
+   ]},
+  {n:"Skor Kecocokan & Talent Pool", d:"Penyaringan berbasis aturan yang transparan, tanpa AI kotak hitam.",
+   ui:{title:"Pelamar · Sangat Cocok (80+)", who:"Talent Acquisition", parts:[
+    ["table",{c:["Pelamar","Skor","Lokasi","Harapan gaji","Tahap"],r:[["Citra N.","ok|91 Sangat cocok","Kecamatan sama","Rp 5,0 jt","Interview"],["Ayu R.","ok|86 Sangat cocok","Kota sama","Rp 4,8 jt","Screening"],["Bima S.","info|72 Cocok","Beda kota","Rp 5,5 jt","Screening"]]}],
+    ["note","Bobot: gaji 20 · pendidikan 15 · jurusan 10 · pengalaman 20 · skill 25 · lokasi 10"]
+   ]},
+   f:[
+    ["Skor Kecocokan 0–100","Bobot gaji, pendidikan, jurusan, pengalaman, skill dengan sinonim, lokasi, dan kriteria tambahan; kriteria tidak relevan dibagi ulang bobotnya.","Ratusan CV terurut otomatis dari yang paling cocok."],
+    ["Tab Verdict","Sangat Cocok, Cocok, Cukup, Kurang Cocok, Data Minim, dan Belum Dinilai.","Recruiter mulai dari kandidat terbaik."],
+    ["Location Match Toko","Kecamatan sama, kota sama, atau beda kota untuk lowongan toko dan outlet.","Karyawan toko lebih dekat rumah, risiko resign dini turun."],
+    ["Talent Pool per PTK","Sistem memindai semua pelamar dan menyimpan 200 saran teratas yang bisa ditambahkan ke daftar PIC.","Lowongan baru terisi dari pelamar lama tanpa iklan ulang."],
+    ["Filter Lanjutan","Skor, status karyawan, red flag, rentang gaji, usia, pengalaman, pendidikan, domisili, sumber, dan tahap.","Pencarian kandidat spesifik dalam detik."]
+   ]},
+  {n:"Virtual Hiring", d:"Rekrutmen proaktif: perusahaan yang menawarkan posisi ke kandidat.",
+   ui:{title:"Tinjau & Tawarkan", who:"Talent Acquisition", parts:[
+    ["list",[["1","Cook Helper · Cabang Bogor","Skor 88 · 2,1 km · shift sesuai","ok|Ditawarkan"],["2","Kasir · Cabang Depok","Skor 74 · 6,4 km","info|Cadangan"]]],
+    ["table",{c:["Slot interview","Mode","Kapasitas","Status"],r:[["Sen 18 Nov 09:00","Google Meet","8 / 20","ok|Dibuka"],["Sel 19 Nov 13:00","Di toko","3 / 10","ok|Dibuka"]]}]
+   ]},
+   f:[
+    ["Pool Kandidat Siap Kerja","Kandidat dengan profil 100% bergabung ke pool dan bisa jeda atau keluar.","Selalu ada kandidat siap saat kebutuhan mendadak."],
+    ["Screener Wajib & Skor","Syarat wajib (pendidikan, pengalaman, jarak, shift, kerja Sabtu, kendaraan dan SIM), lalu skor kecocokan yang dihitung ulang otomatis.","Hanya kandidat layak yang ditawari posisi."],
+    ["Tawaran 1–3 Posisi","TA meninjau dan menawarkan 1–3 lowongan; kandidat memilih posisi dan slot interview atau menolak dengan alasan.","Kandidat merasa dihargai, acceptance rate naik."],
+    ["Slot Interview Pintar","Online (Meet), di kantor (booking ruang), atau di toko, menangani 17 kasus jadwal seperti reschedule, undangan mendesak, dan no-show.","Penjadwalan massal tanpa bentrok."],
+    ["Kandidat Cadangan & Cooldown","Saran cadangan saat kandidat menolak atau gagal, dan jeda 3 bulan untuk posisi yang sama setelah NON OK.","Posisi tidak kosong lama karena satu kandidat mundur."],
+    ["Dashboard Virtual Hiring","Funnel, alasan penolakan, waktu respons, pemakaian slot, akurasi skor dibanding hasil interview, dan sebaran kandidat per lokasi.","Strategi rekrutmen diperbaiki berdasarkan data."]
+   ]},
+  {n:"Interview & Penilaian", d:"Jadwal, Google Meet, dan formulir penilaian digital.",
+   ui:{title:"Penilaian Hasil Wawancara", who:"interviewer", parts:[
+    ["table",{c:["Dimensi","Skor 1–4"],r:[["Komunikasi","4"],["Problem solving","3"],["Integritas","4"],["Kerja tim","3"]]}],
+    ["form",{f:[["Rekomendasi","Lanjut ke psikotest"],["Catatan","Pengalaman F&B 2 tahun, siap shift",1]],b:["Simpan draf","Kirim penilaian"]}]
+   ]},
+   f:[
+    ["Jadwal Interview Massal","Interview HC, User, BOD, atau panel; tatap muka atau online; satu per satu atau massal dengan peringatan bentrok.","Penjadwalan puluhan kandidat selesai dalam sekali proses."],
+    ["Google Calendar & Meet Otomatis","Undangan kalender dan link Meet dibuat otomatis, atau email .ics bila Google tidak dipakai.","Tidak ada lagi link meeting yang dibuat manual."],
+    ["Agenda Interview","Daftar jadwal milik interviewer dengan aksi gabung, reschedule, batal, dan selesai.","Interviewer tahu jadwalnya tanpa diingatkan."],
+    ["Penilaian 12 Dimensi","Layar terbelah: profil dan CV di kiri, formulir 12 dimensi skala 1–4 di kanan, dengan panduan pertanyaan per bidang.","Penilaian objektif dan sebanding antar kandidat."],
+    ["PDF Bertanda Tangan Digital","Formulir penilaian dikunci setelah dikirim dan dicetak ke PDF dengan tanda tangan digital.","Dokumen keputusan rekrutmen siap diaudit."]
+   ]},
+  {n:"Psikotest", d:"Kode aktivasi, undangan, dan hasil dalam satu alur.",
+   ui:{title:"Kode Psikotest", who:"Talent Acquisition", parts:[
+    ["table",{c:["Kode","Modul","Kandidat","Batas","Status"],r:[["PX-7Q2K","Kognitif","Dewi F.","20 Nov","ok|Selesai"],["PX-8M4T","Kepribadian","Eko K.","21 Nov","wait|Belum"],["PX-9C1A","Kognitif","—","—","info|Tersedia"]]}]
+   ]},
+   f:[
+    ["Bank Kode Aktivasi","Kode diimpor dengan tempel dari spreadsheet, lalu dibagikan acak per modul tes.","Tidak ada kode yang terpakai dua kali."],
+    ["Ambil Kode & Kirim Undangan","Aksi massal membagikan kode dan mengirim undangan email serta WhatsApp sekaligus.","Undangan puluhan kandidat terkirim dalam satu klik."],
+    ["Pelacakan Pengerjaan","Batas waktu, status pengerjaan, dan konfirmasi selesai dari kandidat.","Kandidat yang belum mengerjakan bisa segera diingatkan."],
+    ["Import Hasil & Retake","Skor, IQ, dan rekomendasi diimpor berdasarkan kode; percobaan sebelumnya diarsipkan saat retake.","Hasil psikotest langsung menempel di profil kandidat."]
+   ]},
+  {n:"Offering & Persetujuan Masuk", d:"Remunerasi, offering letter, MCU, dan approval berjenjang.",
+   ui:{title:"Pembuatan Remunerasi", who:"Comben", parts:[
+    ["table",{c:["Komponen","Nilai"],r:[["Gaji pokok","Rp 4.900.000"],["Makan & transport × 25 hari","Rp 1.250.000"],["BPJS karyawan","− Rp 196.000"],["PPh 21 (TER PP 58/2023)","− Rp 40.000"],["Take home pay","Rp 5.914.000"]]}],
+    ["flow",{s:["HC","Approval line","RL1","RL2","Final"],on:2}]
+   ]},
+   f:[
+    ["Kalkulator Remunerasi","Template regional atau kustom, makan dan transport, selisih UMK, BPJS, dan PPh 21 TER otomatis sampai take home pay, dengan approval sendiri.","Penawaran gaji akurat dan patuh regulasi."],
+    ["Offering Letter Otomatis","Form terisi dari lamaran, lowongan, dan PTK; nomor surat otomatis; template klausul; unduhan TA lewat izin berbatas waktu.","Offering letter terbit tanpa ketik ulang dan tetap rahasia."],
+    ["MCU","Pilih lokasi MCU, jadwalkan, buat surat pengantar PDF, dan kirim email beserta lampiran.","Proses medical check-up tidak lagi lewat telepon."],
+    ["Data Bank & BPJS dari Kandidat","Diminta otomatis di tahap offering, diisi sekali dengan pernyataan kebenaran lewat link pribadi, lalu dikunci.","Data payroll karyawan baru siap sebelum hari pertama."],
+    ["Persetujuan Masuk Berjenjang","HC lalu reporting line (approval line, RL1, RL2, RL3) dengan tanda tangan digital dan unggah file final.","Keputusan rekrutmen sah dan terdokumentasi lengkap."]
+   ]},
+  {n:"Onboarding & Serah Terima HRIS", d:"Kandidat diterima langsung menjadi karyawan.",
+   ui:{title:"Kandidat On Board", who:"HC", parts:[
+    ["table",{c:["Kandidat","Tgl onboarding","ID karyawan","Seragam & ID","Login Talenta"],r:[["Eko K.","25 Nov","JKT-0412","ok|✓","ok|✓"],["Fajar M.","2 Des","BGR-0188","wait|Proses","—"]]}]
+   ]},
+   f:[
+    ["Jadikan Karyawan","Satu klik membuat data karyawan, struktur organisasi, dan kontrak dari lamaran dan PTK; ID karyawan dibuat dari kode lokasi dan nomor urut.","Tidak ada input ulang data karyawan baru."],
+    ["Ekspor Talenta","Excel Bulk Add Employee sesuai template Talenta, per kandidat, massal, atau sesuai filter.","Karyawan baru masuk sistem payroll dalam menit."],
+    ["Tracker Kandidat On Board","Pengganti spreadsheet lama dengan checklist seragam, ID card, perangkat, login Talenta, dan reporting line.","Hari pertama karyawan baru selalu siap."],
+    ["Pemenuhan PTK","Kandidat yang diterima dihitung terhadap PTK secara berurutan untuk progres dan status rekrutmen.","Manajemen tahu berapa kebutuhan yang sudah terpenuhi."],
+    ["API Lowongan untuk Situs Terpisah","REST API v1 read-only dengan token dan rate limit untuk situs karier terpisah.","Situs karier bisa dipisah dari HRIS tanpa duplikasi data.",1]
+   ]},
+  {n:"Live Chat & Notifikasi", d:"Kandidat selalu dapat kabar, tim HR tidak kebanjiran pertanyaan.",
+   ui:{title:"Layanan Chat", who:"kandidat ↔ HC", parts:[
+    ["list",[["BOT","Asisten Otomatis","Status lamaran Anda: Interview · Senin 09:00 via Meet",""],["AR","Ayu R.","Apakah perlu membawa ijazah asli?",""],["HC","Tim Rekrutmen","Cukup fotokopi, aslinya dibawa saat MCU","ok|Dijawab"]]]
+   ]},
+   f:[
+    ["Bot Berbasis Aturan","Menjawab pertanyaan status dan jadwal, dengan jawaban tambahan dari admin FAQ.","Sebagian besar pertanyaan selesai tanpa staf."],
+    ["Antrean & Jam Layanan","Nomor antrean, jam layanan, tutup otomatis setelah 15 menit idle, dan dua level akses.","Chat terkelola rapi seperti layanan pelanggan profesional."],
+    ["Inbox Staf","Tab Antrean, Milik Saya, Semua, Selesai; pindahkan chat ke staf lain.","Tidak ada chat kandidat yang terlewat."],
+    ["Email Progres Otomatis","Email setiap kali status 8 tahap bergerak, berhenti, atau kandidat diterima, plus undangan interview, psikotest, dan MCU.","Kandidat tidak pernah digantung tanpa kabar."],
+    ["Notifikasi & Push ke PIC","Notifikasi database dan web push untuk penugasan, pengingat SLA, eskalasi, dan digest harian.","PIC bertindak sebelum SLA terlewati."]
+   ]},
+  {n:"Laporan & Analitik Rekrutmen", d:"Rekrutmen yang terukur dari PTK sampai onboarding.",
+   ui:{title:"Durasi Rekrutmen", who:"HC Manager", parts:[
+    ["chart",{t:"Rata-rata hari per tahap",v:[2,4,3,2,2,3,3,1,2,4],l:["Scr","Int","Psi","Rem","OL","MCU","PM","Tal","PKWT","Onb"]}],
+    ["stats",[["SLA PTK staf","30 hari"],["Pengunjung situs","8.420"],["Bounce rate","38%"]]]
+   ]},
+   f:[
+    ["Durasi Rekrutmen & SLA","Rata-rata hari per tahap, kumulatif dari pembuatan PTK, detail per PTK, dan target SLA per level jabatan (30/45/60 hari).","Time-to-hire terukur dan bisa ditekan."],
+    ["SLA per PIC","Waktu tahap, interview, dan penilaian per PIC.","Kinerja tim rekrutmen terlihat adil."],
+    ["Ringkasan Pelamar","Total lamaran, pelamar unik, rata-rata dan median harapan gaji, skor rata-rata, karyawan dan mantan karyawan.","Gambaran pasar kandidat dalam sekali lihat."],
+    ["Trafik Situs Karier","Pengunjung, sesi, sumber trafik, halaman dan lowongan teratas, serta pembuat link UTM.","Anggaran promosi lowongan diarahkan ke kanal terbaik."]
+   ]},
+  {n:"Privasi, Akses & Pengaturan", d:"Data kandidat aman dan proses bisa diatur tanpa developer.",
+   ui:{title:"Pengaturan Rekrutmen", who:"Talent Acquisition", parts:[
+    ["check",[["Anonimisasi pelamar tidak aktif > 2 tahun",1],["Dokumen KTP & KK hanya untuk HC",1],["Gaji kandidat hanya untuk Comben",1],["Jam layanan chat mengikuti hari libur",0]]]
+   ]},
+   f:[
+    ["Anonimisasi Otomatis","Pelamar tidak aktif lebih dari 2 tahun dianonimkan otomatis setiap bulan.","Patuh UU PDP tanpa pekerjaan manual."],
+    ["Akses Berlapis","PIC non-HC hanya melihat CV dan paklaring; gaji kandidat hanya untuk Comben dan HC terpilih.","Data sensitif hanya dilihat yang berhak."],
+    ["Pengaturan Situs Karier","Nama, logo, warna, hero, langkah melamar, tahapan seleksi, dan PIN cek status diatur dari admin.","Tampilan situs karier diubah tanpa developer."],
+    ["Template & Alur","Template pendaftaran, alur rekrutmen dengan SLA, tahap paralel, template remunerasi dan offering letter, serta master UMK.","Proses rekrutmen fleksibel mengikuti kebijakan perusahaan."],
+    ["Akun Pelamar","Perbaiki email, kelola PIN, verifikasi manual, kirim ulang verifikasi, dan proses permintaan hapus data.","Kendala akun kandidat selesai tanpa developer."]
+   ]}
+ ],
+ imp:[
+  ["Manajemen","Rekrutmen cepat dan terkendali",["Time-to-hire terukur per tahap dengan target SLA.","Setiap kebutuhan PTK terlacak sampai terpenuhi.","Keputusan penerimaan disetujui berjenjang dan terdokumentasi."]],
+  ["Talent Acquisition","Ratusan pelamar, satu papan kerja",["Skor kecocokan mengurutkan CV otomatis.","Interview, psikotest, dan offering terjadwal massal.","Kandidat diterima langsung menjadi karyawan di HRIS dan Talenta."]],
+  ["Kandidat","Pengalaman melamar yang profesional",["Melamar lewat QR tanpa membuat akun.","Status 8 tahap selalu terlihat dan dikabari lewat email.","Chat langsung dengan tim rekrutmen."]]
+ ],
+ sell:[["End-to-end hiring","Dari PTK, lowongan, seleksi, offering, sampai karyawan aktif."],["Virtual Hiring","Perusahaan menawarkan posisi ke kandidat yang paling cocok."],["Patuh regulasi","UU PDP, PPh 21 TER, UMK, BPJS terhitung otomatis."],["Siap skala ritel","Multi-lokasi, kuota, QR walk-in, dan poster otomatis."]]
+};
+</script>
+
+<script>
+P.kit = {
+ meta:{name:"Asisten Dapur", short:"Asisten Dapur", stack:"Python Flask · MySQL · Metabase API · Playwright",
+  desc:"CRM pelanggan untuk jaringan toko ritel F&B: rekomendasi follow-up berbasis RFM, database member dan pipeline, follow-up WhatsApp dengan template, laporan pelanggan, Google Review per karyawan, dan Sales Challenge."},
+ mods:[
+  {n:"Rekomendasi Aksi Harian", d:"Sistem memberi tahu karyawan siapa yang harus dihubungi hari ini dan kenapa.",
+   ui:{title:"Rekomendasi Aksi", who:"karyawan toko", parts:[
+    ["stats",[["Total member","412"],["Belum di-FU","58"],["FU hari ini","17"],["Ragu-ragu","9"]]],
+    ["table",{c:["Pelanggan","Recency","Belanja","Tahap","Skor"],r:[["Ibu Lina","34 hari","Rp 1,2 jt","Contacted","bad|92"],["Pak Anton","21 hari","Rp 860 rb","New","wait|78"],["Ibu Rara","9 hari","Rp 2,4 jt","Interested","ok|55"]]}]
+   ]},
+   f:[
+    ["Skor Prioritas 0–100","Skor dari recency (35), nilai belanja (30), frekuensi (15), dan tahap follow-up (20) untuk mengurutkan pelanggan.","Karyawan langsung tahu pelanggan paling bernilai yang harus dihubungi."],
+    ["Aksi Sekali Klik","Tombol Chat WA, Buka Semua WA, dan tambah pengingat ke Google Calendar.","Follow-up yang dulu butuh salin nomor manual selesai dalam detik."],
+    ["Efektivitas Follow-up","Membandingkan pembelian setelah follow-up dengan pembelian organik, hari ini dan sepanjang waktu.","Manajemen melihat bukti bahwa follow-up menghasilkan penjualan."],
+    ["Deteksi Risiko Churn","Pelanggan yang terlambat belanja dibanding interval belanjanya sendiri ditandai berisiko.","Pelanggan diselamatkan sebelum pindah ke toko lain."],
+    ["Email Reminder Harian","Setiap pukul 08:00 setiap karyawan menerima daftar member mendesak, dengan status pengiriman terlihat di dashboard.","Tidak ada pelanggan prioritas yang terlupa."]
+   ]},
+  {n:"Database Member & Pipeline", d:"Satu database pelanggan dari lead sampai closing.",
+   ui:{title:"Database Member", who:"karyawan & leader", parts:[
+    ["flow",{s:["New","Contacted","Interested","Closed Won"],on:2}],
+    ["table",{c:["Pelanggan","Transaksi terakhir","Produk terakhir","Recency","Status FU"],r:[["Ibu Lina","12 Okt","Susu UHT 1L","bad|Urgent","Contacted"],["Pak Anton","25 Okt","Telur 1 kg","wait|Critical","New"],["Ibu Rara","Hari ini","Daging sapi 500 g","ok|Sudah belanja","Interested"]]}]
+   ]},
+   f:[
+    ["Pipeline Penjualan","Tahap New, Contacted, Interested, Closed Won, dengan Closed Lost dihitung terpisah.","Perjalanan setiap pelanggan dari kenalan sampai belanja terlihat jelas."],
+    ["Filter Recency","Urgent (lebih dari 30 hari), Critical (8–30 hari), Safe (1–7 hari), plus filter toko, karyawan, dan status follow-up.","Karyawan fokus ke pelanggan yang hampir hilang."],
+    ["Sudah Belanja Hari Ini","Penjualan realtime disinkron sekitar 30 menit sekali dari Metabase.","Follow-up tidak dikirim ke pelanggan yang baru saja belanja."],
+    ["Detail Member 3 Tab","Aksi dan follow-up, profil dan RFM, serta riwayat assignment dalam satu jendela.","Semua konteks pelanggan ada di satu tempat sebelum menghubungi."],
+    ["Data Member (Leads)","Tambah lead dengan verifikasi nomor otomatis, sumber, dan catatan, lalu follow-up dari detail lead.","Calon member baru tidak hilang di catatan pribadi."],
+    ["Mapping Customer","Kepemilikan pelanggan per karyawan dan riwayat re-assignment, dengan upload massal dari template Excel.","Pembagian pelanggan antar karyawan adil dan transparan."]
+   ]},
+  {n:"Follow-up WhatsApp", d:"Pesan personal dalam hitungan detik, setiap follow-up tercatat.",
+   ui:{title:"Detail Member · Aksi & Follow Up", who:"karyawan toko", parts:[
+    ["form",{f:[["Sumber caption","Pilih template"],["Template","Reaktivasi pelanggan"],["Caption","Halo Ibu Lina, sudah 34 hari sejak belanja Susu UHT 1L terakhir di toko kami…",1]],b:["Copy caption","Buka WhatsApp"]}],
+    ["form",{f:[["Tanggal FU","15 Nov"],["Status minat","Tertarik"],["Tahap pipeline","Interested"]],b:["+ Tambah Follow Up"]}]
+   ]},
+   f:[
+    ["Template Chat dengan Placeholder","Template berisi tombol + Nama, + Produk Terakhir, + Tanggal Terakhir, + Recency, + Toko, + Nama Saya, + Toko Saya, beserta link gambar materi promo.","Pesan terasa personal tanpa diketik ulang."],
+    ["Caption Tiga Sumber","Rekomendasi otomatis, pilih template, atau edit manual, lalu Copy Caption atau Buka WhatsApp.","Karyawan baru mengirim pesan dengan standar yang sama."],
+    ["Catat Follow-up","Tanggal, status minat, dan tahap pipeline dicatat setiap kali follow-up.","Setiap percakapan punya hasil yang terukur."],
+    ["Riwayat Follow-up","Satu baris per follow-up: siapa, kapan, FU ke berapa, hari sampai transaksi berikutnya, feedback, template, dan catatan, dengan ekspor Excel.","Template dan karyawan paling efektif bisa diketahui."]
+   ]},
+  {n:"Analitik & Laporan Pelanggan", d:"RFM dan laporan multi-sheet untuk keputusan HO.",
+   ui:{title:"RFM Customer", who:"HO", parts:[
+    ["stats",[["Champions","86"],["Loyal","142"],["At Risk","63"],["Hibernating","121"]]],
+    ["chart",{t:"Pembelian setelah follow-up per minggu",v:[18,24,22,31,36,41,47,58],l:["M1","M2","M3","M4","M5","M6","M7","M8"]}]
+   ]},
+   f:[
+    ["Peta Segmen RFM","Skor R, F, M 1–5 dihitung setiap sinkronisasi dan dipetakan ke grid recency × frequency dengan segmen seperti Champions, Loyal, dan At Risk.","Strategi promo dibedakan per segmen pelanggan."],
+    ["Daftar RFM yang Bisa Diurutkan","Total belanja, rata-rata recency dan frekuensi, dengan urutan berdasarkan belanja, recency, frekuensi, atau nama.","Pelanggan paling bernilai mudah ditemukan."],
+    ["Report Customer","Laporan harian, mingguan, atau bulanan per toko, per karyawan, dan detail pelanggan dengan metrik % sudah di-FU dan % member aktif.","Laporan rapat HO tersedia tanpa rekap manual."],
+    ["Ekspor Excel Multi-sheet","Ringkasan periode, per toko, per karyawan, dan detail pelanggan dalam satu file.","Data siap dianalisis lebih lanjut oleh tim lain."]
+   ]},
+  {n:"Penjualan & Leaderboard", d:"Kinerja toko dan karyawan terlihat setiap hari.",
+   ui:{title:"Dashboard Sales Assignment", who:"leader & HO", parts:[
+    ["stats",[["Transaksi","1.284"],["Net sales","Rp 312 jt"],["Margin","18,4%"],["Karyawan achieve","14 / 20"]]],
+    ["list",[["1","Rina A.","Cabang A · net Rp 21,4 jt","ok|Top"],["2","Dodi P.","Cabang B · net Rp 18,9 jt",""],["3","Sari M.","Cabang A · net Rp 17,2 jt",""]]]
+   ]},
+   f:[
+    ["Dashboard Sales Assignment","Transaksi, bill, gross, net, margin, tren net harian, dan net per tipe assignment.","Pencapaian toko terlihat setiap hari, bukan akhir bulan."],
+    ["Progres Karyawan & Toko","Achieve X dari Y karyawan dan perbandingan beberapa toko sekaligus.","Toko yang tertinggal segera mendapat perhatian."],
+    ["Ranking Karyawan","Peringkat berdasarkan net sales dengan unduhan CSV dan detail transaksi yang bisa dicari.","Kontribusi setiap karyawan terukur adil."],
+    ["Leaderboard Subscription per Toko","Periode semua, hari ini, kemarin, minggu ini, dan bulan ini.","Kompetisi sehat antar toko."],
+    ["Sales Challenge Scoreboard","Skor per komponen: akuisisi baru, assigned, aktif, frekuensi belanja, dan nilai belanja, dengan pengaturan siapa yang boleh melihat nominal.","Program insentif dihitung transparan dan otomatis.",1]
+   ]},
+  {n:"Google Review Karyawan", d:"Ulasan pelanggan menjadi data kinerja layanan.",
+   ui:{title:"Google Review · Per Karyawan", who:"HO", parts:[
+    ["table",{c:["Karyawan","Toko","Disebut","★5","★1"],r:[["Rina A.","Cabang A","48","44","0"],["Dodi P.","Cabang B","31","26","2"],["Sari M.","Cabang A","19","17","1"]]}],
+    ["flow",{s:["Sync 30/60 hari","Cocokkan nama","Perlu cek manual","Rekap"],on:3}]
+   ]},
+   f:[
+    ["Sinkron Review Terjadwal","Job latar belakang untuk 30 atau 60 hari terakhir atau rentang tanggal, semua atau toko tertentu, dengan log progres, tombol batal, dan riwayat job.","Ratusan review terkumpul tanpa dibaca satu per satu."],
+    ["Pencocokan Nama Karyawan","Nama yang disebut di review dicocokkan dengan fuzzy matching dan daftar nama panggilan.","Pujian pelanggan sampai ke karyawan yang tepat."],
+    ["Rekap per Toko & per Karyawan","Tren harian, rating ★5–★1 per toko, dan jumlah sebutan per karyawan.","Kualitas layanan menjadi angka yang bisa dibandingkan."],
+    ["Perlu Cek Manual","Review ambigu bisa di-assign, dilewati, atau di-reset.","Data tetap akurat walau nama di review tidak jelas."],
+    ["Google Business Profile API","Sumber data dipindahkan dari scraping Playwright ke API resmi dengan OAuth dan pemetaan lokasi.","Data review stabil dan sesuai kebijakan Google.",1]
+   ]},
+  {n:"Akses, Akun & Platform", d:"Aplikasi Flask di VPS yang siap dipakai seluruh jaringan toko.",
+   ui:{title:"Role Access", who:"super admin", parts:[
+    ["table",{c:["Menu","Super Admin","Admin","Reporting","Karyawan"],r:[["Rekomendasi Aksi","✓","✓","✓","✓"],["RFM Customer","✓","✓","✓","—"],["Sales Challenge","✓","✓","sebagian","—"],["Nominal rupiah","✓","✓","✓","disembunyikan"]]}]
+   ]},
+   f:[
+    ["Role dengan Cakupan Data","Super admin, admin, reporting line, approval line, dan karyawan, plus role kustom seperti Area Manager yang mewarisi cakupan data.","Setiap orang hanya melihat data tim dan tokonya."],
+    ["Matriks Menu per Role","Grid centang menu × role yang bisa diubah tanpa developer.","Struktur organisasi baru langsung terakomodasi."],
+    ["Nominal Rupiah Terlindungi","Angka rupiah tidak dikirim server ke peran karyawan dan approval line.","Data finansial aman sampai level server."],
+    ["Akun Massal via Email","Pilih toko, karyawan, dan role; password dan reset dikirim lewat email.","Onboarding ratusan karyawan toko dalam beberapa menit."],
+    ["Sinkronisasi Terjadwal","Penjualan, penjualan realtime, RFM, karyawan, leaderboard, mapping, dan challenge disinkron otomatis dari Metabase dan Google Sheets, dengan tombol refresh manual.","Data selalu segar tanpa ekspor-impor manual."],
+    ["Evolusi Arsitektur","Dimulai di Google Apps Script dan Sheets, lalu dibangun ulang dengan Python Flask, MySQL, APScheduler, Gunicorn, dan Nginx.","Sistem siap menampung data seluruh jaringan toko."]
+   ]}
+ ],
+ imp:[
+  ["Manajemen & HO","Penjualan yang bisa dilacak",["Omzet dari hasil follow-up terbukti, bukan perkiraan.","Segmen RFM menjadi dasar strategi promo.","Kinerja toko dan karyawan terlihat setiap hari."]],
+  ["Leader Toko","Tim toko lebih terarah",["Progres karyawan dan toko terpantau real-time.","Pelanggan dibagi adil lewat mapping.","Karyawan terbaik terlihat dari leaderboard dan review."]],
+  ["Karyawan Toko","Tahu harus melakukan apa",["Daftar prioritas pelanggan setiap pagi lewat email.","Pesan WhatsApp personal tinggal salin dan kirim.","Kontribusi tercatat untuk penilaian dan insentif."]]
+ ],
+ sell:[["CRM untuk ritel","Database member, pipeline, dan follow-up dalam satu aplikasi."],["Prioritas berbasis data","Skor RFM menentukan siapa yang dihubungi lebih dulu."],["Terbukti ke omzet","Pembelian setelah follow-up terlacak."],["Gamifikasi kinerja","Leaderboard, Google Review, dan challenge berhadiah."]]
+};
+</script>
+
+<script>
+P.wat = {
+ meta:{name:"Waterynation", short:"Tugas Akhir", stack:"Laravel 12 · Blade · MySQL · Spatie Roles",
+  desc:"Proyek Tugas Akhir: website organisasi peduli air dengan program dan pendaftaran, donasi QRIS dengan verifikasi admin, rekrutmen volunteer, publikasi artikel, dan panel admin."},
+ mods:[
+  {n:"Profil Organisasi", d:"Wajah publik organisasi yang dikelola dari admin.",
+   ui:{title:"waterynation · Beranda", who:"publik", parts:[
+    ["stats",[["Program aktif","12"],["Volunteer","86"],["Donatur","240"]]],
+    ["list",[["VM","Visi & Misi","Nilai inti dan area fokus organisasi",""],["TIM","Tim Kami","Profil pengurus dan volunteer",""],["PUB","Publikasi","Artikel dan kabar kegiatan terbaru",""]]]
+   ]},
+   f:[
+    ["Beranda & Profil","Halaman beranda, profil, visi-misi, nilai inti, area fokus, dan kontak organisasi.","Organisasi tampil kredibel di mata donatur dan mitra."],
+    ["Halaman Tim","Profil tim organisasi dan tim volunteer.","Transparansi siapa yang menjalankan organisasi."],
+    ["Kelola Organisasi","Admin mengubah profil, visi, misi, core values, kontak, dan info QRIS dari panel.","Konten selalu terbaru tanpa developer."]
+   ]},
+  {n:"Program & Pendaftaran", d:"Tiga jenis program dengan pendaftaran online.",
+   ui:{title:"Program", who:"admin", parts:[
+    ["table",{c:["Program","Kategori","Tanggal","Pendaftar","Status"],r:[["Aksi Bersih Sungai","Offline Action","12 Okt","48","ok|Published"],["Webinar Air Bersih","Online Webinar","20 Okt","132","ok|Published"],["Modul Hemat Air Anak","Modul for Kids","—","—","wait|Hidden"]]}]
+   ]},
+   f:[
+    ["Tiga Kategori Program","Offline Action, Online Webinar, dan Modul Development for Kids dengan halaman masing-masing.","Pengunjung langsung menemukan kegiatan yang sesuai."],
+    ["Detail Program Kaya Media","Gambar, video YouTube, lokasi, tautan, dan periode program dengan slug ramah SEO.","Program lebih menarik dan mudah dibagikan."],
+    ["Pendaftaran Peserta","Program bisa diaktifkan form registrasinya; peserta yang login mendaftar dengan nama, email, dan telepon.","Data peserta terkumpul rapi tanpa Google Form."],
+    ["Ekspor Pendaftar ke Excel","Admin mengunduh daftar pendaftar per program.","Rekap peserta siap dalam satu klik."],
+    ["Status Publikasi","Program bisa disembunyikan atau dipublikasikan.","Konten bisa disiapkan sebelum diumumkan."]
+   ]},
+  {n:"Donasi QRIS", d:"Donasi transparan dengan verifikasi bukti transfer.",
+   ui:{title:"Donasi", who:"admin", parts:[
+    ["table",{c:["Donatur","Tanggal","Nominal","Bukti","Status"],r:[["Hamba Allah","14 Nov","Rp 250.000","ada","wait|Pending"],["Rina A.","13 Nov","Rp 100.000","ada","ok|Terverifikasi"],["Bima S.","12 Nov","Rp 50.000","buram","bad|Ditolak"]]}]
+   ]},
+   f:[
+    ["Form Donasi dengan QRIS","Donatur memindai QRIS organisasi, mengisi nominal, dan mengunggah bukti transfer.","Donasi mudah dari ponsel mana pun."],
+    ["Opsi Anonim","Donatur memilih apakah namanya ditampilkan.","Donatur yang ingin anonim tetap nyaman berdonasi."],
+    ["Verifikasi & Penolakan Admin","Admin memverifikasi atau menolak donasi dengan keterangan.","Dana tercatat akurat dan dapat dipertanggungjawabkan."]
+   ]},
+  {n:"Rekrutmen Volunteer", d:"Dari lowongan volunteer sampai testimoni.",
+   ui:{title:"Pendaftar Volunteer", who:"admin", parts:[
+    ["table",{c:["Nama","Posisi","Instagram","Status"],r:[["Ayu R.","Media","@ayu.r","ok|Diterima"],["Citra N.","Edukator","@citra","wait|Pending"],["Dodi P.","Logistik","—","bad|Ditolak"]]}]
+   ]},
+   f:[
+    ["Lowongan Volunteer Multi-Posisi","Setiap lowongan punya deskripsi, gambar, dan daftar posisi dalam JSON.","Satu kampanye bisa merekrut banyak peran."],
+    ["Pendaftaran Volunteer","Pendaftar mengisi data, posisi, foto, Instagram, dan LinkedIn.","Profil volunteer lengkap sejak awal."],
+    ["Seleksi Pending, Diterima, Ditolak","Admin meninjau dan mengubah status pendaftar.","Proses seleksi volunteer terlacak."],
+    ["Tim Volunteer & Testimoni","Halaman tim volunteer dan testimoni 'Apa Kata Mereka'.","Bukti sosial yang menarik volunteer baru."]
+   ]},
+  {n:"Publikasi & Panel Admin", d:"Konten dan pengguna dikelola dari satu dashboard.",
+   ui:{title:"Dashboard Admin", who:"admin", parts:[
+    ["stats",[["Program","12"],["Donasi pending","4"],["Pendaftar volunteer","17"],["Artikel","28"]]]
+   ]},
+   f:[
+    ["Publikasi Artikel","Artikel dengan slug dan halaman detail untuk kabar kegiatan.","Dampak organisasi terdokumentasi dan terindeks mesin pencari."],
+    ["Dashboard Admin","Ringkasan program, donasi, volunteer, dan publikasi.","Pengurus memantau organisasi dalam sekali lihat."],
+    ["Peran Admin & User","Hak akses berbasis peran dengan verifikasi email dan manajemen pengguna.","Data organisasi hanya dikelola pihak yang berwenang."]
+   ]}
+ ],
+ imp:[
+  ["Pengurus","Organisasi terkelola digital",["Program, donasi, volunteer, dan artikel dalam satu panel.","Rekap pendaftar siap diekspor."]],
+  ["Donatur","Berdonasi dengan percaya",["QRIS mudah dan bisa anonim.","Donasi diverifikasi dan tercatat."]],
+  ["Volunteer & Peserta","Bergabung tanpa ribet",["Daftar program dan volunteer secara online.","Informasi kegiatan selalu terbaru."]]
+ ],
+ sell:[["Satu platform NGO","Program, donasi, volunteer, dan publikasi."],["Transparansi donasi","Bukti transfer dan verifikasi admin."]]
+};
+
+/* PROD: [sistem, proses, teks manual, menit manual, teks sistem, menit sistem, jam hemat/bln, kertas/bln] — estimasi */
+const PROD = [
+ ["hris","Pengajuan PTK sampai disetujui direksi","± 5 hari",2400,"± 1 hari",480,15,60],
+ ["hris","Evaluasi kontrak PKWT (rekap KPI, absensi, SP)","2 jam / karyawan",120,"10 menit",10,30,80],
+ ["hris","Analisis beban kerja & hitung FTE","± 2 minggu",4800,"± 1 hari",480,20,0],
+ ["hris","Menyusun Job Description","2 jam / JD",120,"10 menit",10,15,0],
+ ["hris","Izin keluar kantor di pos security","15 menit",15,"1 menit",1,10,200],
+ ["att","Rekap absensi & upload Talenta per cut-off","3 hari",1440,"15 menit",15,23,0],
+ ["att","Hitung gaji, lembur, PPh 21 & BPJS","4 hari",1920,"1 jam",60,30,0],
+ ["att","Approval cuti, izin & lembur","2 hari",960,"10 menit",10,15,150],
+ ["att","Menyusun roster shift bulanan","2 hari",960,"15 menit",15,14,0],
+ ["car","Screening ratusan CV pelamar","2 hari",960,"1 jam",60,14,100],
+ ["car","Jadwal interview + link meeting","1 hari",480,"10 menit",10,8,0],
+ ["car","Desain poster lowongan Instagram","1 jam",60,"5 menit",5,6,0],
+ ["car","Input karyawan baru ke HRIS & Talenta","45 menit",45,"2 menit",2,6,0],
+ ["kit","Menentukan pelanggan yang harus di-follow up","2 jam / hari",120,"1 menit",1,40,0],
+ ["kit","Rekap performa follow-up per toko","2 hari",960,"real-time",1,16,0],
+ ["kit","Rekap Google Review per toko & karyawan","1 hari",480,"10 menit",10,8,0],
+ ["wat","Verifikasi donasi masuk","15 menit",15,"2 menit",2,5,0],
+ ["wat","Rekap pendaftar program","1 jam",60,"1 menit",1,4,0]
+];
+</script>
+
+<script>
+(function(){
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  let total = 0;
+
+  /* Desain layar per modul. Sel "ok|Teks" menjadi pill status (ok, wait, bad, info). */
+  const cell = v => { const m = /^(ok|wait|bad|info)\|(.*)$/.exec(String(v)); return m ? '<span class="pill ' + m[1] + '">' + esc(m[2]) + '</span>' : esc(v); };
+  const parts = {
+    stats: d => '<div class="s-stats">' + d.map(x => '<div><small>' + esc(x[0]) + '</small><b>' + esc(x[1]) + '</b></div>').join('') + '</div>',
+    table: d => '<div class="s-table"><table><thead><tr>' + d.c.map(c => '<th>' + esc(c) + '</th>').join('') + '</tr></thead><tbody>' + d.r.map(r => '<tr>' + r.map(v => '<td>' + cell(v) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>',
+    form: d => '<div class="s-form">' + d.f.map(x => '<label class="' + (x[2] ? 'full' : '') + '">' + esc(x[0]) + '<span>' + esc(x[1]) + '</span></label>').join('') + '</div>' + (d.b ? '<div class="s-btns">' + d.b.map(b => '<span>' + esc(b) + '</span>').join('') + '</div>' : ''),
+    list: d => '<div class="s-list">' + d.map(x => '<div><i>' + esc(x[0]) + '</i><span style="min-width:0"><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></span>' + (x[3] ? cell(x[3]) : '<span></span>') + '</div>').join('') + '</div>',
+    chart: d => { const mx = Math.max.apply(null, d.v); return '<div class="s-chart"><small>' + esc(d.t) + '</small><div class="cbars">' + d.v.map((v, i) => '<span class="' + (i === d.v.length - 1 ? 'hi' : '') + '" style="height:' + Math.max(6, v / mx * 100) + '%" title="' + v + '"></span>').join('') + '</div><div class="clab">' + d.l.map(l => '<em>' + esc(l) + '</em>').join('') + '</div></div>'; },
+    flow: d => '<div class="s-flow">' + d.s.map((s, i) => '<span class="' + (i <= d.on ? 'on' : '') + '">' + esc(s) + '</span>').join('<em>→</em>') + '</div>',
+    check: d => '<div class="s-check">' + d.map(x => '<div class="' + (x[1] ? 'y' : '') + '"><i>' + (x[1] ? '✓' : '') + '</i><span>' + esc(x[0]) + '</span></div>').join('') + '</div>',
+    kan: d => '<div class="s-kan" style="--n:' + d.length + '">' + d.map(c => '<div><b>' + esc(c[0]) + ' · ' + c[1].length + '</b>' + c[1].map(x => '<span>' + esc(x) + '</span>').join('') + '</div>').join('') + '</div>',
+    note: d => '<p class="s-note">' + esc(d) + '</p>'
+  };
+  /* PROD item: [sistem, proses, teks manual, menit manual, teks sistem, menit sistem, jam hemat/bln, kertas/bln] */
+  function prowHTML(x){
+    const r = 1 - x[5] / x[3];
+    const w = Math.max(1.2, x[5] / x[3] * 100);
+    return '<div class="prow" data-p="' + x[0] + '"><div class="pr-h"><small>' + esc(P[x[0]].meta.short) + '</small><b>' + esc(x[1]) + '</b></div>' +
+      '<div class="pr-bars"><div class="pbar man"><div class="tr"><i style="width:100%"></i></div><span>Manual · <b>' + esc(x[2]) + '</b></span></div>' +
+      '<div class="pbar dig"><div class="tr"><i style="width:' + w + '%"></i></div><span>Sistem · <b>' + esc(x[4]) + '</b></span></div></div>' +
+      '<div class="pr-x"><b>−' + Math.round(r * 100) + '%</b><small>waktu proses</small></div></div>';
+  }
+  /* Kulit per aplikasi, meniru UI asli */
+  const NAV = {
+    hris:['Dashboard','Employees','Organization Chart','Talent Acquisition','Talent Management','HR Operations','KPI Management','WLA Analyst','HC Operations','Settings'],
+    ta:['PTK','Lowongan','Pelamar','Proses Rekrutmen','Agenda Interview','Kode Psikotest','Virtual Hiring','Kandidat On Board','Durasi Rekrutmen','Pengaturan Rekrutmen'],
+    absensi:['Pantauan Hari Ini','Monitor Kehadiran','Log Scan','Profil Wajah','Pengajuan','Roster','Periode & Rekap','Payroll Run','Master Data','Pengaturan'],
+    absen:['Beranda','Riwayat','Pengajuan','Tim','Approval'],
+    karir:['Beranda','Life at','Lowongan','Lamaran Saya','FAQ','Chat'],
+    tdn:['Rekomendasi Aksi','Dashboard','Leaderboard','Database Member','Data Member','Mapping Customer','Riwayat FU','RFM Customer','Report','Google Review','Challenge','Role Access','Template Chat'],
+    wat:['Dashboard','Program','Pendaftar Program','Donasi','Volunteer','Pendaftar Volunteer','Publikasi','Organisasi','User'],
+    watpub:['Beranda','Tentang','Program','Publikasi','Donasi','Volunteer']
+  };
+  const SKIN = {
+    hris:{kind:'admin', cls:'sk-filament', brand:'HRIS', logo:'HR', c:'#D97706', d:'#FBBF24', group:'Menu'},
+    ta:{kind:'admin', cls:'sk-filament', brand:'HRIS', logo:'HR', c:'#D97706', d:'#FBBF24', group:'Talent Acquisition'},
+    absensi:{kind:'admin', cls:'sk-filament', brand:'Absensi', logo:'AB', c:'#2563EB', d:'#60A5FA', group:'Attendance'},
+    absen:{kind:'mobile', brand:'Absensi', c:'#2563EB', d:'#60A5FA'},
+    karir:{kind:'pub', brand:'Karir', logo:'K', c:'#262C5E', d:'#8F98E6', a:'#FF8A00', cta:'Masuk'},
+    tdn:{kind:'admin', cls:'sk-dark', brand:'Asisten Dapur', logo:'AD', c:'#0E6B5C', d:'#3FBFA6', group:'Menu'},
+    wat:{kind:'admin', brand:'Waterynation', logo:'W', c:'#5D87FF', d:'#8EAAFF', group:'Admin'},
+    watpub:{kind:'pub', brand:'Waterynation', logo:'W', c:'#0E7490', d:'#38BDF8', cta:'Donasi'}
+  };
+  const SKMAP = {
+    hris:[['hris','Employees'],['hris','Organization Chart'],['hris','Talent Acquisition'],['hris','HR Operations'],['hris','Talent Management'],['hris','WLA Analyst'],['hris','Dashboard'],['hris','HC Operations'],['hris','Settings'],['hris','KPI Management']],
+    att:[['absen','Beranda'],['absensi','Profil Wajah'],['absensi','Monitor Kehadiran'],['absensi','Roster'],['absen','Approval'],['absensi','Periode & Rekap'],['absensi','Payroll Run'],['absen','Beranda'],['absen','Tim'],['absen','Beranda'],['absensi','Pantauan Hari Ini'],['absensi','Pengaturan']],
+    car:[['karir','Beranda'],['karir','Lowongan'],['karir','Lamaran Saya'],['ta','Lowongan'],['ta','Proses Rekrutmen'],['ta','Pelamar'],['ta','Virtual Hiring'],['ta','Agenda Interview'],['ta','Kode Psikotest'],['ta','Proses Rekrutmen'],['ta','Kandidat On Board'],['karir','Chat'],['ta','Durasi Rekrutmen'],['ta','Pengaturan Rekrutmen']],
+    kit:[['tdn','Rekomendasi Aksi'],['tdn','Database Member'],['tdn','Database Member'],['tdn','RFM Customer'],['tdn','Dashboard'],['tdn','Google Review'],['tdn','Role Access']],
+    wat:[['watpub','Beranda'],['wat','Program'],['wat','Donasi'],['wat','Pendaftar Volunteer'],['wat','Dashboard']]
+  };
+  function screen(ui, key, idx){
+    const m = (SKMAP[key] || [])[idx];
+    const body = ui.parts.map(pt => parts[pt[0]] ? parts[pt[0]](pt[1]) : '').join('');
+    if (!m) return '<div class="scr"><div class="scr-bar"><i></i><b>' + esc(ui.title) + '</b><small>' + esc(ui.who || '') + '</small></div><div class="scr-body">' + body + '</div></div>';
+    const sk = SKIN[m[0]], nav = NAV[m[0]], on = m[1];
+    const vars = ' style="--skc:' + sk.c + ';--skd:' + sk.d + (sk.a ? ';--ska:' + sk.a : '') + '"';
+    const head = '<div class="sk-head"><small>' + esc(sk.group || sk.brand) + ' / ' + esc(on) + '</small><b>' + esc(ui.title) + '</b></div>';
+    const label = ' aria-label="Desain layar ' + esc(ui.title) + '"';
+    if (sk.kind === 'mobile') {
+      return '<div class="scr sk sk-mobile"' + vars + label + '><div class="sk-mob-head"><small>' + esc(sk.brand) + ' · ' + esc(ui.who || '') + '</small><b>' + esc(ui.title) + '</b></div>' +
+        '<div class="sk-main">' + body + '</div><div class="sk-tabbar">' + nav.map(n => '<span class="' + (n === on ? 'on' : '') + '">' + esc(n) + '</span>').join('') + '</div></div>';
+    }
+    if (sk.kind === 'pub') {
+      return '<div class="scr sk sk-pub"' + vars + label + '><div class="sk-top"><span class="sk-logo">' + sk.logo + '</span><span class="sk-brand">' + esc(sk.brand) + '</span><span class="sk-menu">' +
+        nav.map(n => '<span class="' + (n === on ? 'on' : '') + '">' + esc(n) + '</span>').join('') + '</span><span class="sk-cta">' + esc(sk.cta) + '</span></div>' +
+        '<div class="sk-main">' + head + body + '</div></div>';
+    }
+    return '<div class="scr sk ' + (sk.cls || '') + '"' + vars + label + '><div class="sk-top"><span class="sk-logo">' + sk.logo + '</span><span class="sk-brand">' + esc(sk.brand) + '</span><span class="sk-search">Cari…</span><span class="sk-ava">WN</span></div>' +
+      '<div class="sk-wrap"><div class="sk-side"><small>' + esc(sk.group) + '</small>' + nav.map(n => '<span class="' + (n === on ? 'on' : '') + '">' + esc(n) + '</span>').join('') + '</div>' +
+      '<div class="sk-main">' + head + body + '</div></div></div>';
+  }
+
+  Object.entries(P).forEach(([key, p]) => {
+    const feats = p.mods.reduce((a, m) => a + m.f.length, 0);
+    total += feats;
+    const cnt = document.querySelector('[data-count="' + key + '"]');
+    if (cnt) cnt.innerHTML = '<div><strong>' + p.mods.length + '</strong><span>modul</span></div><div><strong>' + feats + '</strong><span>fitur dibangun</span></div><div><strong>100%</strong><span>keterlibatan end-to-end</span></div>';
+
+    document.getElementById('mods-' + key).innerHTML = p.mods.map((m, i) =>
+      '<section class="module"><div class="module-h"><small>MODUL ' + (i + 1) + ' / ' + p.mods.length + ' · ' + m.f.length + ' FITUR</small><h3>' + esc(m.n) + '</h3><p>' + esc(m.d) + '</p></div>' +
+      (m.ui ? screen(m.ui, key, i) : '') +
+      '<div class="feats">' + m.f.map(f =>
+        '<article class="feat"><h4>' + esc(f[0]) + (f[3] ? '<span class="st-prog">DALAM PENGEMBANGAN</span>' : '') + '</h4><p>' + esc(f[1]) + '</p><p class="eff"><b>Dampak</b>' + esc(f[2]) + '</p></article>'
+      ).join('') + '</div></section>'
+    ).join('');
+
+    const prodRows = PROD.filter(x => x[0] === key);
+    if (prodRows.length) document.getElementById('imp-' + key).insertAdjacentHTML('beforebegin',
+      '<div class="pp-head" id="pp-' + key + '"><span class="eyebrow">Sebelum vs sesudah</span><h3>Produktivitas yang dihasilkan</h3></div><div class="prod-list">' + prodRows.map(prowHTML).join('') + '</div>');
+    document.getElementById('imp-' + key).innerHTML = p.imp.map(c =>
+      '<div><h5>' + esc(c[0]) + '</h5><h4>' + esc(c[1]) + '</h4><ul>' + c[2].map(x => '<li>' + esc(x) + '</li>').join('') + '</ul></div>'
+    ).join('');
+
+    document.getElementById('sell-' + key).innerHTML =
+      '<h4><small>Nilai jual</small>Kenapa sistem ini bernilai tinggi</h4><ol>' +
+      p.sell.map(s => '<li><b>' + esc(s[0]) + '</b><span>' + esc(s[1]) + '</span></li>').join('') + '</ol>';
+  });
+  document.getElementById('stat-feat').textContent = total;
+
+  /* Kartu proyek (beranda), daftar modul, dan navigasi antar proyek */
+  const ORDER = ['hris','att','car','kit','wat'];
+  const VIEW = {hris:'hris', att:'attendance', car:'career', kit:'dapur', wat:'waterynation'};
+  document.getElementById('pcards').innerHTML = ORDER.map(k => {
+    const p = P[k], feats = p.mods.reduce((a, m) => a + m.f.length, 0);
+    const save = PROD.filter(x => x[0] === k).reduce((a, x) => a + x[6], 0);
+    return '<a class="pcard" data-p="' + k + '" href="#' + VIEW[k] + '"><div class="ph"><span class="sub">' + esc(p.meta.stack) + '</span><h3>' + esc(p.meta.name) + '</h3><p>' + esc(p.meta.desc) + '</p><div class="hl3">' + p.mods.map(m => '<span class="tag">' + esc(m.n) + '</span>').join('') + '</div></div>' +
+      '<div class="pm"><div><b>' + p.mods.length + '</b><span>modul</span></div><div><b>' + feats + '</b><span>fitur</span></div><div><b>±' + save + '</b><span>jam hemat/bln</span></div><span class="go">Buka halaman →</span></div></a>';
+  }).join('');
+  ORDER.forEach((k, i) => {
+    const p = P[k];
+    document.getElementById('toc-' + k).innerHTML = '<small>MODUL</small>' + p.mods.map((m, j) => '<button type="button" data-t="m-' + k + '-' + j + '">' + esc(m.n) + '<span>' + m.f.length + '</span></button>').join('') +
+      '<button type="button" data-t="imp-' + k + '">Dampak &amp; nilai jual<span>★</span></button>';
+    document.querySelectorAll('#mods-' + k + ' > .module').forEach((el, j) => el.id = 'm-' + k + '-' + j);
+    const L = ORDER.length, prev = ORDER[(i + L - 1) % L], next = ORDER[(i + 1) % L];
+    document.getElementById('next-' + k).innerHTML =
+      '<a href="#' + VIEW[prev] + '"><small>← Sistem sebelumnya</small><b>' + esc(P[prev].meta.name) + '</b></a>' +
+      '<a href="#' + VIEW[next] + '"><small>Sistem berikutnya →</small><b>' + esc(P[next].meta.name) + '</b></a>';
+  });
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.toc button');
+    if (!b) return;
+    const t = document.getElementById(b.dataset.t);
+    if (t) t.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+  });
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(ents => {
+    ents.forEach(en => {
+      if (!en.isIntersecting) return;
+      const toc = en.target.closest('.case').querySelector('.toc');
+      toc.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.t === en.target.id));
+    });
+  }, {rootMargin: '-30% 0px -60% 0px'}) : null;
+  if (io) document.querySelectorAll('.module, .impact').forEach(el => io.observe(el));
+
+  /* Produktivitas: sebelum vs sesudah */
+  document.getElementById('prod-home').innerHTML = PROD.map(prowHTML).join('');
+  const hours = PROD.reduce((a, x) => a + x[6], 0);
+  const paper = PROD.reduce((a, x) => a + x[7], 0);
+  const avg = PROD.reduce((a, x) => a + (1 - x[5] / x[3]), 0) / PROD.length;
+  document.getElementById('stat-hours').textContent = '±' + hours;
+  document.getElementById('prod-sum').innerHTML =
+    '<div><b>±' + hours + ' jam</b><span>jam kerja dihemat setiap bulan</span></div>' +
+    '<div><b>±' + nf0(paper) + '</b><span>lembar kertas tidak dicetak per bulan</span></div>' +
+    '<div><b>' + Math.round(avg * 100) + '%</b><span>rata-rata waktu proses berkurang</span></div>' +
+    '<div><b>' + PROD.length + '</b><span>proses inti beralih ke digital</span></div>';
+  function nf0(n){ return new Intl.NumberFormat('id-ID').format(n); }
+  document.querySelectorAll('.prod-filter button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.prod-filter button').forEach(x => x.classList.toggle('on', x === b));
+    document.querySelectorAll('.prow').forEach(r => r.hidden = !(b.dataset.f === 'all' || r.dataset.p === b.dataset.f));
+  }));
+
+  /* Router: setiap proyek punya halaman sendiri (#hris, #attendance, #career, #dapur) */
+  const views = document.querySelectorAll('.view');
+  const projNav = document.querySelector('[data-nav="proyek"]');
+  function route(){
+    const h = decodeURIComponent(location.hash.slice(1));
+    const isProj = Object.values(VIEW).includes(h);
+    const v = isProj ? h : 'home';
+    views.forEach(el => el.hidden = el.dataset.view !== v);
+    projNav.classList.toggle('on', isProj);
+    if (isProj) { window.scrollTo(0, 0); document.title = P[Object.keys(VIEW).find(k => VIEW[k] === h)].meta.name + ' · Wirda Nissa'; }
+    else {
+      document.title = 'Wirda Nissa Portfolio';
+      const t = h && h !== 'home' && document.getElementById(h);
+      if (t) requestAnimationFrame(() => t.scrollIntoView()); else if (h === 'home') window.scrollTo(0, 0);
+    }
+  }
+  window.addEventListener('hashchange', route); route();
+
+  /* HRIS: approval stamp */
+  const pending = document.getElementById('pending');
+  document.querySelectorAll('.ap button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const row = btn.closest('.ap');
+      btn.remove();
+      const s = document.createElement('span');
+      s.className = 'stampmark'; s.textContent = 'APPROVED';
+      row.appendChild(s);
+      pending.textContent = Math.max(0, parseInt(pending.textContent, 10) - 1);
+    });
+  });
+
+  /* Attendance: live clock + clock in */
+  const clock = document.getElementById('clock');
+  const today = document.getElementById('today');
+  const pad = n => String(n).padStart(2, '0');
+  function tick(){
+    const d = new Date();
+    clock.textContent = pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+    today.textContent = d.toLocaleDateString('id-ID', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  }
+  tick(); setInterval(tick, 1000);
+  const cb = document.getElementById('clockbtn');
+  cb.addEventListener('click', () => {
+    const d = new Date();
+    if (cb.classList.contains('done')) { cb.classList.remove('done'); cb.textContent = 'Clock In dengan Wajah'; return; }
+    cb.classList.add('done');
+    cb.textContent = '✓ Diterima ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ' · wajah, liveness & lokasi valid';
+  });
+
+  /* Attendance: calendar (Oktober 2026 dimulai Kamis) */
+  const cal = document.getElementById('calgrid');
+  const days = ['Sen','Sel','Rab','Kam','Jum','Sab','Min'];
+  const special = {6:'l', 9:'c', 12:'h', 15:'l', 20:'s', 21:'s', 27:'l', 30:'c'};
+  let html = days.map(d => '<em>' + d + '</em>').join('');
+  for (let i = 0; i < 3; i++) html += '<span class="o"></span>';
+  for (let d = 1; d <= 31; d++) {
+    const dow = (3 + d - 1) % 7;
+    const cls = dow >= 5 ? 'o' : (special[d] || 'h');
+    html += '<span class="' + cls + '">' + d + '</span>';
+  }
+  cal.innerHTML = html;
+
+  /* Career: kanban */
+  const people = [
+    ['AR','Ayu R.','Skor 86',0],['BS','Bima S.','Skor 72',0],['CN','Citra N.','Skor 91',1],
+    ['DF','Dewi F.','Skor 80',1],['EK','Eko K.','Interview 18 Nov',2],['FM','Fajar M.','Offering dikirim',3]
+  ];
+  const cols = document.querySelectorAll('#kanban .col');
+  const stageNote = ['Skor kecocokan dihitung','Meet dijadwalkan','Kode psikotest dikirim','Remunerasi & OL','Jadikan Karyawan ✓'];
+  function renderK(moved){
+    cols.forEach(c => c.querySelectorAll('.cand').forEach(x => x.remove()));
+    people.forEach((p, i) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'cand' + (moved === i ? ' new' : '');
+      b.innerHTML = '<i>' + p[0] + '</i><span>' + p[1] + '<small>' + p[2] + '</small></span>';
+      b.title = p[3] < 4 ? 'Pindahkan ke tahap berikutnya' : 'Sudah diterima';
+      b.addEventListener('click', () => {
+        if (p[3] < 4) { p[3]++; p[2] = stageNote[p[3]]; renderK(i); }
+      });
+      cols[p[3]].appendChild(b);
+    });
+    cols.forEach((c, i) => c.querySelector('b span').textContent = people.filter(p => p[3] === i).length);
+  }
+  renderK(-1);
+
+  /* Asisten Dapur: rekomendasi aksi + caption follow-up */
+  const crm = [
+    {n:'Ibu Lina', r:34, p:'Susu UHT 1L', s:92, st:0},
+    {n:'Pak Anton', r:21, p:'Telur 1 kg', s:78, st:0},
+    {n:'Ibu Rara', r:12, p:'Daging sapi 500 g', s:64, st:1},
+    {n:'Mas Dimas', r:9, p:'Beras 5 kg', s:51, st:2}
+  ];
+  const tpls = [
+    ['Reaktivasi', 'Halo {nama}, sudah {r} hari sejak Ibu/Bapak belanja {produk} di toko kami. Stok segar sudah datang lagi, kami tunggu kunjungannya ya. Salam, {saya}'],
+    ['Ajak member', 'Halo {nama}, terima kasih sudah langganan {produk}. Gabung program member loyalty gratis dan dapatkan harga member setiap belanja. Mau saya bantu daftarkan? Salam, {saya}'],
+    ['Promo', 'Halo {nama}, minggu ini ada promo untuk {produk} di toko kami. Info lengkap bisa tanya saya langsung ya. Salam, {saya}']
+  ];
+  const stages = ['New','Contacted','Interested','Closed Won'];
+  let selC = 0;
+  const cList = document.getElementById('crm-list'), cCap = document.getElementById('crm-cap'), cWho = document.getElementById('crm-who');
+  const cTpl = document.getElementById('crm-tpl'), cCat = document.getElementById('crm-cat'), cFun = document.getElementById('crm-funnel');
+  function scoreCls(s){ return s >= 80 ? 'pill bad' : s >= 60 ? 'pill wait' : 'pill ok'; }
+  function renderCrm(){
+    cList.innerHTML = crm.map((c, i) => '<button type="button" class="crm-row' + (i === selC ? ' sel' : '') + '" data-i="' + i + '"><span>' + c.n + '<small>' + c.r + ' hari · ' + c.p + ' · ' + stages[c.st] + '</small></span><span class="crm-score ' + scoreCls(c.s) + '">' + c.s + '</span></button>').join('');
+    const c = crm[selC], t = tpls[+cTpl.value];
+    cCat.textContent = t[0];
+    cWho.textContent = c.n + ' · tahap ' + stages[c.st];
+    cCap.textContent = t[1].replace('{nama}', c.n).replace('{r}', c.r).replace('{produk}', c.p).replace('{saya}', 'Rina (Toko Cabang A)');
+    cFun.innerHTML = stages.map((s, i) => { const n = crm.filter(x => x.st >= i).length; return '<div><span>' + s + ' · ' + n + '</span><div class="meter"><i style="width:' + (n / crm.length * 100) + '%"></i></div></div>'; }).join('');
+  }
+  cList.addEventListener('click', e => { const b = e.target.closest('.crm-row'); if (b) { selC = +b.dataset.i; renderCrm(); } });
+  cTpl.addEventListener('change', renderCrm);
+  document.getElementById('crm-send').addEventListener('click', () => { const c = crm[selC]; if (c.st < 3) c.st++; renderCrm(); });
+  renderCrm();
+
+  /* Kontak: salin email */
+  const copy = document.getElementById('copy');
+  copy.addEventListener('click', () => {
+    const t = document.getElementById('email').textContent;
+    const done = () => { copy.textContent = 'Tersalin'; setTimeout(() => copy.textContent = 'Salin', 1800); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById('email')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); copy.textContent = 'Tekan Ctrl+C'; };
+    try { navigator.clipboard.writeText(t).then(done, fallback); } catch(e) { fallback(); }
+  });
+})();
+</script>
+</body></html>
