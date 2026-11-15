@@ -815,53 +815,86 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
 </style>
 
 <style>
-/* KenalAdat */
-.ka{--c:#B4532A}
+/* KenalAdat: tiruan situs asli (header putih, aksen oranye bata #E07B45) */
+.ka{--c:#B4532A; --ka:#E07B45; --kad:#8B2E1F}
 :root[data-theme="dark"] .ka{--c:#F0915F}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .ka{--c:#F0915F} }
-.ka-grid{display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:28px; align-items:start}
-.ka-left{display:flex; flex-direction:column; gap:16px; min-width:0}
-.ka-site{border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); background:#14110F; color:#fff}
-.ka-nav{display:flex; align-items:center; gap:14px; padding:10px 16px; font-size:12px; background:rgba(0,0,0,.35); overflow:hidden; white-space:nowrap}
-.ka-nav b{color:#F0915F; font-size:13px; margin-right:auto}
-.ka-nav span{opacity:.75}
-.ka-nav span.on{opacity:1; color:#F0915F; box-shadow:inset 0 -2px 0 #F0915F; padding-bottom:2px}
-.ka-hero{position:relative; padding:34px 26px 30px; min-height:230px; display:flex; flex-direction:column; gap:8px; justify-content:center;
-  background:
-    radial-gradient(120% 90% at 85% 20%, rgba(240,145,95,.25), transparent 60%),
-    linear-gradient(180deg, rgba(20,17,15,.2), rgba(20,17,15,.85)),
-    linear-gradient(160deg, #3D4A33 0%, #5C4630 45%, #2A221C 100%)}
-.ka-hero small{font-size:13px; opacity:.85}
-.ka-hero b{font-family:var(--display); font-size:clamp(24px,3vw,34px); font-weight:800; line-height:1.1; max-width:16ch}
-.ka-hero p{font-size:13px; opacity:.8; max-width:46ch}
-.ka-btn{align-self:flex-start; margin-top:6px; background:#E07B45; color:#fff; font-weight:700; font-size:12.5px; padding:8px 14px; border-radius:8px}
-.ka-roofs{position:absolute; right:22px; bottom:0; display:flex; gap:10px; align-items:flex-end; opacity:.9}
-.ka-roofs i{display:block; width:84px; height:56px; background:#1B1612; border-radius:2px;
-  clip-path:polygon(0 30%, 12% 0, 30% 22%, 50% 4%, 70% 22%, 88% 0, 100% 30%, 92% 34%, 92% 100%, 8% 100%, 8% 34%)}
-.ka-roofs i:nth-child(2){width:110px; height:72px}
-.ka-roofs i:nth-child(3){width:70px; height:46px}
+.ka-grid{display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr); gap:28px; align-items:start}
+.ka-left, .ka-right{display:flex; flex-direction:column; gap:12px; min-width:0}
+.ka-right h3{font-size:18px; margin-top:4px}
+.ka-tabs{display:flex; flex-wrap:wrap; gap:6px}
+.ka-tabs button{font:600 13px var(--body); padding:7px 14px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--ink-2); cursor:pointer}
+.ka-tabs button.on{background:var(--ka); border-color:var(--ka); color:#fff}
+.ka-site{border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); background:#fff; color:#2B2B2B; font-family:var(--inter, "Inter"), system-ui, sans-serif}
+.ka-head{display:flex; align-items:center; gap:10px; padding:10px 16px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.06); position:relative; z-index:1}
+.ka-logo{width:30px; height:26px; border-radius:50% 50% 6px 6px; background:radial-gradient(circle at 50% 30%, #F2C14E 0 30%, transparent 31%), linear-gradient(180deg, #E07B45 0 45%, #8B2E1F 45%); flex:none}
+.ka-brand b{display:block; color:var(--kad); font-size:15px; font-weight:800; line-height:1}
+.ka-brand small{display:block; font-size:9.5px; font-weight:600; color:#5a3a2e}
+.ka-head nav{display:flex; gap:12px; margin-left:auto; font-size:11.5px; font-weight:500; white-space:nowrap; overflow:hidden}
+.ka-head nav span.on{color:var(--ka); box-shadow:inset 0 -2px 0 var(--ka); padding-bottom:3px}
+.ka-pane{min-height:300px}
+.ka-banner{height:96px; display:grid; place-items:center; color:#fff; font-size:24px; font-weight:800; text-shadow:0 2px 8px rgba(0,0,0,.4);
+  background:linear-gradient(rgba(20,15,10,.45), rgba(20,15,10,.45)), linear-gradient(110deg, #4E5B3A, #7A5A3A 50%, #3E4A30)}
+.ka-crumb{background:var(--ka); color:#fff; font-size:12px; padding:9px 18px}
+.ka-crumb span{margin:0 6px}
+.ka-cards{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; padding:16px}
+.ka-cards div{border:1px solid #e7e2dc; border-radius:6px; overflow:hidden; text-align:center; font-size:12px; background:#fff}
+.ka-cards span{display:block; padding:8px 4px}
+.tp{display:block; aspect-ratio:1; background:#E9EEF2; position:relative}
+.tp::after{content:""; position:absolute; inset:18%; border-radius:50%; background:radial-gradient(circle, #8C7A5B 0 18%, #4F7A3A 19% 45%, #2E4F24 46% 62%, transparent 63%); box-shadow:0 0 0 10px rgba(255,255,255,.4)}
+.tp2{background:linear-gradient(180deg, #CFE0EA, #F2F2F2)} .tp2::after{background:radial-gradient(circle, #B49A7A 0 20%, #6E5A3E 21% 40%, #4F7A3A 41% 60%, transparent 61%)}
+.tp3{background:linear-gradient(180deg, #DCE6EC, #E8DCCF)} .tp3::after{inset:8%; background:radial-gradient(circle, #CFC2B0 0 25%, #7A5A3A 26% 48%, #5B4630 49% 70%, transparent 71%)}
+.tp4{background:#EEF1F4} .tp4::after{background:radial-gradient(circle, #A99070 0 16%, #3E6B33 17% 46%, #2A4A22 47% 60%, transparent 61%)}
+.ka-360{position:relative; height:300px; overflow:hidden; background:linear-gradient(180deg, #7EB6E3 0%, #CFE5F5 38%, #5F8A4E 40%, #3F6A35 62%, #8A8F96 63%, #6E737A 100%)}
+.ka-spots{position:absolute; left:6%; right:6%; top:26%; display:flex; justify-content:space-around; gap:6px}
+.ka-spots span{display:flex; flex-direction:column; align-items:center; gap:4px; font-size:8.5px; font-weight:800; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,.6); text-transform:uppercase; text-align:center}
+.ka-spots i{width:34px; height:34px; border-radius:50%; border:2px solid #fff; background:radial-gradient(circle at 40% 35%, #F6F1EA, #6E5A3E 70%); box-shadow:0 2px 6px rgba(0,0,0,.4)}
+.ka-gate{position:absolute; left:14px; bottom:58px; background:#1E1E1E; color:#EDEDED; font-size:11px; font-weight:700; padding:8px 12px; border-radius:4px; transform:skewY(-4deg)}
+.ka-ctrl{position:absolute; left:50%; bottom:10px; transform:translateX(-50%); display:flex; gap:12px; background:rgba(60,60,60,.85); padding:8px 16px; border-radius:6px}
+.ka-ctrl i{width:16px; height:16px; border-radius:50%; border:2px solid #fff}
+.ka-about{display:grid; grid-template-columns:.9fr 1.1fr; gap:18px; padding:18px; align-items:start}
+.ka-photo{aspect-ratio:4/3.4; border-radius:4px; position:relative; overflow:hidden; background:linear-gradient(180deg, #A8C4DA 0 45%, #5E7E4C 45% 70%, #8F8F8F 70%)}
+.ka-roofs{position:absolute; left:8%; bottom:28%; display:flex; gap:8px; align-items:flex-end}
+.ka-roofs i{display:block; width:70px; height:50px; background:#9B3A4A; clip-path:polygon(0 30%, 12% 0, 30% 22%, 50% 4%, 70% 22%, 88% 0, 100% 30%, 92% 34%, 92% 100%, 8% 100%, 8% 34%)}
+.ka-roofs i:nth-child(2){width:90px; height:64px; background:#5B6E8A}
+.ka-about small{color:var(--ka); font-size:11px; font-weight:600; letter-spacing:.04em}
+.ka-about b{display:block; font-size:19px; font-weight:500; line-height:1.25; margin:4px 0 8px}
+.ka-about em{font-style:normal; color:var(--ka)}
+.ka-about p{font-size:11.5px; color:#444; line-height:1.6; margin-bottom:6px}
+.ka-shop{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; padding:14px}
+.ka-shop div{border:1px solid #e7e2dc; border-radius:4px; background:#FBF3E4; padding:6px; display:flex; flex-direction:column; align-items:center; gap:4px; text-align:center; min-height:112px; position:relative}
+.ka-shop div::before{content:"PRODUK UNGGULAN"; font-size:7px; font-weight:800; color:#8B2E1F; letter-spacing:.06em}
+.ka-shop i{width:46px; height:46px; border-radius:6px; background:linear-gradient(135deg, #C98B4A, #7A4A22)}
+.ka-shop b{font-size:10.5px; font-weight:800; color:#8B2E1F; text-transform:uppercase; line-height:1.2}
+.ka-shop div.hover{background:#fff; box-shadow:0 6px 18px rgba(0,0,0,.18); justify-content:center}
+.ka-shop div.hover::before{display:none}
+.ka-shop div.hover b{text-transform:none; color:#2B2B2B; font-weight:600}
+.ka-shop div.hover em{font-style:normal; color:#B4232A; font-weight:700; font-size:11px}
+.ka-shop div.hover span{background:var(--ka); color:#fff; font-size:9.5px; font-weight:600; padding:4px 8px; border-radius:4px}
+.ka-note{font-size:12px; color:var(--ink-3)}
 .ka-stats{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px}
 .ka-stats div{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 14px}
 .ka-stats b{display:block; font-size:22px; font-weight:800; color:var(--c); letter-spacing:-.02em}
 .ka-stats span{font-size:12.5px; color:var(--ink-2)}
-.ka-feats{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}
-.ka-feats div{border-left:3px solid var(--c); background:var(--surface); border-radius:0 10px 10px 0; padding:10px 12px}
+.ka-feats{display:flex; flex-direction:column; gap:8px}
+.ka-feats div{border-left:3px solid var(--c); background:var(--surface); border-radius:0 10px 10px 0; padding:9px 12px}
 .ka-feats b{display:block; font-size:14px}
 .ka-feats span{font-size:13px; color:var(--ink-2)}
-.ka-right{display:flex; flex-direction:column; gap:10px; min-width:0}
-.ka-right h3{font-size:18px; margin-bottom:2px}
-.ka-vid{display:grid; grid-template-columns:120px minmax(0,1fr); gap:12px; align-items:center; text-decoration:none; color:inherit; padding:8px; border-radius:12px; border:1px solid var(--line); background:var(--surface)}
+.ka-vid{display:grid; grid-template-columns:108px minmax(0,1fr); gap:12px; align-items:center; text-decoration:none; color:inherit; padding:8px; border-radius:12px; border:1px solid var(--line); background:var(--surface)}
 .ka-vid:hover{border-color:var(--c)}
-.ka-vid b{display:block; font-size:13.5px; line-height:1.3}
+.ka-vid b{display:block; font-size:13px; line-height:1.3}
 .ka-vid small{font-size:11.5px; color:var(--ink-3)}
 .ka-play{position:relative; aspect-ratio:16/9; border-radius:8px; background:linear-gradient(135deg, #5C4630, #2A221C); display:grid; place-items:center}
 .ka-play.ig{background:linear-gradient(135deg, #833AB4, #E1306C 60%, #F77737)}
-.ka-play i{width:28px; height:28px; border-radius:50%; background:rgba(0,0,0,.55); position:relative}
-.ka-play i::after{content:""; position:absolute; left:11px; top:8px; border-left:9px solid #fff; border-top:6px solid transparent; border-bottom:6px solid transparent}
+.ka-play i{width:26px; height:26px; border-radius:50%; background:rgba(0,0,0,.55); position:relative}
+.ka-play i::after{content:""; position:absolute; left:10px; top:7px; border-left:9px solid #fff; border-top:6px solid transparent; border-bottom:6px solid transparent}
 .ka-play em{position:absolute; left:6px; bottom:5px; font-style:normal; font-size:10px; font-weight:600; color:#fff; background:rgba(0,0,0,.7); border-radius:4px; padding:1px 5px}
-.ka-note{font-size:12px; color:var(--ink-3)}
 @media (max-width:1000px){ .ka-grid{grid-template-columns:minmax(0,1fr)} }
-@media (max-width:620px){ .ka-stats, .ka-feats{grid-template-columns:minmax(0,1fr)} .ka-roofs{display:none} .ka-vid{grid-template-columns:96px minmax(0,1fr)} }
+@media (max-width:620px){
+  .ka-stats{grid-template-columns:minmax(0,1fr)} .ka-cards, .ka-shop{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ka-head nav{display:none} .ka-about{grid-template-columns:minmax(0,1fr)} .ka-spots span:nth-child(n+5){display:none}
+}
+@media print{ .ka-pane[hidden]{display:block !important} .ka-tabs{display:none} }
 </style>
 
 <nav class="nav" aria-label="Navigasi utama">
@@ -1022,44 +1055,93 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
 <section class="block ka" id="kenaladat" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><span class="eyebrow">Proyek kompetisi unggulan · Innovillage 2024</span><h2>KenalAdat: Rumah Gadang Sijunjung dalam virtual tour.</h2></div>
-      <p>Proyek sociopreneurship yang saya pimpin sebagai Team Lead. KenalAdat menghadirkan virtual tour Perkampungan Adat Sijunjung dengan 77 Rumah Gadang untuk memperluas promosi wisata budaya secara digital, dan lolos Top 165 Innovillage 2024 dengan skema pendanaan.</p>
+      <div><span class="eyebrow">Proyek kompetisi unggulan · Innovillage 2024</span><h2>KenalAdat: Kampung Adat Sijunjung dalam virtual tour 360°.</h2></div>
+      <p>Proyek sociopreneurship yang saya pimpin sebagai Team Lead. KenalAdat membawa Perkampungan Adat Sijunjung, kawasan cagar budaya dengan sekitar 76 rumah adat peninggalan abad ke-16–17, ke dalam situs virtual tour interaktif lengkap dengan etalase produk UMKM warga. Proyek ini lolos Top 165 Innovillage 2024 dengan skema pendanaan.</p>
     </div>
     <div class="ka-grid">
       <div class="ka-left">
-        <div class="ka-site" aria-label="Tampilan situs KenalAdat">
-          <div class="ka-nav"><b>Kenal Adat</b><span class="on">Home</span><span>Virtual Tour</span><span>Booking</span><span>Article</span><span>Gallery</span><span>Login</span></div>
-          <div class="ka-hero">
-            <div class="ka-roofs" aria-hidden="true"><i></i><i></i><i></i></div>
-            <small>Virtual Tour</small>
-            <b>Kampung Adat Sijunjung</b>
-            <p>Menjelajah keindahan dan sejarah budaya Minangkabau melalui situs virtual yang interaktif.</p>
-            <span class="ka-btn">Mulai Virtual Tour</span>
+        <div class="ka-tabs" role="tablist" aria-label="Halaman situs KenalAdat">
+          <button type="button" role="tab" class="on" aria-selected="true" data-pane="tour">Virtual Tour</button>
+          <button type="button" role="tab" aria-selected="false" data-pane="viewer">Tur 360°</button>
+          <button type="button" role="tab" aria-selected="false" data-pane="home">Tentang Kami</button>
+          <button type="button" role="tab" aria-selected="false" data-pane="shop">Eksplorasi Lokal</button>
+        </div>
+        <div class="ka-site">
+          <div class="ka-head"><span class="ka-logo" aria-hidden="true"></span><span class="ka-brand"><b>KENAL ADAT</b><small>Perkampungan Adat Sijunjung</small></span>
+            <nav><span data-n="home">Home</span><span data-n="tour" class="on">Virtual Tour</span><span data-n="shop">Eksplorasi Lokal ▾</span><span>Publikasi ▾</span><span>Gallery</span><span>Login</span></nav></div>
+
+          <div class="ka-pane" data-p="tour">
+            <div class="ka-banner"><b>Kampung Adat Sijunjung</b></div>
+            <div class="ka-crumb">Beranda <span>→</span> Virtual Tour</div>
+            <div class="ka-cards">
+              <div><i class="tp tp1"></i><span>Kampung Adat</span></div>
+              <div><i class="tp tp2"></i><span>Rumah Gadang 11</span></div>
+              <div><i class="tp tp3"></i><span>Rumah Gadang 27</span></div>
+              <div><i class="tp tp4"></i><span>Rumah Gadang 36</span></div>
+            </div>
+          </div>
+
+          <div class="ka-pane" data-p="viewer" hidden>
+            <div class="ka-360">
+              <div class="ka-spots"><span><i></i>Rumah Gadang 3</span><span><i></i>Rumah Gadang 27</span><span><i></i>Rumah Gadang 36</span><span><i></i>Rumah Gadang 44</span><span><i></i>Video Tenun</span><span><i></i>Bakaua Adat</span></div>
+              <div class="ka-gate">Perkampungan Adat<br>Nagari Sijunjung</div>
+              <div class="ka-ctrl" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+
+          <div class="ka-pane" data-p="home" hidden>
+            <div class="ka-about">
+              <div class="ka-photo" aria-hidden="true"><div class="ka-roofs"><i></i><i></i><i></i></div></div>
+              <div><small>TENTANG KAMI</small><b>Selamat datang di <em>Kampuang Adat Sijunjuang!</em></b>
+                <p>Perkampungan "Lorong Waktu Minangkabau" di Kawasan Geopark Nasional Ranah Minang Silokek: sekitar 76 rumah adat dari 6 suku, 40 rumah gadang menjadi homestay, dengan kuliner Kalamai dan kerajinan tenun.</p>
+                <p>2019 · Anugerah Pesona Wisata Indonesia, Juara II Nasional kategori Perkampungan Adat.</p></div>
+            </div>
+          </div>
+
+          <div class="ka-pane" data-p="shop" hidden>
+            <div class="ka-shop">
+              <div><i></i><b>Rendang Jengkol</b></div><div><i></i><b>Kain Tenun</b></div><div><i></i><b>Madu Galo-Galo</b></div><div><i></i><b>Stick Kentang</b></div>
+              <div><i></i><b>Peyek Kacang</b></div><div><i></i><b>Kue Sapik</b></div>
+              <div class="hover"><b>Minyak Tanak Amak</b><em>Rp 10.000,00</em><span>Beli di Shopee</span><span>Beli di Tokopedia</span></div>
+              <div><i></i><b>Rendang Singkong</b></div>
+            </div>
           </div>
         </div>
+        <p class="ka-note">Tiruan tampilan situs KenalAdat berdasarkan halaman aslinya.</p>
         <div class="ka-stats">
           <div><b>Top 165</b><span>Innovillage 2024, skema pendanaan</span></div>
-          <div><b>77</b><span>Rumah Gadang di kawasan adat</span></div>
+          <div><b>±76</b><span>rumah adat, 40 jadi homestay</span></div>
           <div><b>Team Lead</b><span>tim mahasiswa &amp; dosen pembimbing</span></div>
-        </div>
-        <div class="ka-feats">
-          <div><b>Virtual Tour</b><span>Jelajah Rumah Gadang dan kawasan adat secara interaktif dari mana saja.</span></div>
-          <div><b>Booking</b><span>Pemesanan kunjungan langsung dari situs untuk mendukung ekonomi warga.</span></div>
-          <div><b>Artikel &amp; Galeri</b><span>Cerita budaya, sejarah, dan dokumentasi foto kawasan.</span></div>
-          <div><b>Dampak</b><span>Promosi wisata budaya digital dan dokumentasi warisan Minangkabau.</span></div>
         </div>
       </div>
       <div class="ka-right">
+        <h3>Fitur situs</h3>
+        <div class="ka-feats">
+          <div><b>Virtual Tour 360°</b><span>Jelajah Kampung Adat dan Rumah Gadang 3, 11, 27, 36, 44 dengan hotspot antar lokasi, audio, zoom, dan layar penuh.</span></div>
+          <div><b>Konten budaya</b><span>Video tenun dan tradisi Bakaua Adat langsung di dalam tur.</span></div>
+          <div><b>Eksplorasi Lokal</b><span>Etalase produk unggulan UMKM warga dengan harga dan tombol beli di Shopee atau Tokopedia.</span></div>
+          <div><b>Publikasi &amp; Gallery</b><span>Artikel, dokumentasi kegiatan, dan galeri foto kawasan.</span></div>
+        </div>
         <h3>Perjalanan proyek</h3>
-        <a class="ka-vid" href="https://www.youtube.com/results?search_query=5th+INNOVILLAGE+KenalAdat+Progres+Ke+2" target="_blank" rel="noopener"><span class="ka-play"><i></i><em>5:04</em></span><span><b>5th INNOVILLAGE · KenalAdat · Progres Ke 2</b><small>YouTube · Kenal Adat · 31 Jan 2025</small></span></a>
-        <a class="ka-vid" href="https://www.youtube.com/results?search_query=Webinar+Kenal+Adat+Inovasi+Virtual+Tour" target="_blank" rel="noopener"><span class="ka-play"><i></i><em>1:16:13</em></span><span><b>Webinar Kenal Adat: Inovasi Virtual Tour</b><small>YouTube · Kenal Adat · 22 Feb 2025</small></span></a>
+        <a class="ka-vid" href="https://www.youtube.com/results?search_query=5th+INNOVILLAGE+KenalAdat+Progres+Ke+2" target="_blank" rel="noopener"><span class="ka-play"><i></i><em>5:04</em></span><span><b>5th INNOVILLAGE · KenalAdat · Progres Ke 2</b><small>YouTube · 31 Jan 2025</small></span></a>
+        <a class="ka-vid" href="https://www.youtube.com/results?search_query=Webinar+Kenal+Adat+Inovasi+Virtual+Tour" target="_blank" rel="noopener"><span class="ka-play"><i></i><em>1:16:13</em></span><span><b>Webinar Kenal Adat: Inovasi Virtual Tour</b><small>YouTube · 22 Feb 2025</small></span></a>
         <a class="ka-vid" href="https://www.instagram.com/kenaladat.innovillage2024/" target="_blank" rel="noopener"><span class="ka-play ig"><i></i><em>1:00:07</em></span><span><b>Reel Kenal Adat</b><small>Instagram · @kenaladat.innovillage2024 · 24 Feb 2025</small></span></a>
-        <a class="ka-vid" href="https://www.youtube.com/results?search_query=5th+INNOVILLAGE+KenalAdat+Progres+Ke+3" target="_blank" rel="noopener"><span class="ka-play"><i></i><em>4:59</em></span><span><b>5th INNOVILLAGE · KenalAdat · Progres Ke 3</b><small>YouTube · Kenal Adat · 28 Feb 2025</small></span></a>
-        <p class="ka-note">Video dan dokumentasi dipublikasikan di kanal YouTube dan Instagram Kenal Adat.</p>
+        <a class="ka-vid" href="https://www.youtube.com/results?search_query=5th+INNOVILLAGE+KenalAdat+Progres+Ke+3" target="_blank" rel="noopener"><span class="ka-play"><i></i><em>4:59</em></span><span><b>5th INNOVILLAGE · KenalAdat · Progres Ke 3</b><small>YouTube · 28 Feb 2025</small></span></a>
       </div>
     </div>
   </div>
 </section>
+<script>
+(function(){
+  const box = document.getElementById('kenaladat'); if (!box) return;
+  const show = k => {
+    box.querySelectorAll('.ka-tabs button').forEach(b => { const on = b.dataset.pane === k; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+    box.querySelectorAll('.ka-pane').forEach(p => p.hidden = p.dataset.p !== k);
+    box.querySelectorAll('.ka-head nav span').forEach(s => s.classList.toggle('on', s.dataset.n === (k === 'viewer' ? 'tour' : k)));
+  };
+  box.querySelectorAll('.ka-tabs button').forEach(b => b.addEventListener('click', () => show(b.dataset.pane)));
+})();
+</script>
 
 <section class="block" id="cara-kerja">
   <div class="wrap">
