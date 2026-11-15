@@ -733,6 +733,87 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
 @media (max-width:560px){ .screen{grid-template-columns:minmax(0,1fr)} .screen .map{min-height:150px} }
 </style>
 
+<style>
+/* Galeri layar asli */
+.showcase{display:flex; flex-direction:column; gap:10px; min-width:0}
+.sc-frame{border-radius:14px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); background:#fff}
+.sc-frame img{display:block; width:100%; height:auto; max-width:100%}
+.sc-thumbs{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.sc-thumbs button{all:unset; box-sizing:border-box; cursor:pointer; display:flex; align-items:center; gap:10px; padding:6px; border-radius:10px; border:1px solid var(--line); background:var(--surface); font-size:13px; font-weight:600; color:var(--ink-2); min-width:0}
+.sc-thumbs button img{width:72px; height:45px; object-fit:cover; object-position:top left; border-radius:6px; border:1px solid var(--line); flex:none}
+.sc-thumbs button.on{border-color:var(--c); color:var(--ink); box-shadow:0 0 0 2px color-mix(in srgb, var(--c) 25%, transparent)}
+.sc-thumbs button:focus-visible{outline:2px solid var(--c); outline-offset:2px}
+.sc-note{font-size:12px; color:var(--ink-3)}
+.case-top{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) !important}
+@media (max-width:1000px){ .case-top{grid-template-columns:minmax(0,1fr) !important} }
+
+/* Bagian sebelum-sesudah: tab alur */
+.ba-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+.ba-tabs button{font:600 13.5px var(--body); padding:8px 16px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--ink-2); cursor:pointer}
+.ba-tabs button.on{background:var(--brand); border-color:var(--brand); color:#fff}
+:root[data-theme="dark"] .ba-tabs button.on{color:var(--paper)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .ba-tabs button.on{color:var(--paper)} }
+.awards .medal{font-size:14px}
+
+/* Filament asli: topbar putih, sidebar menyatu dengan latar, grup dengan chevron */
+.sk-fil .sk-top{gap:10px}
+.sk-fil .sk-brand{font-size:14px; font-weight:700}
+.sk-fil .sk-search{max-width:170px; padding-left:22px; position:relative; background:var(--surface); border-radius:8px}
+.sk-fil .sk-search::before{content:""; position:absolute; left:8px; top:7px; width:8px; height:8px; border:1.5px solid var(--ink-3); border-radius:50%}
+.sk-bell{width:12px; height:12px; border:1.5px solid var(--ink-3); border-radius:6px 6px 2px 2px; flex:none}
+.sk-ava-k{background:#09090B; color:#fff}
+:root[data-theme="dark"] .sk-ava-k{background:#fff; color:#09090B}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .sk-ava-k{background:#fff; color:#09090B} }
+.sk-fil .sk-wrap{background:color-mix(in srgb, var(--surface-2) 45%, var(--surface)); grid-template-columns:150px minmax(0,1fr)}
+.sk-fil .sk-side{background:transparent; border-right:0; padding:10px 8px; gap:2px}
+.sk-side em{font-style:normal; font-size:10.5px; font-weight:600; color:var(--ink-3); padding:9px 8px 3px; display:flex; justify-content:space-between; align-items:center}
+.sk-side em::after{content:""; width:5px; height:5px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg) translateY(-2px)}
+.sk-side em.open::after{transform:rotate(-135deg) translateY(-1px)}
+.sk-fil .sk-side span.on{background:color-mix(in srgb, var(--ink) 6%, transparent); color:var(--c)}
+.sk-fil .sk-main{background:transparent}
+.sk-fil .sk-head small{font-size:10px}
+.sk-fil .sk-head b{font-size:17px}
+.sk-ftabs{display:flex; flex-wrap:wrap; gap:3px; padding:4px; border-radius:10px; background:var(--surface); box-shadow:0 0 0 1px var(--line); align-self:flex-start; max-width:100%}
+.sk-ftabs span{font-size:10.5px; font-weight:500; padding:4px 8px; border-radius:7px; color:var(--ink-2); white-space:nowrap}
+.sk-ftabs span.on{background:var(--c); color:#fff; font-weight:700}
+
+/* Asisten Dapur asli: sidebar gelap dengan brand, header sapaan putih */
+.sk-tdn .sk-wrap{grid-template-columns:160px minmax(0,1fr)}
+.sk-tdn .sk-side{background:#0F221C; border-right:0; padding:10px 8px; gap:1px}
+.sk-tdn .sk-side em{color:#7E9690}
+.sk-tdn .sk-side span{color:#DCE7E2; font-size:11px}
+.sk-tdn .sk-side span.on{background:#173A30; color:#fff; font-weight:600}
+.sk-tbrand{display:flex; gap:8px; align-items:center; padding:2px 4px 10px; border-bottom:1px solid #173A30; margin-bottom:4px}
+.sk-tbrand .sk-logo{background:#0E6B5C}
+.sk-tbrand b{display:block; color:#fff; font-size:12px}
+.sk-tbrand small{display:block; color:#7E9690; font-size:9px; line-height:1.3}
+.sk-tdn .sk-main{background:#F3F6F4}
+:root[data-theme="dark"] .sk-tdn .sk-main{background:var(--surface-2)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .sk-tdn .sk-main{background:var(--surface-2)} }
+.sk-greet{margin:-12px -12px 2px; padding:12px; background:var(--surface); border-bottom:1px solid var(--line)}
+.sk-greet b{display:block; font-size:15px}
+.sk-greet small{font-size:10.5px; color:var(--ink-3)}
+.sk-tdn .sk-head b{font-size:14px}
+
+/* Situs Karir asli: kotak logo navy, tombol Masuk / Daftar */
+.sk-karir .sk-top{padding:10px 14px}
+.sk-kbox{background:#262C5E; color:#fff; font-weight:800; font-size:12px; padding:5px 9px; border-radius:6px; flex:none}
+.sk-karir .sk-menu{margin-left:6px; gap:12px}
+.sk-karir .sk-menu span.on{color:var(--ink); font-weight:700; box-shadow:inset 0 -2px 0 var(--c)}
+.sk-out, .sk-in{font-size:11px; font-weight:700; padding:5px 12px; border-radius:999px; flex:none}
+.sk-out{border:1px solid var(--line); margin-left:auto}
+.sk-in{background:#262C5E; color:#fff}
+.sk-karir .sk-head{background:linear-gradient(110deg, var(--surface), color-mix(in srgb, #262C5E 10%, var(--surface))); color:var(--ink)}
+.sk-karir .sk-head small{color:var(--ink-3)}
+.sk-karir .sk-head b{font-size:17px; font-weight:800}
+@media (max-width:560px){ .sk-out{display:none} .sk-fil .sk-search, .sk-bell{display:none} }
+</style>
+<style>
+.sk-tbrand span{white-space:normal !important; padding:0 !important; display:block !important; overflow:visible !important; background:none !important}
+.sk-tbrand span::before{display:none !important}
+.sk-tbrand .sk-logo{display:grid !important; place-items:center; width:24px; height:24px; color:#fff !important; font-size:10px}
+</style>
+
 <nav class="nav" aria-label="Navigasi utama">
   <div class="wrap">
     <a class="brand" href="#home"><i>WN</i>Wirda Nissa</a>
@@ -804,7 +885,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         <div class="fact"><span class="k">Pendidikan</span><span class="v">D3 Manajemen Informatika, Politeknik Negeri Padang<small>2022–2026 · IPK 3,68 / 4,00</small></span></div>
         <div class="fact"><span class="k">Peran kini</span><span class="v">OD &amp; HRIS Developer<small>PT. Suri Nusantara Jaya · Sep 2025–sekarang</small></span></div>
         <div class="fact"><span class="k">Metodologi</span><span class="v">Agile Scrum &amp; Waterfall<small>Sprint planning, review, retrospective, backlog</small></span></div>
-        <div class="fact"><span class="k">Program</span><span class="v">MSIB Batch 6 · PMM Batch 3 · PKM-PM Vokasi 2024<small>Research Assistant, Interactive Tsunami Education</small></span></div>
+        <div class="fact"><span class="k">Prestasi</span><span class="v">5 penghargaan · 4 hibah &amp; program terpilih<small>Juara 1 UI/UX Nasional · Top 165 Innovillage · PKM-PM Vokasi · PMM · MSIB</small></span></div>
         <div class="fact"><span class="k">Kekuatan</span><span class="v">Business process → sistem jadi<small>Analisis, desain alur, development, dokumentasi, stakeholder</small></span></div>
       </div>
     </div>
@@ -818,40 +899,8 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
       <p>Setiap sistem menggantikan pekerjaan yang dulu bergantung pada kertas, tanda tangan basah, chat, dan rekap Excel. Inilah perbandingan waktu kerja untuk proses yang paling sering dijalankan.</p>
     </div>
 
-    <div class="ba">
-      <div class="ba-side before">
-        <span class="ba-tag">Cara lama · manual</span>
-        <div class="stack" aria-hidden="true">
-          <div class="sheet s5"></div><div class="sheet s4"></div><div class="sheet s3"></div><div class="sheet s2"></div>
-          <div class="sheet s1"><b>FORM PENGAJUAN CUTI</b><i></i><i></i><i class="short"></i><div class="sign"><span>Atasan</span><span>Manajer</span><span>HRD</span></div></div>
-        </div>
-        <ul class="ba-steps">
-          <li><b>Isi form kertas</b><span>diantar ke meja atasan</span></li>
-          <li><b>Tunggu 3 tanda tangan</b><span>sering tertahan karena atasan dinas</span></li>
-          <li><b>Input ulang ke Excel</b><span>saldo cuti dihitung manual</span></li>
-          <li><b>Arsip di lemari</b><span>sulit dicari saat audit</span></li>
-        </ul>
-        <div class="ba-time"><span>Waktu proses</span><b>2–3 hari</b></div>
-      </div>
-      <div class="ba-arrow" aria-hidden="true"><span>Digitalisasi</span></div>
-      <div class="ba-side after">
-        <span class="ba-tag">Dengan sistem saya</span>
-        <div class="device" aria-hidden="true">
-          <div class="dv-top"><b>Pengajuan Cuti</b><span class="pill ok">Disetujui</span></div>
-          <div class="dv-row"><span>Jenis</span><b>Cuti tahunan · 3 hari</b></div>
-          <div class="dv-row"><span>Sisa saldo</span><b>9 → 6 hari</b></div>
-          <div class="dv-flow"><span class="d">Atasan ✓</span><span class="d">Manajer ✓</span><span class="d">HR ✓</span></div>
-          <div class="dv-foot">Notifikasi email terkirim · 09:14</div>
-        </div>
-        <ul class="ba-steps">
-          <li><b>Ajukan dari ponsel</b><span>lampiran foto langsung terunggah</span></li>
-          <li><b>Approval otomatis berjenjang</b><span>notifikasi ke atasan detik itu juga</span></li>
-          <li><b>Saldo terpotong otomatis</b><span>tanpa input ulang</span></li>
-          <li><b>Tersimpan digital</b><span>dicari dalam hitungan detik</span></li>
-        </ul>
-        <div class="ba-time"><span>Waktu proses</span><b>± 10 menit</b></div>
-      </div>
-    </div>
+    <div class="ba-tabs" role="tablist" aria-label="Pilih alur"><button type="button" role="tab" class="on" aria-selected="true" data-flow="ptk">PTK</button><button type="button" role="tab" aria-selected="false" data-flow="rotasi">Rotasi &amp; Promosi</button><button type="button" role="tab" aria-selected="false" data-flow="pkwt">Evaluasi PKWT</button></div>
+    <div class="ba" id="ba"></div>
 
     <div class="prod-filter" role="tablist" aria-label="Filter sistem">
       <button type="button" class="on" data-f="all">Semua sistem</button>
@@ -971,13 +1020,17 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
           <ul><li>Memfasilitasi Sprint Planning, Daily Scrum, Review, dan Retrospective.</li><li>Mengelola sprint backlog dan prioritas di Trello.</li><li>Mengembangkan aplikasi Android dengan Kotlin dan Jetpack Compose.</li></ul></li>
       </ol>
       <div class="side">
-        <h3>Penghargaan</h3>
+        <h3>Penghargaan &amp; Program Terpilih</h3>
         <ul class="awards">
           <li><span class="medal">#1</span><div><b>National UI/UX Challenge</b><small>Politeknik Negeri Padang · Mei 2024</small></div></li>
           <li><span class="medal">165</span><div><b>Top 165 Innovillage 2024, skema pendanaan</b><small>September 2024</small></div></li>
           <li><span class="medal">W</span><div><b>Winner Women Award 2023, kategori Kreatif Sumatera Barat</b><small>Desember 2023</small></div></li>
           <li><span class="medal">#2</span><div><b>Juara 2 Ide Kreatif</b><small>Universitas Negeri Padang · November 2022</small></div></li>
           <li><span class="medal">#1</span><div><b>Juara 1 Hackathon</b><small>Politeknik Negeri Padang · Oktober 2022</small></div></li>
+          <li><span class="medal">PKM</span><div><b>Lolos pendanaan PKM-PM Vokasi 2024</b><small>Website Rumah Singgah Pasien · semester 4</small></div></li>
+          <li><span class="medal">PMM</span><div><b>Awardee PMM Batch 3, Universitas Airlangga</b><small>Pertukaran Mahasiswa Merdeka · 2023</small></div></li>
+          <li><span class="medal">MSIB</span><div><b>Peserta terpilih MSIB Batch 6, Infinite Learning</b><small>Mobile Development &amp; Agile Scrum · 2024</small></div></li>
+          <li><span class="medal">RA</span><div><b>Research Assistant, Tim Peneliti Dosen</b><small>Edukasi Tsunami Interaktif · Analisis Kinerja Linux pada Mini PC</small></div></li>
         </ul>
         <h3>Kepemimpinan</h3>
         <ul class="lead-list">
@@ -1041,29 +1094,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         </div>
         <div class="count" data-count="hris"></div>
       </div>
-      <div class="mock">
-        <div class="mock-bar"><i></i><i></i><i></i><span class="url">hris / dashboard</span></div>
-        <div class="hris-ui">
-          <aside><b>HRIS</b><span class="on">Dashboard</span><span>Karyawan</span><span>Org Chart</span><span>PTK</span><span>PKWT</span><span>Rotasi</span><span>WLA</span><span>Izin Keluar</span></aside>
-          <div class="hris-main">
-            <div class="kpis">
-              <div><small>Headcount</small><strong>2.418</strong></div>
-              <div><small>Tugas saya</small><strong id="pending">3</strong></div>
-              <div><small>PKWT ≤ 30 hari</small><strong>46</strong></div>
-            </div>
-            <div class="bars" aria-label="Grafik kepatuhan SLA per bulan">
-              <span style="height:52%"></span><span style="height:60%"></span><span style="height:58%"></span><span style="height:66%"></span><span style="height:71%"></span><span style="height:69%"></span><span style="height:78%"></span><span style="height:88%"></span>
-            </div>
-            <div class="approvals">
-              <div class="hd"><span>Tugas Saya · menunggu approval</span><span class="mono" style="font-weight:400;color:var(--ink-3)">klik Setujui</span></div>
-              <div class="ap"><div><b>PTK-0412 · Cook Helper × 5</b><small>Known-2 · Retail · SLA 2 hari</small></div><button type="button">Setujui</button></div>
-              <div class="ap"><div><b>Evaluasi PKWT · Perpanjang</b><small>Dodi P. · KPI 88 · absensi 96%</small></div><button type="button">Setujui</button></div>
-              <div class="ap"><div><b>Rotasi · Promosi Store Leader</b><small>Sari M. · efektif 1 Des</small></div><button type="button">Setujui</button></div>
-            </div>
-          </div>
-        </div>
-        <span class="sample">CONTOH DATA</span>
-      </div>
+      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">hris / admin</span></div><img src="screens/hris-dashboard.png" alt="Tampilan Dashboard" width="1280" height="800"></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/hris-dashboard.png" data-url="hris / admin" data-alt="Tampilan Dashboard"><img src="screens/hris-dashboard.png" alt="" width="1280" height="800"><span>Dashboard</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/hris-ptk.png" data-url="hris / admin / ptk" data-alt="Tampilan Riwayat PTK"><img src="screens/hris-ptk.png" alt="" width="1280" height="800"><span>Riwayat PTK</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
     </div>
     <div class="pbody"><nav class="toc" id="toc-hris" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-hris"></div></div></div>
     <div class="impact" id="imp-hris"></div>
@@ -1090,37 +1121,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         </div>
         <div class="count" data-count="att"></div>
       </div>
-      <div class="att-wrap">
-        <div class="phone">
-          <div class="screen">
-            <div class="notch"><i></i></div>
-            <div class="map"><div class="geo"></div><div class="pin"></div></div>
-            <div class="inner">
-              <div class="clock" id="clock">08:00:00</div>
-              <small id="today">Hari ini</small>
-              <div class="inarea"><span>Kantor Pusat · 38 m</span><span class="pill ok">Dalam radius</span></div>
-              <div class="selfie"><i></i><span>Wajah cocok 0,82 · liveness 0,94<br><b style="color:var(--ink)">Shift Pagi · 08:00–17:00</b></span></div>
-              <button class="clockbtn" id="clockbtn" type="button">Clock In dengan Wajah</button>
-            </div>
-          </div>
-        </div>
-        <div class="cal">
-          <h4>Riwayat kehadiran saya</h4>
-          <p class="sub">Oktober · periode 21–20</p>
-          <div class="calgrid" id="calgrid"></div>
-          <div class="legend">
-            <span><i style="background:color-mix(in srgb,var(--att) 75%,transparent)"></i>Hadir</span>
-            <span><i style="background:color-mix(in srgb,var(--kit) 70%,transparent)"></i>Terlambat</span>
-            <span><i style="background:color-mix(in srgb,var(--hris) 65%,transparent)"></i>Cuti</span>
-            <span><i style="background:color-mix(in srgb,var(--stamp) 55%,transparent)"></i>Sakit</span>
-          </div>
-          <div class="recap">
-            <div><small>Jam kerja</small><b>168 j</b></div>
-            <div><small>Lembur</small><b>9 j 30 m</b></div>
-          </div>
-          <span class="sample" style="position:static;display:inline-block;margin-top:10px">CONTOH DATA</span>
-        </div>
-      </div>
+      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">absensi / admin / pantauan-hari-ini</span></div><img src="screens/absensi-monitor.png" alt="Tampilan Pantauan Hari Ini" width="1280" height="800"></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/absensi-monitor.png" data-url="absensi / admin / pantauan-hari-ini" data-alt="Tampilan Pantauan Hari Ini"><img src="screens/absensi-monitor.png" alt="" width="1280" height="800"><span>Pantauan Hari Ini</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/absensi-payroll.png" data-url="absensi / admin / payroll-runs" data-alt="Tampilan Proses Payroll"><img src="screens/absensi-payroll.png" alt="" width="1280" height="800"><span>Proses Payroll</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
     </div>
     <div class="pbody"><nav class="toc" id="toc-att" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-att"></div></div></div>
     <div class="impact" id="imp-att"></div>
@@ -1147,26 +1148,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         </div>
         <div class="count" data-count="car"></div>
       </div>
-      <div class="mock">
-        <div class="mock-bar"><i></i><i></i><i></i><span class="url">karir / info-lowongan</span></div>
-        <div class="car-ui">
-          <div class="car-hero"><b>Tumbuh bersama kami</b><span>Lowongan terbuka di kantor pusat, toko, dan outlet</span></div>
-          <div class="jobs">
-            <div class="job"><b>HR Generalist</b><small>Human Capital · Jakarta</small></div>
-            <div class="job"><b>Cook Helper</b><small>Kitchen · Bogor · 5 posisi</small></div>
-            <div class="job"><b>Store Leader</b><small>Retail · Depok</small></div>
-          </div>
-          <div class="kanban-h"><span>Proses Rekrutmen · Cook Helper</span><small>klik kartu untuk naik tahap</small></div>
-          <div class="kanban" id="kanban">
-            <div class="col" data-stage="0"><b>Screening <span>0</span></b></div>
-            <div class="col" data-stage="1"><b>Interview <span>0</span></b></div>
-            <div class="col" data-stage="2"><b>Psikotest <span>0</span></b></div>
-            <div class="col" data-stage="3"><b>Offering <span>0</span></b></div>
-            <div class="col" data-stage="4"><b>Onboarding <span>0</span></b></div>
-          </div>
-        </div>
-        <span class="sample">CONTOH DATA</span>
-      </div>
+      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">karir / beranda</span></div><img src="screens/karir-home.png" alt="Tampilan Situs Karir" width="1280" height="800"></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/karir-home.png" data-url="karir / beranda" data-alt="Tampilan Situs Karir"><img src="screens/karir-home.png" alt="" width="1280" height="800"><span>Situs Karir</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/karir-pipeline.png" data-url="hris / admin / proses-rekrutmen" data-alt="Tampilan Proses Rekrutmen"><img src="screens/karir-pipeline.png" alt="" width="1280" height="800"><span>Proses Rekrutmen</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
     </div>
     <div class="pbody"><nav class="toc" id="toc-car" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-car"></div></div></div>
     <div class="impact" id="imp-car"></div>
@@ -1193,28 +1175,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         </div>
         <div class="count" data-count="kit"></div>
       </div>
-      <div class="mock">
-        <div class="mock-bar"><i></i><i></i><i></i><span class="url">asisten-dapur / rekomendasi-aksi</span></div>
-        <div class="kit-ui">
-          <div>
-            <h5>Prioritas tindak lanjut hari ini</h5>
-            <p class="sub">Skor RFM + tahap pipeline</p>
-            <div class="ing" id="crm-list"></div>
-          </div>
-          <div>
-            <h5>Kirim follow-up</h5>
-            <p class="sub" id="crm-who">Pilih pelanggan di kiri</p>
-            <div class="scaler">
-              <label for="crm-tpl">Template <output id="crm-cat">Reaktivasi</output></label>
-              <select id="crm-tpl" class="crm-sel"><option value="0">Reaktivasi pelanggan lama</option><option value="1">Ajak gabung member loyalty</option><option value="2">Promo produk terakhir</option></select>
-            </div>
-            <p class="crm-cap" id="crm-cap"></p>
-            <button type="button" class="clockbtn crm-btn" id="crm-send">Tandai sudah dikirim via WhatsApp</button>
-            <div class="stock" id="crm-funnel"></div>
-          </div>
-        </div>
-        <span class="sample">CONTOH DATA</span>
-      </div>
+      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">asisten-dapur / rekomendasi-aksi</span></div><img src="screens/crm-rekomendasi.png" alt="Tampilan Rekomendasi Aksi" width="1280" height="800"></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/crm-rekomendasi.png" data-url="asisten-dapur / rekomendasi-aksi" data-alt="Tampilan Rekomendasi Aksi"><img src="screens/crm-rekomendasi.png" alt="" width="1280" height="800"><span>Rekomendasi Aksi</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/crm-database.png" data-url="asisten-dapur / database-member" data-alt="Tampilan Database Member"><img src="screens/crm-database.png" alt="" width="1280" height="800"><span>Database Member</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
     </div>
     <div class="pbody"><nav class="toc" id="toc-kit" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-kit"></div></div></div>
     <div class="impact" id="imp-kit"></div>
@@ -1976,58 +1937,115 @@ const PROD = [
       '<div class="pbar dig"><div class="tr"><i style="width:' + w + '%"></i></div><span>Sistem · <b>' + esc(x[4]) + '</b></span></div></div>' +
       '<div class="pr-x"><b>−' + Math.round(r * 100) + '%</b><small>waktu proses</small></div></div>';
   }
-  /* Kulit per aplikasi, meniru UI asli */
+  /* Kulit per aplikasi, meniru UI asli (menu dan label diambil dari kode) */
+  const G_HRIS = [[null,['Dashboard']],['Employees',['Employees','Employee Dashboard','Laporan Karyawan','Atasan Karyawan']],['Organization Chart',['Organization Chart','Setup Job Position','Job Description','SOP']],['Talent Acquisition',['PTK','Lowongan','Pelamar','Proses Rekrutmen','Pengaturan Rekrutmen']],['Talent Management',['Rotasi','SK Rotasi','Serah Terima Pekerjaan','Talent Review']],['KPI Management',['Monthly Assignments','Performance Dashboard','Calibration']],['WLA Analyst',['Siklus WLA','Analisa Jabatan','Dasbor Workforce']],['HR Operations',['PKWT Evaluation','PKWT Monitoring','Offboarding']],['HC Operations',['Izin Keluar Kantor','Bis Kantor','Kalender']],['Settings',['Feature Settings','Pengaturan Notifikasi','Status Sistem','Log Aktivitas']]];
   const NAV = {
-    hris:['Dashboard','Employees','Organization Chart','Talent Acquisition','Talent Management','HR Operations','KPI Management','WLA Analyst','HC Operations','Settings'],
-    ta:['PTK','Lowongan','Pelamar','Proses Rekrutmen','Agenda Interview','Kode Psikotest','Virtual Hiring','Kandidat On Board','Durasi Rekrutmen','Pengaturan Rekrutmen'],
-    absensi:['Pantauan Hari Ini','Monitor Kehadiran','Log Scan','Profil Wajah','Pengajuan','Roster','Periode & Rekap','Payroll Run','Master Data','Pengaturan'],
+    hris:G_HRIS, ta:G_HRIS,
+    absensi:[[null,['Dasbor']],['Kehadiran',['Pantauan Hari Ini','Peringatan Dini','Kunjungan','Monitor kehadiran','Log scan','Perangkat karyawan','Periode & rekap','Profil wajah']],['Pengajuan',['Ganti HP','Cuti, izin & sakit','Koreksi absen','Lembur (SPL)','Saldo cuti']],['Jadwal',['Roster','Master shift','Pola shift','Regu','Periode khusus']],['Payroll',['Proses Payroll','Profil payroll','Kelompok payroll','Komponen gaji','Laporan BPJS']],['Master Data',['Karyawan','Lokasi kerja','Hari libur']],['Pengaturan',['Pengaturan Absensi','Kalibrasi Wajah','Pengumuman','Akun']],['Log Sistem',['Audit & Login','Error aplikasi']]],
     absen:['Beranda','Riwayat','Pengajuan','Tim','Approval'],
-    karir:['Beranda','Life at','Lowongan','Lamaran Saya','FAQ','Chat'],
-    tdn:['Rekomendasi Aksi','Dashboard','Leaderboard','Database Member','Data Member','Mapping Customer','Riwayat FU','RFM Customer','Report','Google Review','Challenge','Role Access','Template Chat'],
+    karir:['Beranda','Budaya Kerja','Lowongan','Lamaran Saya','Virtual Hiring','FAQ','Chat'],
+    tdn:[['Menu',['Rekomendasi Aksi','Dashboard','Leaderboard Subscription','Database Member','Data Lead Member','Mapping Customer','Riwayat FU','RFM Customer','Report','Google Review','Sales Challenge']],['Admin',['Users','Role Access','Template Chat']]],
     wat:['Dashboard','Program','Pendaftar Program','Donasi','Volunteer','Pendaftar Volunteer','Publikasi','Organisasi','User'],
     watpub:['Beranda','Tentang','Program','Publikasi','Donasi','Volunteer']
   };
   const SKIN = {
-    hris:{kind:'admin', cls:'sk-filament', brand:'HRIS', logo:'HR', c:'#D97706', d:'#FBBF24', group:'Menu'},
-    ta:{kind:'admin', cls:'sk-filament', brand:'HRIS', logo:'HR', c:'#D97706', d:'#FBBF24', group:'Talent Acquisition'},
-    absensi:{kind:'admin', cls:'sk-filament', brand:'Absensi', logo:'AB', c:'#2563EB', d:'#60A5FA', group:'Attendance'},
+    hris:{kind:'fil', brand:'HRIS', ava:'WN', c:'#D97706', d:'#FBBF24'},
+    ta:{kind:'fil', brand:'HRIS', ava:'WN', c:'#D97706', d:'#FBBF24'},
+    absensi:{kind:'fil', brand:'Absensi', ava:'AH', c:'#2563EB', d:'#60A5FA'},
     absen:{kind:'mobile', brand:'Absensi', c:'#2563EB', d:'#60A5FA'},
-    karir:{kind:'pub', brand:'Karir', logo:'K', c:'#262C5E', d:'#8F98E6', a:'#FF8A00', cta:'Masuk'},
-    tdn:{kind:'admin', cls:'sk-dark', brand:'Asisten Dapur', logo:'AD', c:'#0E6B5C', d:'#3FBFA6', group:'Menu'},
+    karir:{kind:'pub', brand:'Karir', c:'#262C5E', d:'#8F98E6', a:'#FF8A00'},
+    tdn:{kind:'tdn', brand:'Asisten Dapur', c:'#0E6B5C', d:'#3FBFA6'},
     wat:{kind:'admin', brand:'Waterynation', logo:'W', c:'#5D87FF', d:'#8EAAFF', group:'Admin'},
-    watpub:{kind:'pub', brand:'Waterynation', logo:'W', c:'#0E7490', d:'#38BDF8', cta:'Donasi'}
+    watpub:{kind:'pubw', brand:'Waterynation', logo:'W', c:'#0E7490', d:'#38BDF8', cta:'Donasi'}
   };
+  const TT = ['Tugas Saya','Kandidat On Board','Agenda Interview','Cadangan Kandidat','Kode Psikotest','Durasi Rekrutmen'];
+  const TP = ['Lamaran','Akun Pelamar','Virtual Hiring','Dashboard Virtual Hiring','Trafik Situs Karir'];
   const SKMAP = {
-    hris:[['hris','Employees'],['hris','Organization Chart'],['hris','Talent Acquisition'],['hris','HR Operations'],['hris','Talent Management'],['hris','WLA Analyst'],['hris','Dashboard'],['hris','HC Operations'],['hris','Settings'],['hris','KPI Management']],
-    att:[['absen','Beranda'],['absensi','Profil Wajah'],['absensi','Monitor Kehadiran'],['absensi','Roster'],['absen','Approval'],['absensi','Periode & Rekap'],['absensi','Payroll Run'],['absen','Beranda'],['absen','Tim'],['absen','Beranda'],['absensi','Pantauan Hari Ini'],['absensi','Pengaturan']],
-    car:[['karir','Beranda'],['karir','Lowongan'],['karir','Lamaran Saya'],['ta','Lowongan'],['ta','Proses Rekrutmen'],['ta','Pelamar'],['ta','Virtual Hiring'],['ta','Agenda Interview'],['ta','Kode Psikotest'],['ta','Proses Rekrutmen'],['ta','Kandidat On Board'],['karir','Chat'],['ta','Durasi Rekrutmen'],['ta','Pengaturan Rekrutmen']],
-    kit:[['tdn','Rekomendasi Aksi'],['tdn','Database Member'],['tdn','Database Member'],['tdn','RFM Customer'],['tdn','Dashboard'],['tdn','Google Review'],['tdn','Role Access']],
+    hris:[['hris','Employees'],['hris','Organization Chart'],['hris','PTK'],['hris','PKWT Evaluation'],['hris','Rotasi'],['hris','Dasbor Workforce'],['hris','Dashboard'],['hris','Izin Keluar Kantor'],['hris','Feature Settings'],['hris','Performance Dashboard']],
+    att:[['absen','Beranda'],['absensi','Profil wajah'],['absensi','Monitor kehadiran'],['absensi','Roster'],['absen','Approval'],['absensi','Periode & rekap'],['absensi','Proses Payroll'],['absen','Beranda'],['absen','Tim'],['absen','Beranda'],['absensi','Pantauan Hari Ini'],['absensi','Pengaturan Absensi']],
+    car:[['karir','Beranda'],['karir','Lowongan'],['karir','Lamaran Saya'],['ta','Lowongan'],['ta','Proses Rekrutmen',TT,'Tugas Saya'],['ta','Pelamar',TP,'Lamaran'],['ta','Pelamar',TP,'Virtual Hiring'],['ta','Proses Rekrutmen',TT,'Agenda Interview'],['ta','Proses Rekrutmen',TT,'Kode Psikotest'],['ta','Proses Rekrutmen',TT,'Tugas Saya'],['ta','Proses Rekrutmen',TT,'Kandidat On Board'],['karir','Chat'],['ta','Proses Rekrutmen',TT,'Durasi Rekrutmen'],['ta','Pengaturan Rekrutmen']],
+    kit:[['tdn','Rekomendasi Aksi'],['tdn','Database Member'],['tdn','Riwayat FU'],['tdn','RFM Customer'],['tdn','Dashboard'],['tdn','Google Review'],['tdn','Role Access']],
     wat:[['watpub','Beranda'],['wat','Program'],['wat','Donasi'],['wat','Pendaftar Volunteer'],['wat','Dashboard']]
   };
+  const li = (n, on) => '<span class="' + (n === on ? 'on' : '') + '">' + esc(n) + '</span>';
+  function sideGroups(groups, on, expandAll){
+    return groups.map(g => {
+      const open = expandAll || !g[0] || g[1].includes(on);
+      return (g[0] ? '<em class="' + (open ? 'open' : '') + '">' + esc(g[0]) + '</em>' : '') + (open ? g[1].map(n => li(n, on)).join('') : '');
+    }).join('');
+  }
   function screen(ui, key, idx){
     const m = (SKMAP[key] || [])[idx];
     const body = ui.parts.map(pt => parts[pt[0]] ? parts[pt[0]](pt[1]) : '').join('');
     if (!m) return '<div class="scr"><div class="scr-bar"><i></i><b>' + esc(ui.title) + '</b><small>' + esc(ui.who || '') + '</small></div><div class="scr-body">' + body + '</div></div>';
     const sk = SKIN[m[0]], nav = NAV[m[0]], on = m[1];
     const vars = ' style="--skc:' + sk.c + ';--skd:' + sk.d + (sk.a ? ';--ska:' + sk.a : '') + '"';
-    const head = '<div class="sk-head"><small>' + esc(sk.group || sk.brand) + ' / ' + esc(on) + '</small><b>' + esc(ui.title) + '</b></div>';
     const label = ' aria-label="Desain layar ' + esc(ui.title) + '"';
+    const tabs = m[2] ? '<div class="sk-ftabs">' + m[2].map(t => li(t, m[3])).join('') + '</div>' : '';
+    if (sk.kind === 'fil') {
+      return '<div class="scr sk sk-fil"' + vars + label + '><div class="sk-top"><span class="sk-brand">' + esc(sk.brand) + '</span><span class="sk-search">Cari</span><span class="sk-bell" aria-hidden="true"></span><span class="sk-ava sk-ava-k">' + sk.ava + '</span></div>' +
+        '<div class="sk-wrap"><div class="sk-side">' + sideGroups(nav, on) + '</div>' +
+        '<div class="sk-main"><div class="sk-head"><small>' + esc(on) + ' › ' + (m[3] ? esc(m[3]) : 'Daftar') + '</small><b>' + esc(ui.title) + '</b></div>' + tabs + body + '</div></div></div>';
+    }
+    if (sk.kind === 'tdn') {
+      return '<div class="scr sk sk-tdn"' + vars + label + '><div class="sk-wrap"><div class="sk-side"><div class="sk-tbrand"><span class="sk-logo">AD</span><span><b>Asisten Dapur</b><small>Melayani, Mendampingi, Membangun Loyalitas</small></span></div>' + sideGroups(nav, on, true) + '</div>' +
+        '<div class="sk-main"><div class="sk-greet"><b>Selamat pagi, Rina!</b><small>Selamat bekerja, semoga hari Anda produktif.</small></div><div class="sk-head"><small>Super Admin · ' + esc(on) + '</small><b>' + esc(ui.title) + '</b></div>' + body + '</div></div></div>';
+    }
     if (sk.kind === 'mobile') {
       return '<div class="scr sk sk-wide"' + vars + label + '><div class="sk-mob-head"><div class="sk-wh"><span class="sk-logo sk-logo-w">AB</span><span><small>' + esc(sk.brand) + ' · ' + esc(ui.who || '') + '</small><b>' + esc(ui.title) + '</b></span><span class="sk-ava sk-ava-w">WN</span></div>' +
-        '<div class="sk-wtabs">' + nav.map(n => '<span class="' + (n === on ? 'on' : '') + '">' + esc(n) + '</span>').join('') + '</div></div>' +
-        '<div class="sk-main">' + body + '</div></div>';
+        '<div class="sk-wtabs">' + nav.map(n => li(n, on)).join('') + '</div></div><div class="sk-main">' + body + '</div></div>';
     }
     if (sk.kind === 'pub') {
-      return '<div class="scr sk sk-pub"' + vars + label + '><div class="sk-top"><span class="sk-logo">' + sk.logo + '</span><span class="sk-brand">' + esc(sk.brand) + '</span><span class="sk-menu">' +
-        nav.map(n => '<span class="' + (n === on ? 'on' : '') + '">' + esc(n) + '</span>').join('') + '</span><span class="sk-cta">' + esc(sk.cta) + '</span></div>' +
-        '<div class="sk-main">' + head + body + '</div></div>';
+      return '<div class="scr sk sk-pub sk-karir"' + vars + label + '><div class="sk-top"><span class="sk-kbox">Karir</span><span class="sk-menu">' + nav.map(n => li(n, on)).join('') + '</span><span class="sk-out">Masuk</span><span class="sk-in">Daftar</span></div>' +
+        '<div class="sk-main"><div class="sk-head"><small>' + esc(on) + '</small><b>' + esc(ui.title) + '</b></div>' + body + '</div></div>';
     }
-    return '<div class="scr sk ' + (sk.cls || '') + '"' + vars + label + '><div class="sk-top"><span class="sk-logo">' + sk.logo + '</span><span class="sk-brand">' + esc(sk.brand) + '</span><span class="sk-search">Cari…</span><span class="sk-ava">WN</span></div>' +
-      '<div class="sk-wrap"><div class="sk-side"><small>' + esc(sk.group) + '</small>' + nav.map(n => '<span class="' + (n === on ? 'on' : '') + '">' + esc(n) + '</span>').join('') + '</div>' +
-      '<div class="sk-main">' + head + body + '</div></div></div>';
+    if (sk.kind === 'pubw') {
+      return '<div class="scr sk sk-pub"' + vars + label + '><div class="sk-top"><span class="sk-logo">' + sk.logo + '</span><span class="sk-brand">' + esc(sk.brand) + '</span><span class="sk-menu">' + nav.map(n => li(n, on)).join('') + '</span><span class="sk-cta">' + esc(sk.cta) + '</span></div>' +
+        '<div class="sk-main"><div class="sk-head"><small>' + esc(sk.brand) + ' / ' + esc(on) + '</small><b>' + esc(ui.title) + '</b></div>' + body + '</div></div>';
+    }
+    return '<div class="scr sk"' + vars + label + '><div class="sk-top"><span class="sk-logo">' + sk.logo + '</span><span class="sk-brand">' + esc(sk.brand) + '</span><span class="sk-search">Cari…</span><span class="sk-ava">WN</span></div>' +
+      '<div class="sk-wrap"><div class="sk-side"><small>' + esc(sk.group) + '</small>' + nav.map(n => li(n, on)).join('') + '</div>' +
+      '<div class="sk-main"><div class="sk-head"><small>' + esc(sk.group) + ' / ' + esc(on) + '</small><b>' + esc(ui.title) + '</b></div>' + body + '</div></div></div>';
   }
 
-  window.PF = {screen: screen, prowHTML: prowHTML, esc: esc};
+  /* Sebelum vs sesudah: alur PTK, Rotasi, dan Evaluasi PKWT di HRIS */
+  const BA = {
+    ptk:{tab:'PTK', sheet:'FORM PERMINTAAN TENAGA KERJA', sign:['Atasan (RL)','HC Manager','Direksi'],
+      before:[['Isi form PTK kertas','JD dan kualifikasi diketik ulang'],['Kejar 3 tanda tangan','RL, HC Manager, lalu Direksi'],['Scan & kirim lewat chat','nomor PTK dicatat manual di Excel'],['Progres tidak terlihat','atasan bertanya berulang ke HC']], tBefore:'± 5 hari',
+      card:{title:'PTK-0412 · Cook Helper × 5', pill:'Approved', rows:[['Organisasi','Retail · Cabang Bogor'],['JD & KPI','terisi otomatis']], chips:['Known-1 ✓','Known-2 ✓','Direksi ✓'], foot:'PDF bernomor terbit · lowongan siap dibuat'},
+      after:[['Ajukan dari HRIS','JD dan KPI terisi otomatis'],['Approval berjenjang otomatis','Known-1 RL → Known-2 HC → Direksi'],['PDF bernomor & arsip digital','scan tanda tangan final terunggah'],['Langsung jadi lowongan','progres rekrutmen terlihat per posisi']], tAfter:'± 1 hari'},
+    rotasi:{tab:'Rotasi & Promosi', sheet:'FORM ROTASI / PROMOSI', sign:['RL Asal','Comben','Direksi'],
+      before:[['Form & usulan gaji di kertas','lampiran dicetak dan diedarkan'],['Berpindah ke 6 meja','RL asal, Comben, TM, RL tujuan, GM HC, Direksi'],['SK diketik manual','nomor SK dicatat terpisah'],['Update data dua kali','HRIS dan Talenta diubah manual']], tBefore:'± 7 hari',
+      card:{title:'Rotasi · Promosi Store Leader', pill:'Disetujui', rows:[['Tanggal efektif','1 Desember'],['Band gaji','sesuai level jabatan']], chips:['RL ✓','Comben ✓','GM HC ✓'], foot:'SK terbit · ekspor Talenta otomatis'},
+      after:[['Form bertingkat','entitas → posisi → atasan baru'],['Rantai approval dinamis','lengkap dengan delegasi approver'],['SK & final salary PDF otomatis','arsip tersimpan digital'],['Efektif otomatis','data berubah di tanggal efektif']], tAfter:'± 2 hari'},
+    pkwt:{tab:'Evaluasi PKWT', sheet:'EVALUASI KONTRAK PKWT', sign:['Atasan','RL1','GM HC'],
+      before:[['Cek kontrak habis di Excel','sering terlewat sampai lewat tanggal'],['Rekap KPI, absensi, SP','dikumpulkan manual per karyawan'],['Form evaluasi diedarkan','tanda tangan berjenjang di kertas'],['Hasil diinput ulang','ke Talenta dan arsip fisik']], tBefore:'2 jam / karyawan',
+      card:{title:'Evaluasi PKWT · Dodi P.', pill:'Perpanjang', rows:[['KPI · Absensi · SP','88 · 96% · —'],['Sisa kontrak','15 hari']], chips:['Atasan ✓','RL1 ✓','GM HC ✓'], foot:'dibuat otomatis 30 hari sebelum kontrak habis'},
+      after:[['Evaluasi dibuat otomatis','untuk kontrak yang akan berakhir'],['Remark otomatis','KPI, absensi, dan SP terisi sendiri'],['Approval berjenjang & massal','Atasan → RL1–RL3 → GM HC'],['Monitoring lintas tim','TM, Legal, dan Comben di satu layar']], tAfter:'± 10 menit'}
+  };
+  function renderBA(k){
+    const b = BA[k];
+    const steps = a => '<ul class="ba-steps">' + a.map(s => '<li><b>' + esc(s[0]) + '</b><span>' + esc(s[1]) + '</span></li>').join('') + '</ul>';
+    return '<div class="ba-side before"><span class="ba-tag">Cara lama · manual</span>' +
+      '<div class="stack" aria-hidden="true"><div class="sheet s5"></div><div class="sheet s4"></div><div class="sheet s3"></div><div class="sheet s2"></div>' +
+      '<div class="sheet s1"><b>' + esc(b.sheet) + '</b><i></i><i></i><i class="short"></i><div class="sign">' + b.sign.map(s => '<span>' + esc(s) + '</span>').join('') + '</div></div></div>' +
+      steps(b.before) + '<div class="ba-time"><span>Waktu proses</span><b>' + esc(b.tBefore) + '</b></div></div>' +
+      '<div class="ba-arrow" aria-hidden="true"><span>Digitalisasi</span></div>' +
+      '<div class="ba-side after"><span class="ba-tag">Dengan HRIS yang saya bangun</span>' +
+      '<div class="device" aria-hidden="true"><div class="dv-top"><b>' + esc(b.card.title) + '</b><span class="pill ok">' + esc(b.card.pill) + '</span></div>' +
+      b.card.rows.map(r => '<div class="dv-row"><span>' + esc(r[0]) + '</span><b>' + esc(r[1]) + '</b></div>').join('') +
+      '<div class="dv-flow">' + b.card.chips.map(c => '<span class="d">' + esc(c) + '</span>').join('') + '</div><div class="dv-foot">' + esc(b.card.foot) + '</div></div>' +
+      steps(b.after) + '<div class="ba-time"><span>Waktu proses</span><b>' + esc(b.tAfter) + '</b></div></div>';
+  }
+  const baBox = document.getElementById('ba');
+  if (baBox) {
+    baBox.innerHTML = renderBA('ptk');
+    document.querySelectorAll('.ba-tabs button').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('.ba-tabs button').forEach(x => { x.classList.toggle('on', x === btn); x.setAttribute('aria-selected', x === btn); });
+      baBox.innerHTML = renderBA(btn.dataset.flow);
+    }));
+  }
+  window.PF = {screen: screen, prowHTML: prowHTML, esc: esc, ba: renderBA};
   if (!document.getElementById('pcards')) return;
 
   Object.entries(P).forEach(([key, p]) => {
@@ -2139,89 +2157,14 @@ const PROD = [
     });
   });
 
-  /* Attendance: live clock + clock in */
-  const clock = document.getElementById('clock');
-  const today = document.getElementById('today');
-  const pad = n => String(n).padStart(2, '0');
-  function tick(){
-    const d = new Date();
-    clock.textContent = pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
-    today.textContent = d.toLocaleDateString('id-ID', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
-  }
-  tick(); setInterval(tick, 1000);
-  const cb = document.getElementById('clockbtn');
-  cb.addEventListener('click', () => {
-    const d = new Date();
-    if (cb.classList.contains('done')) { cb.classList.remove('done'); cb.textContent = 'Clock In dengan Wajah'; return; }
-    cb.classList.add('done');
-    cb.textContent = '✓ Diterima ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ' · wajah, liveness & lokasi valid';
+  /* Galeri layar asli di atas halaman proyek */
+  document.querySelectorAll('.showcase').forEach(sc => {
+    const img = sc.querySelector('.sc-frame img'), url = sc.querySelector('.sc-frame .url');
+    sc.querySelectorAll('.sc-thumbs button').forEach(btn => btn.addEventListener('click', () => {
+      sc.querySelectorAll('.sc-thumbs button').forEach(x => { x.classList.toggle('on', x === btn); x.setAttribute('aria-selected', x === btn); });
+      img.src = btn.dataset.img; img.alt = btn.dataset.alt; url.textContent = btn.dataset.url;
+    }));
   });
-
-  /* Attendance: calendar (Oktober 2026 dimulai Kamis) */
-  const cal = document.getElementById('calgrid');
-  const days = ['Sen','Sel','Rab','Kam','Jum','Sab','Min'];
-  const special = {6:'l', 9:'c', 12:'h', 15:'l', 20:'s', 21:'s', 27:'l', 30:'c'};
-  let html = days.map(d => '<em>' + d + '</em>').join('');
-  for (let i = 0; i < 3; i++) html += '<span class="o"></span>';
-  for (let d = 1; d <= 31; d++) {
-    const dow = (3 + d - 1) % 7;
-    const cls = dow >= 5 ? 'o' : (special[d] || 'h');
-    html += '<span class="' + cls + '">' + d + '</span>';
-  }
-  cal.innerHTML = html;
-
-  /* Career: kanban */
-  const people = [
-    ['AR','Ayu R.','Skor 86',0],['BS','Bima S.','Skor 72',0],['CN','Citra N.','Skor 91',1],
-    ['DF','Dewi F.','Skor 80',1],['EK','Eko K.','Interview 18 Nov',2],['FM','Fajar M.','Offering dikirim',3]
-  ];
-  const cols = document.querySelectorAll('#kanban .col');
-  const stageNote = ['Skor kecocokan dihitung','Meet dijadwalkan','Kode psikotest dikirim','Remunerasi & OL','Jadikan Karyawan ✓'];
-  function renderK(moved){
-    cols.forEach(c => c.querySelectorAll('.cand').forEach(x => x.remove()));
-    people.forEach((p, i) => {
-      const b = document.createElement('button');
-      b.type = 'button'; b.className = 'cand' + (moved === i ? ' new' : '');
-      b.innerHTML = '<i>' + p[0] + '</i><span>' + p[1] + '<small>' + p[2] + '</small></span>';
-      b.title = p[3] < 4 ? 'Pindahkan ke tahap berikutnya' : 'Sudah diterima';
-      b.addEventListener('click', () => {
-        if (p[3] < 4) { p[3]++; p[2] = stageNote[p[3]]; renderK(i); }
-      });
-      cols[p[3]].appendChild(b);
-    });
-    cols.forEach((c, i) => c.querySelector('b span').textContent = people.filter(p => p[3] === i).length);
-  }
-  renderK(-1);
-
-  /* Asisten Dapur: rekomendasi aksi + caption follow-up */
-  const crm = [
-    {n:'Ibu Lina', r:34, p:'Susu UHT 1L', s:92, st:0},
-    {n:'Pak Anton', r:21, p:'Telur 1 kg', s:78, st:0},
-    {n:'Ibu Rara', r:12, p:'Daging sapi 500 g', s:64, st:1},
-    {n:'Mas Dimas', r:9, p:'Beras 5 kg', s:51, st:2}
-  ];
-  const tpls = [
-    ['Reaktivasi', 'Halo {nama}, sudah {r} hari sejak Ibu/Bapak belanja {produk} di toko kami. Stok segar sudah datang lagi, kami tunggu kunjungannya ya. Salam, {saya}'],
-    ['Ajak member', 'Halo {nama}, terima kasih sudah langganan {produk}. Gabung program member loyalty gratis dan dapatkan harga member setiap belanja. Mau saya bantu daftarkan? Salam, {saya}'],
-    ['Promo', 'Halo {nama}, minggu ini ada promo untuk {produk} di toko kami. Info lengkap bisa tanya saya langsung ya. Salam, {saya}']
-  ];
-  const stages = ['New','Contacted','Interested','Closed Won'];
-  let selC = 0;
-  const cList = document.getElementById('crm-list'), cCap = document.getElementById('crm-cap'), cWho = document.getElementById('crm-who');
-  const cTpl = document.getElementById('crm-tpl'), cCat = document.getElementById('crm-cat'), cFun = document.getElementById('crm-funnel');
-  function scoreCls(s){ return s >= 80 ? 'pill bad' : s >= 60 ? 'pill wait' : 'pill ok'; }
-  function renderCrm(){
-    cList.innerHTML = crm.map((c, i) => '<button type="button" class="crm-row' + (i === selC ? ' sel' : '') + '" data-i="' + i + '"><span>' + c.n + '<small>' + c.r + ' hari · ' + c.p + ' · ' + stages[c.st] + '</small></span><span class="crm-score ' + scoreCls(c.s) + '">' + c.s + '</span></button>').join('');
-    const c = crm[selC], t = tpls[+cTpl.value];
-    cCat.textContent = t[0];
-    cWho.textContent = c.n + ' · tahap ' + stages[c.st];
-    cCap.textContent = t[1].replace('{nama}', c.n).replace('{r}', c.r).replace('{produk}', c.p).replace('{saya}', 'Rina (Toko Cabang A)');
-    cFun.innerHTML = stages.map((s, i) => { const n = crm.filter(x => x.st >= i).length; return '<div><span>' + s + ' · ' + n + '</span><div class="meter"><i style="width:' + (n / crm.length * 100) + '%"></i></div></div>'; }).join('');
-  }
-  cList.addEventListener('click', e => { const b = e.target.closest('.crm-row'); if (b) { selC = +b.dataset.i; renderCrm(); } });
-  cTpl.addEventListener('change', renderCrm);
-  document.getElementById('crm-send').addEventListener('click', () => { const c = crm[selC]; if (c.st < 3) c.st++; renderCrm(); });
-  renderCrm();
 
   /* Kontak: salin email */
   const copy = document.getElementById('copy');
