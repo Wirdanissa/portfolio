@@ -976,6 +976,44 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
 }
 </style>
 
+<style>
+/* Keahlian yang menjual */
+.vp{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
+.vp > div{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:20px; display:flex; flex-direction:column; gap:8px; position:relative; overflow:hidden}
+.vp > div::after{content:""; position:absolute; right:-30px; top:-30px; width:90px; height:90px; border-radius:50%; background:color-mix(in srgb, var(--hris) 9%, transparent)}
+.vp-n{font-family:var(--mono); font-size:12px; font-weight:600; color:var(--hris)}
+.vp b{font-size:17px; line-height:1.3}
+.vp p{font-size:14px; color:var(--ink-2)}
+.proof{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); margin-top:18px; border-radius:16px; overflow:hidden; background:var(--brand); color:#fff}
+:root[data-theme="dark"] .proof{background:#13254A}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .proof{background:#13254A} }
+.proof div{padding:18px 20px; border-left:1px solid rgba(255,255,255,.14)}
+.proof div:first-child{border-left:0}
+.proof b{display:block; font-size:30px; font-weight:800; letter-spacing:-.03em; font-variant-numeric:tabular-nums}
+.proof span{font-size:13px; color:rgba(255,255,255,.75)}
+.sm-legend{display:flex; flex-wrap:wrap; gap:8px 18px; margin:28px 0 12px; font-size:12.5px; color:var(--ink-2)}
+.sm-legend span{display:flex; align-items:center; gap:8px}
+.sm{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+.sm-g{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:18px; display:flex; flex-direction:column; gap:12px; min-width:0}
+.sm-g h4{font-size:16px}
+.sk-r{display:grid; grid-template-columns:minmax(0,1fr) 54px; grid-template-areas:"n l" "s s"; gap:2px 10px; align-items:center}
+.sk-r .nm{grid-area:n; font-weight:600; font-size:14px}
+.sk-r small{grid-area:s; font-size:12.5px; color:var(--ink-3)}
+.sk-r i{grid-area:l}
+i.lv1, i.lv2, i.lv3{display:block; height:6px; border-radius:6px; background:linear-gradient(90deg, var(--hris) var(--p), var(--surface-2) var(--p))}
+.sm-legend i{width:40px; flex:none}
+i.lv3{--p:100%} i.lv2{--p:70%} i.lv1{--p:40%}
+.roles{margin-top:18px; display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; padding:16px 18px; border-radius:16px; border:1px dashed color-mix(in srgb, var(--hris) 45%, var(--line)); background:color-mix(in srgb, var(--hris) 5%, var(--surface))}
+.roles b{font-size:14px}
+.roles div{display:flex; flex-wrap:wrap; gap:8px}
+.roles span{font-size:13px; font-weight:600; padding:6px 12px; border-radius:999px; background:var(--hris); color:#fff}
+:root[data-theme="dark"] .roles span{color:#0A111D}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .roles span{color:#0A111D} }
+.sm-tools{margin-top:12px; font-size:13px; color:var(--ink-3)}
+@media (max-width:1000px){ .vp{grid-template-columns:repeat(2,minmax(0,1fr))} .sm{grid-template-columns:repeat(2,minmax(0,1fr))} .proof{grid-template-columns:repeat(3,minmax(0,1fr))} .proof div:nth-child(4){border-left:0} .proof div{border-top:1px solid rgba(255,255,255,.14)} .proof div:nth-child(-n+3){border-top:0} }
+@media (max-width:620px){ .vp, .sm{grid-template-columns:minmax(0,1fr)} .proof{grid-template-columns:repeat(2,minmax(0,1fr))} .proof div{border-left:0 !important; border-top:1px solid rgba(255,255,255,.14) !important} .proof div:nth-child(-n+2){border-top:0 !important} .proof b{font-size:26px} }
+</style>
+
 <nav class="nav" aria-label="Navigasi utama">
   <div class="wrap">
     <a class="brand" href="#home"><i>WN</i>Wirda Nissa</a>
@@ -983,6 +1021,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
       <li class="opt"><a href="#tentang">Tentang</a></li>
       <li><a href="#produktivitas">Dampak</a></li>
       <li><a href="#proyek" data-nav="proyek">Proyek</a></li>
+      <li class="opt"><a href="#keahlian">Keahlian</a></li>
       <li class="opt"><a href="#pengalaman">Pengalaman</a></li>
       <li><a href="#kontak">Kontak</a></li>
     </ul>
@@ -997,7 +1036,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
       <h1>Saya mengubah tumpukan dokumen menjadi <span class="hl">sistem yang bekerja sendiri.</span></h1>
       <p class="lead">Saya Wirda Nissa, Organization Development &amp; HRIS Developer. Saya menganalisis proses bisnis, merancang alurnya, lalu membangun aplikasinya dengan Laravel dan Google Apps Script, sampai dipakai setiap hari oleh tim HR, rekrutmen, dan Operational Retail.</p>
       <div class="chips">
-        <span class="tag">Laravel</span><span class="tag">Google Apps Script</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">Agile Scrum</span><span class="tag">FSD · TSD · BRD</span>
+        <span class="tag">Laravel</span><span class="tag">Filament</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Python</span><span class="tag">REST API</span><span class="tag">Google Apps Script</span><span class="tag">HR &amp; Payroll</span>
       </div>
       <div class="cta">
         <a class="btn primary" href="#proyek">Lihat 5 proyek unggulan</a>
@@ -1299,14 +1338,70 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
 <section class="block" id="keahlian" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><span class="eyebrow">Keahlian</span><h2>Toolkit yang saya pakai setiap hari.</h2></div>
+      <div><span class="eyebrow">Keahlian</span><h2>Full-stack developer yang paham HR dari hulu ke hilir.</h2></div>
+      <p>Bukan sekadar bisa menulis kode. Saya memahami proses bisnis HR, regulasi ketenagakerjaan, dan kebutuhan user, lalu mengubahnya menjadi sistem yang berjalan di produksi dan dipakai setiap hari.</p>
     </div>
-    <div class="skills">
-      <div class="skill"><h4>Development</h4><div><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">Google Apps Script</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span></div></div>
-      <div class="skill"><h4>Project Management</h4><div><span class="tag">Agile Scrum</span><span class="tag">Waterfall</span><span class="tag">SDLC</span><span class="tag">Sprint Planning</span><span class="tag">Backlog</span><span class="tag">Stakeholder Mgmt</span></div></div>
-      <div class="skill"><h4>Dokumentasi</h4><div><span class="tag">BRD</span><span class="tag">FSD</span><span class="tag">TSD</span><span class="tag">User Story</span><span class="tag">API Docs</span><span class="tag">UML</span><span class="tag">ERD</span><span class="tag">Flowchart</span></div></div>
-      <div class="skill"><h4>Tools</h4><div><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Postman</span><span class="tag">Figma</span><span class="tag">Trello</span><span class="tag">Google Workspace</span><span class="tag">MS Office</span></div></div>
+
+    <div class="vp">
+      <div><span class="vp-n">01</span><b>Full-stack Laravel siap produksi</b><p>Laravel 12, Filament, Livewire, MySQL dan PostgreSQL. Empat sistem internal yang saya bangun sudah dipakai harian.</p></div>
+      <div><span class="vp-n">02</span><b>Paham domain HR &amp; payroll</b><p>PTK, PKWT, rotasi, WLA/FTE, PPh 21 TER, BPJS, THR, dan UU PDP. Kombinasi yang jarang dimiliki developer.</p></div>
+      <div><span class="vp-n">03</span><b>Integrasi, otomasi &amp; AI</b><p>Google Workspace API, Gemini AI, verifikasi wajah, scheduler, sinkron data Talenta dan Metabase.</p></div>
+      <div><span class="vp-n">04</span><b>Dari analisis sampai dokumentasi</b><p>BRD, FSD, TSD, ERD, UAT, dan Agile Scrum. Sistem rapi untuk dirawat tim berikutnya.</p></div>
     </div>
+
+    <div class="proof">
+      <div><b>257</b><span>fitur dibangun end-to-end</span></div>
+      <div><b>695</b><span>commit di codebase HRIS tim</span></div>
+      <div><b>190+</b><span>automated test di sistem absensi</span></div>
+      <div><b>4</b><span>sistem internal berjalan di produksi</span></div>
+      <div><b>3</b><span>bahasa: PHP, Python, JavaScript</span></div>
+    </div>
+
+    <div class="sm-legend"><span><i class="lv3"></i>Inti: dipakai setiap hari</span><span><i class="lv2"></i>Mahir: dipakai di produksi</span><span><i class="lv1"></i>Terbiasa: pernah dipakai di proyek</span></div>
+    <div class="sm">
+      <div class="sm-g"><h4>Backend</h4>
+        <div class="sk-r"><span class="nm">Laravel &amp; PHP</span><i class="lv3"></i><small>HRIS, Attendance, Career Site, Waterynation</small></div>
+        <div class="sk-r"><span class="nm">Filament &amp; Livewire</span><i class="lv3"></i><small>Panel admin HRIS &amp; Absensi</small></div>
+        <div class="sk-r"><span class="nm">REST API &amp; integrasi</span><i class="lv2"></i><small>API HRIS ⇄ Absensi, API lowongan, Sanctum</small></div>
+        <div class="sk-r"><span class="nm">Python (Flask, FastAPI)</span><i class="lv2"></i><small>Asisten Dapur CRM, layanan verifikasi wajah</small></div>
+        <div class="sk-r"><span class="nm">Queue &amp; scheduler</span><i class="lv2"></i><small>Sinkron otomatis, reminder, rekap payroll malam</small></div>
+      </div>
+      <div class="sm-g"><h4>Data</h4>
+        <div class="sk-r"><span class="nm">MySQL</span><i class="lv3"></i><small>HRIS, Career Site, Asisten Dapur</small></div>
+        <div class="sk-r"><span class="nm">PostgreSQL</span><i class="lv2"></i><small>Attendance &amp; Payroll</small></div>
+        <div class="sk-r"><span class="nm">Google Sheets &amp; Apps Script</span><i class="lv3"></i><small>WLA Dashboard, prototipe CRM</small></div>
+        <div class="sk-r"><span class="nm">Excel &amp; PDF generator</span><i class="lv2"></i><small>Ekspor Talenta, slip gaji, SK, offering letter</small></div>
+      </div>
+      <div class="sm-g"><h4>Frontend</h4>
+        <div class="sk-r"><span class="nm">Blade, Tailwind, JavaScript</span><i class="lv3"></i><small>Seluruh antarmuka sistem</small></div>
+        <div class="sk-r"><span class="nm">PWA &amp; Web Push</span><i class="lv2"></i><small>Aplikasi absensi karyawan</small></div>
+        <div class="sk-r"><span class="nm">Chart.js &amp; dashboard</span><i class="lv2"></i><small>Dashboard eksekutif, KPI, CRM</small></div>
+        <div class="sk-r"><span class="nm">React</span><i class="lv1"></i><small>Org chart interaktif di HRIS</small></div>
+      </div>
+      <div class="sm-g"><h4>Integrasi &amp; AI</h4>
+        <div class="sk-r"><span class="nm">Google Workspace API</span><i class="lv2"></i><small>Drive, Calendar &amp; Meet otomatis</small></div>
+        <div class="sk-r"><span class="nm">Face recognition &amp; liveness</span><i class="lv2"></i><small>OpenCV, ONNX untuk absensi anti titip</small></div>
+        <div class="sk-r"><span class="nm">Web scraping (Playwright)</span><i class="lv2"></i><small>Google Review per karyawan</small></div>
+        <div class="sk-r"><span class="nm">Gemini API</span><i class="lv1"></i><small>Drafting Job Description otomatis</small></div>
+      </div>
+      <div class="sm-g"><h4>Kualitas &amp; deploy</h4>
+        <div class="sk-r"><span class="nm">Git &amp; GitHub</span><i class="lv3"></i><small>Kolaborasi tim, branch &amp; review</small></div>
+        <div class="sk-r"><span class="nm">PHPUnit testing</span><i class="lv2"></i><small>190+ test di sistem absensi</small></div>
+        <div class="sk-r"><span class="nm">Nginx, Gunicorn, VPS</span><i class="lv1"></i><small>Deploy Asisten Dapur &amp; panduan produksi</small></div>
+      </div>
+      <div class="sm-g"><h4>HR &amp; proses bisnis</h4>
+        <div class="sk-r"><span class="nm">PTK, PKWT, Rotasi, WLA</span><i class="lv3"></i><small>Alur approval berjenjang di HRIS</small></div>
+        <div class="sk-r"><span class="nm">Payroll compliance</span><i class="lv2"></i><small>PPh 21 TER, BPJS, lembur PP 35/2021, THR</small></div>
+        <div class="sk-r"><span class="nm">Agile Scrum &amp; SDLC</span><i class="lv3"></i><small>Scrum Master MSIB, sprint di setiap proyek</small></div>
+        <div class="sk-r"><span class="nm">BRD, FSD, TSD, UML, ERD</span><i class="lv3"></i><small>Dokumentasi teknis &amp; Tech Writer</small></div>
+      </div>
+    </div>
+
+    <div class="roles">
+      <b>Siap berkontribusi sebagai</b>
+      <div><span>Software Engineer (HRIS)</span><span>Fullstack Developer (Laravel)</span><span>Backend Developer</span><span>System Analyst</span><span>HRIS Specialist</span></div>
+    </div>
+    <p class="sm-tools">Tools: VS Code, Postman, Figma, Trello, Microsoft Office, Google Workspace</p>
   </div>
 </section>
 
