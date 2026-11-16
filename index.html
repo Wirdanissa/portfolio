@@ -1014,6 +1014,30 @@ i.lv3{--p:100%} i.lv2{--p:70%} i.lv1{--p:40%}
 @media (max-width:620px){ .vp, .sm{grid-template-columns:minmax(0,1fr)} .proof{grid-template-columns:repeat(2,minmax(0,1fr))} .proof div{border-left:0 !important; border-top:1px solid rgba(255,255,255,.14) !important} .proof div:nth-child(-n+2){border-top:0 !important} .proof b{font-size:26px} }
 </style>
 
+<style>
+/* Organization Development */
+:root{--od:#6D28D9}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--od:#A78BFA} }
+:root[data-theme="dark"]{--od:#A78BFA}
+.case[data-p="od"], .pcard[data-p="od"], .prow[data-p="od"]{--c:var(--od)}
+.pcard:nth-child(even):last-child{grid-column:1/-1}
+.od-cycle{position:relative; aspect-ratio:1; max-width:460px; width:100%; margin:0 auto; border-radius:50%; background:radial-gradient(circle, color-mix(in srgb, var(--od) 10%, var(--surface)) 0 30%, transparent 31%), radial-gradient(circle, transparent 0 62%, color-mix(in srgb, var(--od) 18%, transparent) 62.2% 62.8%, transparent 63%)}
+.odc-center{position:absolute; inset:36%; border-radius:50%; display:grid; place-content:center; text-align:center; gap:2px}
+.odc-center b{font-size:18px; font-weight:800; color:var(--od)}
+.odc-center small{font-size:11.5px; color:var(--ink-3)}
+.odc-step{position:absolute; width:150px; transform:translate(-50%,-50%); background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:8px 10px 8px 34px; box-shadow:var(--shadow)}
+.odc-step i{position:absolute; left:8px; top:9px; width:20px; height:20px; border-radius:50%; background:var(--od); color:#fff; font-style:normal; font-size:11px; font-weight:700; display:grid; place-items:center}
+.odc-step b{display:block; font-size:13px}
+.odc-step small{font-size:11px; color:var(--ink-3)}
+.s1{left:50%; top:9%} .s2{left:88%; top:30%} .s3{left:88%; top:70%} .s4{left:50%; top:91%} .s5{left:12%; top:70%} .s6{left:12%; top:30%}
+@media (max-width:620px){
+  .od-cycle{aspect-ratio:auto; border-radius:0; background:none; display:grid; grid-template-columns:1fr 1fr; gap:8px}
+  .odc-center{display:none}
+  .odc-step{position:static; transform:none; width:auto}
+}
+</style>
+<style>.sm-od{border-color:color-mix(in srgb, var(--od) 45%, var(--line)); background:color-mix(in srgb, var(--od) 5%, var(--surface))} .sm-od i.lv1, .sm-od i.lv2, .sm-od i.lv3{background:linear-gradient(90deg, var(--od) var(--p), var(--surface-2) var(--p))}</style>
+
 <nav class="nav" aria-label="Navigasi utama">
   <div class="wrap">
     <a class="brand" href="#home"><i>WN</i>Wirda Nissa</a>
@@ -1039,12 +1063,12 @@ i.lv3{--p:100%} i.lv2{--p:70%} i.lv1{--p:40%}
         <span class="tag">Laravel</span><span class="tag">Filament</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Python</span><span class="tag">REST API</span><span class="tag">Google Apps Script</span><span class="tag">HR &amp; Payroll</span>
       </div>
       <div class="cta">
-        <a class="btn primary" href="#proyek">Lihat 5 proyek unggulan</a>
+        <a class="btn primary" href="#proyek">Lihat portofolio</a>
         <a class="btn ghost" href="#produktivitas">Lihat dampaknya</a>
       </div>
       <div class="stats">
         <div><strong id="stat-feat">0</strong><span>fitur dibangun end-to-end</span></div>
-        <div><strong>5</strong><span>proyek unggulan end-to-end</span></div>
+        <div><strong>1.800+</strong><span>karyawan tercakup KPI yang saya rancang</span></div>
         <div><strong id="stat-hours">0</strong><span>jam kerja dihemat / bulan*</span></div>
         <div><strong>3,68</strong><span>IPK D3 Manajemen Informatika</span></div>
       </div>
@@ -1104,7 +1128,8 @@ i.lv3{--p:100%} i.lv2{--p:70%} i.lv1{--p:40%}
     <div class="ba" id="ba"></div>
 
     <div class="prod-filter" role="tablist" aria-label="Filter sistem">
-      <button type="button" class="on" data-f="all">Semua sistem</button>
+      <button type="button" class="on" data-f="all">Semua</button>
+      <button type="button" data-f="od">OD</button>
       <button type="button" data-f="hris">HRIS</button>
       <button type="button" data-f="att">Attendance</button>
       <button type="button" data-f="car">Career Site</button>
@@ -1163,8 +1188,8 @@ i.lv3{--p:100%} i.lv2{--p:70%} i.lv1{--p:40%}
 <section class="block" id="proyek" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><span class="eyebrow">Proyek unggulan · keterlibatan penuh</span><h2>Lima proyek, masing-masing dengan halamannya sendiri.</h2></div>
-      <p>Saya terlibat penuh di kelima proyek ini, dari menggali kebutuhan sampai mendampingi pengguna. Buka setiap sistem untuk melihat seluruh modul, desain layar, fitur, dan dampaknya.</p>
+      <div><span class="eyebrow">Proyek unggulan · keterlibatan penuh</span><h2>Peran OD dan lima sistem, masing-masing dengan halamannya sendiri.</h2></div>
+      <p>Mulai dari peran saya sebagai Organization Development sampai lima sistem yang saya bangun. Saya terlibat penuh di semuanya, dari menggali kebutuhan sampai mendampingi pengguna. Buka setiap sistem untuk melihat seluruh modul, desain layar, fitur, dan dampaknya.</p>
     </div>
     <div class="pcards" id="pcards"></div>
   </div>
@@ -1344,7 +1369,7 @@ i.lv3{--p:100%} i.lv2{--p:70%} i.lv1{--p:40%}
 
     <div class="vp">
       <div><span class="vp-n">01</span><b>Full-stack Laravel siap produksi</b><p>Laravel 12, Filament, Livewire, MySQL dan PostgreSQL. Empat sistem internal yang saya bangun sudah dipakai harian.</p></div>
-      <div><span class="vp-n">02</span><b>Paham domain HR &amp; payroll</b><p>PTK, PKWT, rotasi, WLA/FTE, PPh 21 TER, BPJS, THR, dan UU PDP. Kombinasi yang jarang dimiliki developer.</p></div>
+      <div><span class="vp-n">02</span><b>Praktisi OD sekaligus developer</b><p>Merancang KPI, JD, WLA, dan struktur organisasi, lalu membangun sistemnya sendiri. Paham PPh 21, BPJS, dan UU PDP.</p></div>
       <div><span class="vp-n">03</span><b>Integrasi, otomasi &amp; AI</b><p>Google Workspace API, Gemini AI, verifikasi wajah, scheduler, sinkron data Talenta dan Metabase.</p></div>
       <div><span class="vp-n">04</span><b>Dari analisis sampai dokumentasi</b><p>BRD, FSD, TSD, ERD, UAT, dan Agile Scrum. Sistem rapi untuk dirawat tim berikutnya.</p></div>
     </div>
@@ -1354,11 +1379,12 @@ i.lv3{--p:100%} i.lv2{--p:70%} i.lv1{--p:40%}
       <div><b>695</b><span>commit di codebase HRIS tim</span></div>
       <div><b>190+</b><span>automated test di sistem absensi</span></div>
       <div><b>4</b><span>sistem internal berjalan di produksi</span></div>
-      <div><b>3</b><span>bahasa: PHP, Python, JavaScript</span></div>
+      <div><b>356</b><span>Job Description resmi disusun</span></div>
     </div>
 
     <div class="sm-legend"><span><i class="lv3"></i>Inti: dipakai setiap hari</span><span><i class="lv2"></i>Mahir: dipakai di produksi</span><span><i class="lv1"></i>Terbiasa: pernah dipakai di proyek</span></div>
     <div class="sm">
+      <div class="sm-g sm-od"><h4>Organization Development</h4><div class="sk-r"><span class="nm">KPI design &amp; Balanced Scorecard</span><i class="lv3"></i><small>358 jabatan, ±1.878 karyawan, 5 grade band</small></div><div class="sk-r"><span class="nm">Analisa jabatan &amp; Job Description</span><i class="lv3"></i><small>356 JD resmi dengan approval berjenjang</small></div><div class="sk-r"><span class="nm">WLA / FTE &amp; manpower planning</span><i class="lv3"></i><small>Standar headcount toko &amp; workforce health</small></div><div class="sk-r"><span class="nm">Desain organisasi &amp; STO</span><i class="lv2"></i><small>Restrukturisasi ±1.758 karyawan, 56 divisi</small></div><div class="sk-r"><span class="nm">People analytics</span><i class="lv2"></i><small>Turnover, siklus karyawan, demografi</small></div><div class="sk-r"><span class="nm">Service excellence &amp; SOP audit</span><i class="lv2"></i><small>Observasi 4 peran toko, 5 aspek layanan</small></div></div>
       <div class="sm-g"><h4>Backend</h4>
         <div class="sk-r"><span class="nm">Laravel &amp; PHP</span><i class="lv3"></i><small>HRIS, Attendance, Career Site, Waterynation</small></div>
         <div class="sk-r"><span class="nm">Filament &amp; Livewire</span><i class="lv3"></i><small>Panel admin HRIS &amp; Absensi</small></div>
@@ -1422,6 +1448,42 @@ i.lv3{--p:100%} i.lv2{--p:70%} i.lv1{--p:40%}
   </div>
 </section>
 
+</main>
+
+<!-- ============ ORGANIZATION DEVELOPMENT ============ -->
+<main class="view" data-view="od" hidden>
+<article class="case" data-p="od">
+  <div class="wrap">
+    <div class="crumb"><a href="#home">Portofolio</a><span>/</span><a href="#proyek">Proyek</a><span>/</span><span>Organization Development</span></div>
+    <div class="case-top">
+      <div>
+        <span class="kicker">Peran utama · Organization Development</span>
+        <h2>Organization Development</h2>
+        <p class="lead">Sebagai OD, saya merancang fondasi organisasi: struktur, jabatan, beban kerja, dan ukuran kinerja. Saya juga membangun sendiri alat-alatnya dengan Google Apps Script dan Python, sehingga metode OD berjalan otomatis untuk lebih dari 1.800 karyawan.</p>
+        <div class="problem"><b>Masalah sebelumnya</b><p>KPI tersebar di puluhan spreadsheet divisi, banyak jabatan belum memiliki JD resmi, kebutuhan kru toko diputuskan tanpa perhitungan beban kerja, dan struktur organisasi berubah tanpa pemetaan yang lengkap.</p></div>
+        <div class="meta">
+          <div class="row"><span>Metode</span><div><span class="tag">Balanced Scorecard</span><span class="tag">Job Analysis</span><span class="tag">WLA / FTE</span><span class="tag">VA · NVA · Waste</span><span class="tag">Org Design</span><span class="tag">DMAIC</span></div></div>
+          <div class="row"><span>Tools</span><div><span class="tag">Google Apps Script</span><span class="tag">Python</span><span class="tag">Google Sheets</span><span class="tag">Gemini API</span><span class="tag">d3 · Graphviz</span><span class="tag">Excel</span></div></div>
+          <div class="row role-steps"><span>Peran</span><div><span class="tag">OD analyst</span><span class="tag">Perancang metode</span><span class="tag">Builder alat OD</span><span class="tag">Fasilitator divisi</span></div></div>
+        </div>
+        <div class="count" data-count="od"></div>
+      </div>
+      <div class="od-cycle" aria-label="Siklus kerja OD">
+        <div class="odc-center"><b>Siklus OD</b><small>dari struktur sampai kinerja</small></div>
+        <div class="odc-step s1"><i>1</i><b>Desain struktur</b><small>15 PT · 56 divisi · 152 unit</small></div>
+        <div class="odc-step s2"><i>2</i><b>Analisa jabatan</b><small>356 JD resmi</small></div>
+        <div class="odc-step s3"><i>3</i><b>Beban kerja</b><small>FTE · standar headcount</small></div>
+        <div class="odc-step s4"><i>4</i><b>KPI</b><small>358 jabatan · Balanced Scorecard</small></div>
+        <div class="odc-step s5"><i>5</i><b>Monitoring</b><small>rekap otomatis · audit data</small></div>
+        <div class="odc-step s6"><i>6</i><b>Pengembangan</b><small>MT · magang · L&amp;D</small></div>
+      </div>
+    </div>
+    <div class="pbody"><nav class="toc" id="toc-od" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-od"></div></div></div>
+    <div class="impact" id="imp-od"></div>
+    <div class="sell" id="sell-od"></div>
+    <div class="pnext" id="next-od"></div>
+  </div>
+</article>
 </main>
 
 <!-- ============ HRIS ============ -->
@@ -2258,6 +2320,119 @@ const PROD = [
 </script>
 
 <script>
+P.od = {
+ meta:{name:"Organization Development", short:"OD", stack:"KPI · Job Analysis · WLA/FTE · Org Design · People Analytics",
+  desc:"Peran utama saya: merancang KPI untuk 1.800+ karyawan, menyusun 356 Job Description, menghitung beban kerja dan kebutuhan tenaga kerja, merestrukturisasi organisasi, dan membangun alat analitik yang membuat semua itu berjalan otomatis."},
+ mods:[
+  {n:"KPI Framework & Performance Management", d:"Kerangka KPI berbasis Balanced Scorecard untuk seluruh posisi.",
+   ui:{title:"Kamus KPI per Jabatan", who:"OD · contoh data", parts:[
+    ["stats",[["Karyawan","±1.878"],["Jabatan","358"],["Nama KPI","±350"],["Unit organisasi","±140"]]],
+    ["table",{c:["Grade","Rentang skor","Arti"],r:[["ok|Excellent","> 100","melampaui target"],["ok|Good","80,01–100","sesuai target"],["info|Satisfactory","70,01–80","cukup"],["wait|Need Improvement","60,01–70","perlu perbaikan"],["bad|Unsatisfactory","0–60","di bawah standar"]]}]
+   ]},
+   f:[
+    ["Kamus KPI per Jabatan","KPI dipetakan dari entitas, unit, sampai jabatan untuk 358 posisi dan sekitar 350 nama KPI, lengkap dengan bobot dan satuan.","Setiap posisi punya ukuran kinerja yang jelas dan seragam."],
+    ["Balanced Scorecard 4 Perspektif","KPI dikelompokkan ke Financial, Customer, Internal Process, dan Learning & Growth, rata-rata 5 KPI per posisi.","Kinerja dinilai seimbang, bukan hanya dari angka penjualan."],
+    ["Rumus Pencapaian Increase & Decrease","Pencapaian dihitung dari baseline ke target, dengan rumus berbeda untuk KPI yang harus naik dan yang harus turun.","Penilaian adil untuk KPI biaya, keluhan, maupun penjualan."],
+    ["Skor Berbobot & 5 Grade","Skor akhir = Σ(pencapaian × bobot) / Σ bobot, lalu dikonversi ke grade Excellent sampai Unsatisfactory.","Hasil kinerja bisa dibandingkan lintas divisi."],
+    ["KPI Wajib Perusahaan","Training Hours, Free Idea Improvement, CI Project, Zero Accident, dan 5R diterapkan ke seluruh karyawan.","Budaya belajar, perbaikan, dan keselamatan terukur di semua unit."],
+    ["KPI Peran Toko","Set KPI untuk 12 peran toko, dari District Manager, Store Head, Kasir, sampai Stock Keeper.","Kinerja operasional ritel terukur sampai level kru."]
+   ]},
+  {n:"Konsolidasi & Monitoring KPI", d:"Rekap bulanan dari puluhan file divisi menjadi satu sumber data.",
+   ui:{title:"Sinkronisasi Master Goals", who:"otomatis tiap 15 menit", parts:[
+    ["flow",{s:["27 file Update KPI","Fuzzy matching","Master Goals","Monitoring atasan"],on:3}],
+    ["stats",[["Baris KPI","±109 rb"],["Periode","Jan–Okt"],["Karyawan resign dibersihkan","91"],["Ide diproses","123"]]]
+   ]},
+   f:[
+    ["Sinkron 27 File Divisi","Puluhan spreadsheet Update KPI digabung ke Master Goals dengan fuzzy matching nama dan goal, dijadwalkan otomatis setiap 15 menit.","Rekap yang dulu berhari-hari kini selalu terbaru."],
+    ["Aturan Tanggal Bergabung","KPI dimulai di bulan bergabung dengan cut-off tanggal 15, dan karyawan resign otomatis dibersihkan.","Data kinerja bersih dan sesuai masa kerja."],
+    ["Prorata KPI Mutasi & Promosi","Posisi dan organisasi per bulan diambil dari riwayat mutasi, bobot goal diisi bertingkat dari data karyawan atau posisi.","Karyawan yang pindah tetap dinilai adil sesuai jabatannya tiap bulan."],
+    ["Monitoring per Atasan","Login berdasarkan approval line 4 level; atasan melihat seluruh bawahan beserta grade.","Atasan memantau kinerja tim tanpa meminta rekap."],
+    ["Audit Kualitas Data KPI","Deteksi karyawan tanpa KPI nyata, baris ganda, bobot di atas 100, dan karyawan resign yang masih tercatat.","Masalah data ditemukan sebelum penilaian akhir tahun."],
+    ["Generator Template KPI Bulanan","Template KPI per karyawan per bulan dibuat otomatis dari master KPI jabatan.","Distribusi KPI ke ratusan karyawan selesai sekali jalan."]
+   ]},
+  {n:"Analisa Jabatan & Job Description", d:"Dari aktivitas nyata karyawan menjadi JD standar yang disahkan.",
+   ui:{title:"Job Description per Level", who:"diimpor ke HRIS", parts:[
+    ["stats",[["JD diterbitkan","356"],["Tanggung jawab","1.986"],["Relasi kerja","1.821"]]],
+    ["table",{c:["Level","Jumlah JD"],r:[["Staff","214"],["Manager","31"],["Supervisor","30"],["Officer","29"],["Lainnya","52"]]}]
+   ]},
+   f:[
+    ["Kuesioner Analisa Jabatan","Karyawan mengisi aktivitas (periode, frekuensi, menit), kompetensi, serta relasi kerja internal dan eksternal.","JD disusun dari pekerjaan nyata, bukan asumsi."],
+    ["Standar Format JD","Tujuan jabatan (How + What + Why), minimal 5 tanggung jawab dengan target-aktivitas-ukuran, relasi kerja, kualifikasi, dan kompetensi inti, manajerial, fungsional.","Semua JD konsisten dan bisa dipakai untuk rekrutmen, training, dan penilaian."],
+    ["Ukuran dari KPI Nyata","Ukuran tanggung jawab diambil dari KPI jabatan, dengan cadangan dari aktivitas WLA.","JD dan KPI saling menguatkan."],
+    ["Draf JD dengan AI","Draf JD dibuat Gemini dengan prompt konsultan OD dan keluaran terstruktur, lalu disimpan sebagai PDF per divisi.","Ratusan JD tersusun dalam hitungan minggu."],
+    ["356 JD Disahkan & Diimpor","JD bernomor dengan rantai approval analis, kepala divisi, dan direksi, lalu diimpor ke HRIS.","Setiap posisi memiliki JD resmi yang bisa diakses."]
+   ]},
+  {n:"Workload Analysis & Manpower Planning", d:"Beban kerja dihitung menjadi kebutuhan tenaga kerja yang tepat.",
+   ui:{title:"Workforce Health per Toko", who:"WLA toko", parts:[
+    ["table",{c:["Toko","FTE rata-rata","HC aktual / standar","Health"],r:[["Cabang A","1,08","13 / 13","ok|Optimal 86"],["Cabang B","1,34","10 / 13","wait|Watch 71"],["Cabang C","0,79","17 / 15","bad|Risk 58"]]}],
+    ["note","Health = coverage 40% + FTE 30% + sales per HC 30% · FTE: Under < 0,85 · Fit 0,85–1,30 · Over > 1,30"]
+   ]},
+   f:[
+    ["Metode FTE Terstandar","Aktivitas dikonversi ke menit per minggu lalu dibagi 40 jam efektif menjadi FTE dengan status Underload, Fit, atau Overload.","Kebutuhan orang punya dasar perhitungan yang bisa dipertanggungjawabkan."],
+    ["Klasifikasi VA / NVA / Waste","Setiap aktivitas dinilai bernilai tambah, perlu dipersingkat, atau dihapus bersama manajer departemen.","Efisiensi proses, bukan sekadar menambah orang."],
+    ["Aplikasi WLA Toko","Form kunjungan dengan isi otomatis dari kunjungan sebelumnya, tren FTE, dan heatmap aktivitas per posisi, dikembangkan dalam 43 iterasi.","Analisis beban kerja di puluhan toko berjalan rutin."],
+    ["Kalkulator Kebutuhan Kasir","Jumlah kasir dihitung dari rata-rata transaksi POS harian.","Jadwal kasir sesuai keramaian toko."],
+    ["Standar Headcount per Band Sales","Kebutuhan 7 sampai 20 orang per toko berdasarkan band penjualan bulanan, dengan gap aktual vs standar.","Penambahan atau pengurangan kru berbasis data penjualan."],
+    ["Produktivitas & Workforce Health","Revenue per karyawan, sales per labor hour, rasio gaji terhadap sales, dan skor kesehatan Optimal / Watch / Risk / Critical.","Manajemen tahu toko mana yang perlu intervensi lebih dulu."]
+   ]},
+  {n:"Desain Organisasi & Struktur", d:"Restrukturisasi grup dan struktur yang selalu terbaru.",
+   ui:{title:"Restrukturisasi Organisasi", who:"sebelum → sesudah", parts:[
+    ["table",{c:["Komponen","Sebelum","Sesudah"],r:[["Entitas / PT","8","15"],["Organisasi / divisi","107","56 divisi"],["Departemen / unit","—","152"],["Lokasi kerja","—","39"],["Karyawan dipetakan","±1.758","±1.758"]]}]
+   ]},
+   f:[
+    ["Pemetaan Restrukturisasi","Sekitar 1.758 karyawan dipetakan dari struktur lama ke struktur baru: 15 PT, 56 divisi, 152 unit, 39 lokasi, 3 SBU, dengan dua alternatif skenario.","Perubahan organisasi dieksekusi tanpa ada karyawan yang terlewat."],
+    ["STO per Band Level","Generator struktur organisasi per divisi dengan band level Officer sampai Senior Manager dan headcount per peran.","Struktur dan jenjang jabatan jelas untuk setiap divisi."],
+    ["Org Chart Interaktif","Org chart dengan pencarian, buka-tutup cabang, headcount, filter SBU, dan ekspor gambar.","Siapa melapor ke siapa terlihat seketika."],
+    ["Fondasi Org Chart HRIS","Konsep dan data struktur menjadi dasar org chart dan headcount plan di HRIS.","Satu struktur organisasi untuk semua sistem."]
+   ]},
+  {n:"People Analytics", d:"Data karyawan menjadi insight untuk keputusan.",
+   ui:{title:"Turnover Dashboard", who:"contoh data", parts:[
+    ["stats",[["Headcount akhir","3.2 rb"],["Masuk","148"],["Resign","96"],["Exit / entry","0,65"]]],
+    ["chart",{t:"Resign berdasarkan masa kerja",v:[38,24,14,9,6,5],l:["<3 bln","3–6","6–12","1–2 th","2–5","5+"]}]
+   ]},
+   f:[
+    ["Dashboard Turnover","Turnover rate, exit-to-entry ratio, resign per organisasi, dan resign berdasarkan masa kerja.","Pola resign dini terlihat dan bisa dicegah."],
+    ["Monitoring Siklus Karyawan","118 checkpoint dari onboarding, induction, PKWT, penghargaan masa kerja, sampai resign dan pensiun.","Tidak ada tahap siklus karyawan yang terlewat."],
+    ["Progres per Fungsi HC","Progres checkpoint per PIC dan fungsi (TA, GA, Legal, L&D, OD, dan lainnya) untuk Looker.","Setiap fungsi HC tahu pekerjaan yang tertunda."],
+    ["Analisis Demografi","Komposisi usia, masa kerja, headcount per entitas dan level.","Perencanaan suksesi dan regenerasi berbasis data."]
+   ]},
+  {n:"Standar Layanan & SOP", d:"Kualitas layanan toko diukur dan dibandingkan.",
+   ui:{title:"Service Excellence", who:"observasi toko", parts:[
+    ["table",{c:["Bagian penilaian","Skor"],r:[["Starting Service","4,6"],["Serving Process","4,2"],["Ending Service","4,4"],["Service Excellence Aspects","4,1"],["Grooming","4,8"]]}]
+   ]},
+   f:[
+    ["Observasi Service Excellence","Penilaian 4 peran toko (Captain, Crew, Butcher, Kasir) dalam 5 bagian dengan skor, catatan, dan foto bukti.","Standar layanan pelanggan terukur di setiap toko."],
+    ["Ranking & Tren Layanan","Peringkat dan Top 3 per peran dan lokasi, plus tren kuartalan.","Toko dan kru terbaik bisa diapresiasi, yang lemah dibina."],
+    ["Observasi SOP","Form observasi SOP dengan pustaka SOP, catatan, dan unggahan bukti.","Kepatuhan SOP tercatat, bukan hanya diasumsikan."],
+    ["Desain Checklist 5R","Rancangan checklist 5R dengan status temuan, rencana aksi, dan dokumentasi.","Audit 5R siap didigitalkan."]
+   ]},
+  {n:"Program Talenta & L&D", d:"Program pengembangan yang terstruktur dan terukur.",
+   ui:{title:"Portal Management Trainee", who:"MT · mentor · admin", parts:[
+    ["list",[["MT","Logbook mentoring","Ekspor bulanan per mentor","ok|Aktif"],["OJT","Penilaian OJT & magang","Per tahap penempatan","info|Berjalan"],["CI","Proyek DMAIC","Define → Measure → Analyze → Improve → Control","wait|Review"]]]
+   ]},
+   f:[
+    ["Portal Management Trainee","Pustaka SOP, jadwal rotasi penempatan, logbook harian, logbook mentoring, KPI MT, penilaian OJT, dan leaderboard.","Program MT berjalan terstruktur dan terpantau mentor."],
+    ["Portal Magang dengan DMAIC","Log harian, absensi, dan project charter DMAIC lengkap dengan feedback mentor per tahap.","Peserta magang menghasilkan proyek perbaikan yang nyata."],
+    ["Portal L&D & KPI Wajib","Pencatatan jam training (peserta dan trainer), Idea Improvement, TNA, dan Knowledge Sharing dengan rekap otomatis.","KPI wajib L&D terkumpul tanpa rekap manual."],
+    ["Administrasi Penilaian & Mutasi","Pengelolaan formulir penilaian kinerja serta formulir rotasi, promosi, dan demosi.","Proses talent management terdokumentasi rapi."]
+   ]}
+ ],
+ imp:[
+  ["Manajemen & Direksi","Organisasi yang terukur",["Kinerja 1.800+ karyawan terlihat dalam satu kerangka KPI.","Kebutuhan headcount toko berdasarkan beban kerja dan penjualan.","Struktur organisasi baru dieksekusi dengan data lengkap."]],
+  ["Tim Human Capital","Standar untuk semua proses",["JD dan KPI menjadi acuan rekrutmen, training, dan penilaian.","Rekap KPI dan audit data berjalan otomatis.","Analitik turnover dan siklus karyawan siap dipakai."]],
+  ["Atasan & Karyawan","Target yang jelas dan adil",["Setiap orang tahu tanggung jawab dan ukuran kinerjanya.","Penilaian adil untuk karyawan yang mutasi atau baru bergabung.","Atasan memantau tim tanpa meminta rekap."]]
+ ],
+ sell:[["KPI untuk 1.800+ karyawan","358 jabatan dengan Balanced Scorecard."],["356 JD resmi","Dari analisa jabatan sampai disahkan di HRIS."],["Manpower planning berbasis data","FTE, standar headcount, dan workforce health."],["Analis sekaligus builder","Merancang metode OD dan membangun alatnya sendiri."]]
+};
+PROD.push(
+ ["od","Rekap KPI bulanan dari 27 file divisi","± 5 hari",2400,"otomatis tiap 15 menit",15,30,0],
+ ["od","Menyusun Job Description per jabatan","± 1 hari / JD",480,"± 15 menit (draf AI)",15,20,0],
+ ["od","Hitung FTE & kebutuhan kru toko","± 1 minggu",2400,"± 10 menit",10,15,40],
+ ["od","Prorata KPI karyawan mutasi","2 jam / karyawan",120,"otomatis",1,10,0]
+);
+</script>
+
+<script>
 (function(){
   const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   let total = 0;
@@ -2423,8 +2598,8 @@ const PROD = [
   document.getElementById('stat-feat').textContent = total;
 
   /* Kartu proyek (beranda), daftar modul, dan navigasi antar proyek */
-  const ORDER = ['hris','att','car','kit','wat'];
-  const VIEW = {hris:'hris', att:'attendance', car:'career', kit:'dapur', wat:'waterynation'};
+  const ORDER = ['od','hris','att','car','kit','wat'];
+  const VIEW = {hris:'hris', att:'attendance', car:'career', kit:'dapur', wat:'waterynation', od:'od'};
   document.getElementById('pcards').innerHTML = ORDER.map(k => {
     const p = P[k], feats = p.mods.reduce((a, m) => a + m.f.length, 0);
     const save = PROD.filter(x => x[0] === k).reduce((a, x) => a + x[6], 0);
