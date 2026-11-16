@@ -897,6 +897,85 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
 @media print{ .ka-pane[hidden]{display:block !important} .ka-tabs{display:none} }
 </style>
 
+<style>
+/* Penyesuaian ponsel */
+.meta .row > div{min-width:0}
+.meta .tag{white-space:normal}
+@media (max-width:620px){
+  .meta .row{grid-template-columns:minmax(0,1fr); gap:6px}
+  .count{gap:18px; flex-wrap:wrap}
+  .count strong{font-size:32px}
+  .case h2{font-size:30px}
+  .case .lead{font-size:16px}
+  .sec-head h2{font-size:28px}
+  .hero{padding-block:32px 28px}
+  .hero h1{font-size:36px}
+  .stats strong{font-size:26px}
+  .idcard{max-width:320px}
+  .module-h h3{font-size:19px}
+  .feat{padding:14px}
+  .pcard .pm{flex-wrap:wrap; gap:12px 18px}
+  .pcard .pm .go{margin-left:0; width:100%}
+  .sell{padding:18px}
+  .impact > div{padding:16px}
+  .contact h2{font-size:28px}
+  .ba-side{padding:18px}
+  .ba-time b{font-size:24px}
+  .prod-sum b{font-size:24px}
+  .prow{padding:12px}
+  .pbar{grid-template-columns:minmax(0,1fr) 120px}
+  .sc-thumbs button{font-size:12px}
+  .sc-thumbs button img{width:56px; height:35px}
+  .timeline li{padding-left:28px}
+  .nav .wrap{gap:10px}
+  .nav ul a{padding:6px 8px; font-size:13px}
+  .brand{font-size:17px}
+  .ka-tabs button{padding:6px 11px; font-size:12px}
+  .ka-cards{padding:10px; gap:8px}
+  .ka-shop{padding:10px; gap:8px}
+  .ka-banner{font-size:18px; height:76px}
+  .ka-head{padding:8px 12px}
+  .eco{padding:12px}
+}
+@media (max-width:400px){
+  .nav ul li:not(:last-child):not(:nth-child(3)){display:none}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .shots, .sc-thumbs{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+<style>
+@media (max-width:1000px){ .badge-area{order:0 !important} }
+@media (max-width:620px){
+  .hero .wrap{gap:28px}
+  .idcard .top{padding:12px 16px 32px}
+  .avatar{width:64px; height:64px; font-size:24px; border-radius:16px}
+  .idcard h3{font-size:20px}
+  .idcard dl{font-size:12.5px}
+  .barcode, .barcode + small{display:none}
+  .status{font-size:11.5px}
+}
+</style>
+<style>
+@media (max-width:620px){
+  .pbar{grid-template-columns:minmax(0,1fr) !important; gap:2px}
+  .pbar span{white-space:normal}
+  .prow{gap:8px}
+}
+</style>
+<style>
+@media (max-width:1000px){
+  .toc{position:sticky !important; top:calc(env(safe-area-inset-top,0px) + 53px); z-index:20; background:var(--paper); padding:8px 0 !important; margin:0 -4px}
+}
+.sc-frame a{display:block; cursor:zoom-in}
+</style>
+<style>
+@media (max-width:560px){
+  .sk-fil .sk-wrap, .sk-tdn .sk-wrap, .sk .sk-wrap{grid-template-columns:minmax(0,1fr) !important}
+  .sk-ftabs{flex-wrap:nowrap; overflow-x:auto; align-self:stretch}
+  .sk-tdn .sk-greet b{font-size:13px}
+}
+</style>
+
 <nav class="nav" aria-label="Navigasi utama">
   <div class="wrap">
     <a class="brand" href="#home"><i>WN</i>Wirda Nissa</a>
@@ -1267,7 +1346,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         </div>
         <div class="count" data-count="hris"></div>
       </div>
-      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">hris / admin</span></div><img src="screens/hris-dashboard.png" alt="Tampilan Dashboard" width="1280" height="800"></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/hris-dashboard.png" data-url="hris / admin" data-alt="Tampilan Dashboard"><img src="screens/hris-dashboard.png" alt="" width="1280" height="800"><span>Dashboard</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/hris-ptk.png" data-url="hris / admin / ptk" data-alt="Tampilan Riwayat PTK"><img src="screens/hris-ptk.png" alt="" width="1280" height="800"><span>Riwayat PTK</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
+      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">hris / admin</span></div><a href="screens/hris-dashboard.png" target="_blank" rel="noopener" aria-label="Buka gambar ukuran penuh"><img src="screens/hris-dashboard.png" alt="Tampilan Dashboard" width="1280" height="800"></a></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/hris-dashboard.png" data-url="hris / admin" data-alt="Tampilan Dashboard"><img src="screens/hris-dashboard.png" alt="" width="1280" height="800"><span>Dashboard</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/hris-ptk.png" data-url="hris / admin / ptk" data-alt="Tampilan Riwayat PTK"><img src="screens/hris-ptk.png" alt="" width="1280" height="800"><span>Riwayat PTK</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
     </div>
     <div class="pbody"><nav class="toc" id="toc-hris" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-hris"></div></div></div>
     <div class="impact" id="imp-hris"></div>
@@ -1294,7 +1373,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         </div>
         <div class="count" data-count="att"></div>
       </div>
-      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">absensi / admin / pantauan-hari-ini</span></div><img src="screens/absensi-monitor.png" alt="Tampilan Pantauan Hari Ini" width="1280" height="800"></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/absensi-monitor.png" data-url="absensi / admin / pantauan-hari-ini" data-alt="Tampilan Pantauan Hari Ini"><img src="screens/absensi-monitor.png" alt="" width="1280" height="800"><span>Pantauan Hari Ini</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/absensi-payroll.png" data-url="absensi / admin / payroll-runs" data-alt="Tampilan Proses Payroll"><img src="screens/absensi-payroll.png" alt="" width="1280" height="800"><span>Proses Payroll</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
+      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">absensi / admin / pantauan-hari-ini</span></div><a href="screens/absensi-monitor.png" target="_blank" rel="noopener" aria-label="Buka gambar ukuran penuh"><img src="screens/absensi-monitor.png" alt="Tampilan Pantauan Hari Ini" width="1280" height="800"></a></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/absensi-monitor.png" data-url="absensi / admin / pantauan-hari-ini" data-alt="Tampilan Pantauan Hari Ini"><img src="screens/absensi-monitor.png" alt="" width="1280" height="800"><span>Pantauan Hari Ini</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/absensi-payroll.png" data-url="absensi / admin / payroll-runs" data-alt="Tampilan Proses Payroll"><img src="screens/absensi-payroll.png" alt="" width="1280" height="800"><span>Proses Payroll</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
     </div>
     <div class="pbody"><nav class="toc" id="toc-att" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-att"></div></div></div>
     <div class="impact" id="imp-att"></div>
@@ -1321,7 +1400,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         </div>
         <div class="count" data-count="car"></div>
       </div>
-      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">karir / beranda</span></div><img src="screens/karir-home.png" alt="Tampilan Situs Karir" width="1280" height="800"></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/karir-home.png" data-url="karir / beranda" data-alt="Tampilan Situs Karir"><img src="screens/karir-home.png" alt="" width="1280" height="800"><span>Situs Karir</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/karir-pipeline.png" data-url="hris / admin / proses-rekrutmen" data-alt="Tampilan Proses Rekrutmen"><img src="screens/karir-pipeline.png" alt="" width="1280" height="800"><span>Proses Rekrutmen</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
+      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">karir / beranda</span></div><a href="screens/karir-home.png" target="_blank" rel="noopener" aria-label="Buka gambar ukuran penuh"><img src="screens/karir-home.png" alt="Tampilan Situs Karir" width="1280" height="800"></a></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/karir-home.png" data-url="karir / beranda" data-alt="Tampilan Situs Karir"><img src="screens/karir-home.png" alt="" width="1280" height="800"><span>Situs Karir</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/karir-pipeline.png" data-url="hris / admin / proses-rekrutmen" data-alt="Tampilan Proses Rekrutmen"><img src="screens/karir-pipeline.png" alt="" width="1280" height="800"><span>Proses Rekrutmen</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
     </div>
     <div class="pbody"><nav class="toc" id="toc-car" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-car"></div></div></div>
     <div class="impact" id="imp-car"></div>
@@ -1348,7 +1427,7 @@ footer{padding-block:32px 48px; color:var(--ink-3); font-size:13px}
         </div>
         <div class="count" data-count="kit"></div>
       </div>
-      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">asisten-dapur / rekomendasi-aksi</span></div><img src="screens/crm-rekomendasi.png" alt="Tampilan Rekomendasi Aksi" width="1280" height="800"></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/crm-rekomendasi.png" data-url="asisten-dapur / rekomendasi-aksi" data-alt="Tampilan Rekomendasi Aksi"><img src="screens/crm-rekomendasi.png" alt="" width="1280" height="800"><span>Rekomendasi Aksi</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/crm-database.png" data-url="asisten-dapur / database-member" data-alt="Tampilan Database Member"><img src="screens/crm-database.png" alt="" width="1280" height="800"><span>Database Member</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
+      <div class="showcase"><div class="sc-frame"><div class="mock-bar"><i></i><i></i><i></i><span class="url">asisten-dapur / rekomendasi-aksi</span></div><a href="screens/crm-rekomendasi.png" target="_blank" rel="noopener" aria-label="Buka gambar ukuran penuh"><img src="screens/crm-rekomendasi.png" alt="Tampilan Rekomendasi Aksi" width="1280" height="800"></a></div><div class="sc-thumbs" role="tablist" aria-label="Pilih layar"><button type="button" role="tab" aria-selected="true" class="on" data-img="screens/crm-rekomendasi.png" data-url="asisten-dapur / rekomendasi-aksi" data-alt="Tampilan Rekomendasi Aksi"><img src="screens/crm-rekomendasi.png" alt="" width="1280" height="800"><span>Rekomendasi Aksi</span></button><button type="button" role="tab" aria-selected="false" class="" data-img="screens/crm-database.png" data-url="asisten-dapur / database-member" data-alt="Tampilan Database Member"><img src="screens/crm-database.png" alt="" width="1280" height="800"><span>Database Member</span></button></div><small class="sc-note">Tiruan tampilan aplikasi yang dibuat ulang dari kode aslinya, berisi contoh data.</small></div>
     </div>
     <div class="pbody"><nav class="toc" id="toc-kit" aria-label="Daftar modul"></nav><div style="min-width:0"><div class="modules" id="mods-kit"></div></div></div>
     <div class="impact" id="imp-kit"></div>
@@ -2335,7 +2414,7 @@ const PROD = [
     const img = sc.querySelector('.sc-frame img'), url = sc.querySelector('.sc-frame .url');
     sc.querySelectorAll('.sc-thumbs button').forEach(btn => btn.addEventListener('click', () => {
       sc.querySelectorAll('.sc-thumbs button').forEach(x => { x.classList.toggle('on', x === btn); x.setAttribute('aria-selected', x === btn); });
-      img.src = btn.dataset.img; img.alt = btn.dataset.alt; url.textContent = btn.dataset.url;
+      img.src = btn.dataset.img; img.alt = btn.dataset.alt; url.textContent = btn.dataset.url; if (img.parentElement.tagName === 'A') img.parentElement.href = btn.dataset.img;
     }));
   });
 
